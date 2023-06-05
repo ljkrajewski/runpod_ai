@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
-fileid=$1
+link=$1
 # Example Google Drive link: https://drive.google.com/file/d/118ul9uLt-jebHAOMQNTogfbXsjJpXzTf/view?usp=sharing
+fileid=`echo $link | awk -F '/' '{ print $6 }'`
 #fileid="118ul9uLt-jebHAOMQNTogfbXsjJpXzTf"  #eg, 1AMQ1OndXcTxXwklOGJvK-A5uCGvHR4I7
 filename=$2
 #filename="zwx_debra.ckpt"

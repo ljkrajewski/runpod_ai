@@ -3,6 +3,7 @@
 1. [Start here](#start-here)
 2. [AUTOMATIC1111/Stable Diffusion (text2image)](#automatic1111stable-diffusion-text2image)
 3. [oobabooga/text-generation-webui (text2text)](#oobaboogatext-generation-webui-text2text)
+4. [Honkware/text-generation-webui (text2text)](#honkwaretext-generation-webui-text2text)
 ## Start here:
 1. Go to [RunPod.io](https://runpod.io) and log in.
 2. Go to _Templates_ and pick the _RunPod Pytorch 2.0.1_ template.

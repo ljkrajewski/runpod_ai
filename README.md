@@ -1,8 +1,8 @@
 # Text and image creation scripts for RunPod that work
 ## Table of Contents
 1. [Start here](#start-here)
-2. [AUTOMATIC1111/Stable Diffusion](#AUTOMATIC1111Stable-Diffusion)
-3. [oobabooga/text-generation-webui](#oobaboogatext-generation-webui)
+2. [AUTOMATIC1111/Stable Diffusion](#automatic1111stable-diffusion-text2image)
+3. [oobabooga/text-generation-webui](#oobaboogatext-generation-webui-text2text)
 ## Start here:
 1. Go to [RunPod.io](https://runpod.io) and log in.
 2. Go to _Templates_ and pick the _RunPod Pytorch 2.0.1_ template.

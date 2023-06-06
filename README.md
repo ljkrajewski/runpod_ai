@@ -21,3 +21,5 @@ git clone https://github.com/ljkrajewski/runpod_ai.git
 3. When the "Running on public URL:" line appears, click on the _gradio.live_ link to enter your Automatic 1111 session.
 ## [oobabooga/text-generation-webui](https://github.com/oobabooga/text-generation-webui) (text2text)
 _Coming soon_
+## [Honkware/text-generation-webui](https://github.com/Honkware/text-generation-webui) (text2text)
+_Coming soon_

@@ -1,4 +1,5 @@
-# Text and image creation scripts for RunPod that work
+# Text and image creation scripts for RunPod that work<sup>*</sup>
+_<sup>*</sup>This is a work in progress, so take the claim that these scripts/notebooks work with a grain of salt._
 ## Table of Contents
 1. [Start here](#start-here)
 2. [AUTOMATIC1111/Stable Diffusion (text2image)](#automatic1111stable-diffusion-text2image)

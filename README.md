@@ -14,7 +14,7 @@ _<sup>*</sup>This is a work in progress, so take the claim that these scripts/no
     - 24GB VRAM for most other uses.
 4. Set container size to 50GB, volume size 100GB
 5. Start the pod instance.
-6. After starting a RunPod instance, open a web terminal and run the following commands:
+6. Once RunPod instance has finished booting up, open a web terminal and run the following commands:
 ```
 cd /workspace
 git clone https://github.com/ljkrajewski/runpod_ai.git
@@ -27,4 +27,19 @@ _Coming soon_
 ## [Honkware/text-generation-webui](https://github.com/Honkware/text-generation-webui) (text2text)
 _Coming soon_
 ## [bmaltais/kohya_ss](https://github.com/bmaltais/kohya_ss) (text2image training)
-_Coming soon_
+### Part 1
+1. From your RunPod control panel, open Jupyter Notebook, then 'run all' in _/workstation/runpod_ai/kohya_ss-Part_1.ipynb_
+2. When the last cell of _kohya_ss-Part_1.ipynb_ starts running, create a new launcher tab in Jupyter Notebook, start a terminal session, and run the following command:
+```
+tmux attach -t kohya_session
+```
+3. When the "Running on public URL:" line appears in the terminal, click on the _gradio.live_ link to enter your __kohya_ss__ session.
+4. Continue with [part 2](#part-2). _(Shouldn't have to tell you that, but just in case....)_
+### Part 2
+1. In Jupyter Notebook, create a new launcher tab and start _/workstation/runpod_ai/kohya_ss-Part_2.ipynb_.  __Do not 'run all'!__
+2. In the first cell, edit the following user-editable variables:
+    - _JobName_: The name you give to identify your training job.
+    - 
+3.
+
+_More coming soon_

@@ -5,6 +5,7 @@ _<sup>*</sup>This is a work in progress, so take the claim that these scripts/no
 2. [AUTOMATIC1111/Stable Diffusion (text2image)](#automatic1111stable-diffusion-text2image)
 3. [oobabooga/text-generation-webui (text2text)](#oobaboogatext-generation-webui-text2text)
 4. [Honkware/text-generation-webui (text2text)](#honkwaretext-generation-webui-text2text)
+5. [bmaltais/kohya_ss (text2image training)](#bmaltaiskohya_ss-text2image-training)
 ## Start here:
 1. Go to [RunPod.io](https://runpod.io) and log in.
 2. Go to _Templates_ and pick the _RunPod Pytorch 2.0.1_ template.
@@ -24,4 +25,6 @@ git clone https://github.com/ljkrajewski/runpod_ai.git
 ## [oobabooga/text-generation-webui](https://github.com/oobabooga/text-generation-webui) (text2text)
 _Coming soon_
 ## [Honkware/text-generation-webui](https://github.com/Honkware/text-generation-webui) (text2text)
+_Coming soon_
+## [bmaltais/kohya_ss](https://github.com/bmaltais/kohya_ss) (text2image training)
 _Coming soon_

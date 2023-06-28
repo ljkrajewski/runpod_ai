@@ -4,7 +4,7 @@
   "v_parameterization": false,
   "logging_dir": "/workspace/training/log",
   "train_data_dir": "/workspace/training/images",
-  "reg_data_dir": "/workspace/training/reg",
+  "reg_data_dir": "",
   "output_dir": "/workspace/training/output",
   "max_resolution": "768,768",
   "learning_rate": "0.0001",
@@ -13,8 +13,8 @@
   "train_batch_size": 1,
   "epoch": "10",
   "save_every_n_epochs": "1",
-  "mixed_precision": "fp16",
-  "save_precision": "fp16",
+  "mixed_precision": "bf16",
+  "save_precision": "bf16",
   "seed": "1234",
   "num_cpu_threads_per_process": 2,
   "cache_latents": true,
@@ -25,7 +25,7 @@
   "no_token_padding": false,
   "stop_text_encoder_training": 0,
   "use_8bit_adam": true,
-  "xformers": false,
+  "xformers": true,
   "save_model_as": "safetensors",
   "shuffle_caption": false,
   "save_state": false,
@@ -40,7 +40,7 @@
   "clip_skip": 2,
   "gradient_accumulation_steps": 1.0,
   "mem_eff_attn": false,
-  "output_name": "Debra",
+  "output_name": "latest",
   "model_list": "runwayml/stable-diffusion-v1-5",
   "max_token_length": "75",
   "max_train_epochs": "",
@@ -51,4 +51,3 @@
   "lr_scheduler_num_cycles": "",
   "lr_scheduler_power": ""
 }
-

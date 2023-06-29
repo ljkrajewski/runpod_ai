@@ -2,7 +2,7 @@
   "pretrained_model_name_or_path": "/workspace/v1-5-pruned.safetensors",
   "v2": false,
   "v_parameterization": false,
-  "logging_dir": "/workspace/training/log",
+  "logging_dir": "/workspace/training/logs",
   "train_data_dir": "/workspace/training/images",
   "reg_data_dir": "",
   "output_dir": "/workspace/training/output",

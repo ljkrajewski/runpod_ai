@@ -24,3 +24,5 @@ See [Widget Events.ipynb](https://github.com/jupyter-widgets/ipywidgets/blob/39d
 - [How to Upload /import csv file in Jupyter using ipywidgets (YouTube)](https://www.youtube.com/watch?v=4qohNqUlACw)
 - [How to use FileUpload widget in jupyter lab? (stackoverflow)](https://stackoverflow.com/questions/63215752/how-to-use-fileupload-widget-in-jupyter-lab)
 - [Bring your Jupyter Notebook to life with interactive widgets](https://towardsdatascience.com/bring-your-jupyter-notebook-to-life-with-interactive-widgets-bc12e03f0916)
+
+# Add [d8ahazard/sd_dreambooth_extension](https://github.com/d8ahazard/sd_dreambooth_extension) to runpod_ai SD install

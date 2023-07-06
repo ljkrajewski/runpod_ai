@@ -7,7 +7,7 @@
   "reg_data_dir": "/workspace/training/reg",
   "output_dir": "/workspace/training/output",
   "max_resolution": "768,768",
-  "learning_rate": "0.000005",
+  "learning_rate": "0.000001",
   "lr_scheduler": "constant",
   "lr_warmup": "0",
   "train_batch_size": 1,

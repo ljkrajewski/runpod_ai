@@ -2,7 +2,7 @@
 ```
 from IPython.display import display
 import ipywidgets as widgets
-from pathlib import Path
+#from pathlib import Path
 
 def upload_files(b):
     uploaded = widgets.FileUpload(accept='', multiple=True)

@@ -49,5 +49,6 @@
   "training_comment": "",
   "keep_tokens": "0",
   "lr_scheduler_num_cycles": "",
-  "lr_scheduler_power": ""
+  "lr_scheduler_power": "",
+  "blank_line": "Hopefully this line won't break anything. :)"
 }

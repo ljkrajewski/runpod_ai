@@ -50,7 +50,8 @@ echo "Captioning directory: ""/workspace/training/img/$numRepeats_$tokenName $cl
 echo "BLIP is recommended for phrotorealistic models, WD14 for anime/drawings."
 echo "Remember to add ""$tokenName"" to the captioning prefix along with any other words you wish to train on."
 echo
-sed 's/TOKEN-NAME/$tokenName/g' /workspace/runpod_ai/kohya-ss.conf.orig > /workspace/kohya-ss.conf
+sed 's/TOKENNAME/$tokenName/g' /workspace/runpod_ai/kohya-ss.conf.orig > /workspace/kohya-ss.conf
+sed -i 's/CLASSNAME/$className/g' /workspace/kohya-ss.conf
 echo "2) Load the configuration file at /workspace/kohya-ss.conf into hohya-ss."
 echo "Confirm your sample prompt, make any other parameter changes you wish to, then begin training."
 

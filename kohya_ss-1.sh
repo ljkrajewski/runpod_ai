@@ -14,11 +14,11 @@ pause
 numTrainingFiles=$((`ls -l /workspace/training/img/tmp | wc -l` - 1))
 #for LoRA training, btw 1500-6000 steps per epoch
 minRecRepeats=1500/$numTrainingFiles+1
-if [[ $minRecRepeats -lt 10 ]]; then
+if [[ "$minRecRepeats" -lt "10" ]]; then
   minRecRepeats=10
 fi
 maxRecRepeats=6000/$numTrainingFiles+1
-if [[ $maxRecRepeats -lt 10 ]]; then
+if [[ "$maxRecRepeats" -lt "10" ]]; then
   maxRecRepeats=10
 fi
 echo

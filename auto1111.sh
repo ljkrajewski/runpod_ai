@@ -2,17 +2,13 @@
 
 function dlFromGoogle {
 #because Google is a pain in the @$$.
-#Usage: dlFromGoogle 'http://drive.google.com/link/to/file' 'filename.ext' '/dest/ina/tion/directory'
+#Downloads a file from Google drive to the current directory.
+#Usage: dlFromGoogle 'http://drive.google.com/link/to/file' 'filename.ext'
   link=$1
   filename=$2
-  destDir=$3
-  #echo Downloading from Google Drive
   fileid=`echo $link | awk -F '/' '{ print $6 }'`
-  #echo File ID = $fileid
-  html=`curl -c ./cookie -s -L "https://drive.google.com/uc?export=download&id=${fileid}"`
-  #echo html = $html
-  #echo ${html}|grep -Po '(confirm=[a-zA-Z0-9\-_]+)'
-  curl -Lb ./cookie "https://drive.google.com/uc?export=download&`echo ${html}|grep -Po '(confirm=[a-zA-Z0-9\-_]+)'`&id=${fileid}" -o ${filename}
+  html=`curl -c ./cookie -s -L "https://drive.google.com/uc?export=download&id=$fileid"`
+  curl -Lb ./cookie "https://drive.google.com/uc?export=download&`echo $html|grep -Po '(confirm=[a-zA-Z0-9\-_]+)'`&id=$fileid" -o $filename
 }
 
 cd /workspace

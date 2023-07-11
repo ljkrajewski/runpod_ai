@@ -25,7 +25,7 @@ echo
 echo "Recommended number of repeats is between $minRecRepeats and $maxRecRepeats per image."
 echo "Note: Easy subjects like faces can use fewer repeats."
 read -p "Enter number of repeats per image:  " numRepeats
-cd mkdir -p /workspace/training/img
+cd /workspace/training/img
 mv tmp "$numRepeats_$tokenName $className"
 
 echo
@@ -36,7 +36,7 @@ echo "When your regularization images are complete, move them to /workspace/trai
 echo "You can proceed when the regularization images are moved."
 pause
 
-cd mkdir -p /workspace/training/reg
+cd /workspace/training/reg
 mv tmp "1_$className"
 
 echo

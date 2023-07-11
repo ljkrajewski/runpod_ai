@@ -31,6 +31,7 @@ git clone https://github.com/ljkrajewski/runpod_ai.git
 2. When the "Running on public URL:" line appears, click on the _gradio.live_ link to enter your Automatic 1111 session.
 ## [bmaltais/kohya_ss](https://github.com/bmaltais/kohya_ss) (text2image training)
 ### Training resources:
+- [Tutorial: Dreambooth LoRA training using Kohya_SS (article)](https://civitai.com/articles/391/tutorial-dreambooth-lora-training-using-kohyass)
 - [The guide to fine-tuning Stable Diffusion with your own images (article)](https://tryolabs.com/blog/2022/10/25/the-guide-to-fine-tuning-stable-diffusion-with-your-own-images)
 - [Training LoRA with Kohya (theory included!) (YouTube)](https://www.youtube.com/watch?v=xholR62Q2tY)
 - [LORA + Checkpoint Model Training GUIDE - Get the BEST RESULTS super easy (YouTube)](https://www.youtube.com/watch?v=j-So4VYTL98)

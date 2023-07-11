@@ -21,6 +21,8 @@ git clone https://github.com/ljkrajewski/runpod_ai.git
     - [oobabooga/text-generation-webui (text2text)](#oobaboogatext-generation-webui-text2text)
     - [Honkware/text-generation-webui (text2text)](#honkwaretext-generation-webui-text2text)
 ## [AUTOMATIC1111/Stable Diffusion](https://github.com/AUTOMATIC1111/stable-diffusion-webui) (text2image)
+### Training resources:
+- [AMAZING SD Models - And how to get the MOST out of them! (YouTube)](https://www.youtube.com/watch?v=ezNDCWhv4pQ)
 ### Directions:
 1. In Jupyter Notebook, open a new terminal tab and run
    ```

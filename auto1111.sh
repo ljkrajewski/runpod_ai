@@ -15,7 +15,7 @@ git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git
 ## Models ##
 cd /workspace/stable-diffusion-webui/models/Stable-diffusion
 wget https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned.safetensors
-wget https://civitai.com/api/download/models/51913 && mv 51913 edgeOfRealism.safetensors
+curl https://civitai.com/api/download/models/51913 -o edgeOfRealism.safetensors -L
 
 ## Extentions ##
 cd /workspace/stable-diffusion-webui/extensions

@@ -47,6 +47,7 @@ echo
 echo "Last few steps..."
 echo "1) Caption your training files."
 echo "Captioning directory: ""/workspace/training/img/$numRepeats_$tokenName $className"""
+echo "BLIP is recommended for phrotorealistic models, WD14 for anime/drawings."
 echo "Remember to add ""$tokenName"" to the captioning prefix along with any other words you wish to train on."
 echo
 sed 's/TOKEN-NAME/$tokenName/g' /workspace/runpod_ai/kohya-ss.conf.orig > /workspace/kohya-ss.conf

@@ -33,11 +33,11 @@ git clone https://github.com/ljkrajewski/runpod_ai.git
 - [Training LoRA with Kohya (theory included!) (YouTube)](https://www.youtube.com/watch?v=xholR62Q2tY)
 - [LORA + Checkpoint Model Training GUIDE - Get the BEST RESULTS super easy (YouTube)](https://www.youtube.com/watch?v=j-So4VYTL98)
 ### Directions:
-1. In Jupyter Notebook, open a new terminal tab and run
+1. In Jupyter Notebook, open a new terminal tab and run:
    ```
-   /workspace/runpod_ai/koyha_ss.sh
+   /workspace/runpod_ai/koyha_ss-1.sh
    ```
-2. When the "Running on public URL:" line appears, click on the _gradio.live_ link to enter your kohya_ss session.
+2. Answer the prompts and follow the directions.
 ## [oobabooga/text-generation-webui](https://github.com/oobabooga/text-generation-webui) (text2text)
 _Coming soon_
 ## [Honkware/text-generation-webui](https://github.com/Honkware/text-generation-webui) (text2text)

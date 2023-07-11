@@ -10,12 +10,21 @@ function dlFromGoogle {
 }
 
 cd /workspace
+git lfs install
 git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git
 
 ## Models ##
 cd /workspace/stable-diffusion-webui/models/Stable-diffusion
 wget https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned.safetensors
 curl https://civitai.com/api/download/models/51913 -o edgeOfRealism.safetensors -L
+
+## VAE ##
+cd /workspace/stable-diffusion-webui/models/VAE
+wget https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.safetensors
+
+## Embeddings ##
+cd /workspace/stable-diffusion-webui/embeddings
+git clone https://huggingface.co/nolanaatama/embeddings
 
 ## Extentions ##
 cd /workspace/stable-diffusion-webui/extensions
@@ -24,7 +33,6 @@ git clone https://github.com/kohya-ss/sd-webui-additional-networks.git
 # ControlNet for Stable Diffusion WebUI (https://github.com/Mikubill/sd-webui-controlnet)
 git clone https://github.com/Mikubill/sd-webui-controlnet.git
 cd sd-webui-controlnet/models
-git lfs install
 git clone https://huggingface.co/lllyasviel/ControlNet-v1-1
 
 ## Start the GUI ##

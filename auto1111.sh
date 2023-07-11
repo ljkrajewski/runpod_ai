@@ -30,6 +30,14 @@ git clone https://huggingface.co/nolanaatama/embeddings
 cd /workspace/stable-diffusion-webui/extensions
 # Kohya-ss/Additional Networks models (https://github.com/kohya-ss/sd-webui-additional-networks.git)
 git clone https://github.com/kohya-ss/sd-webui-additional-networks.git
+# Booru Tag Autocomplete
+# -- get URL from SD extentions
+# Image browser
+# -- get URL from SD extentions
+# Aspect Ratio Helper
+# -- get URL from SD extentions
+# System Info
+# -- get URL from SD extentions
 # ControlNet for Stable Diffusion WebUI (https://github.com/Mikubill/sd-webui-controlnet)
 git clone https://github.com/Mikubill/sd-webui-controlnet.git
 cd sd-webui-controlnet/models

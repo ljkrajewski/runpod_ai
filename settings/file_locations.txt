@@ -1,0 +1,3 @@
+stable-diffusion-webui/extensions/a1111-sd-webui-tagcomplete/tags/temp/emb.txt
+stable-diffusion-webui/test
+stable-diffusion-webui/config.json

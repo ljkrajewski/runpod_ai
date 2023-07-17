@@ -15,8 +15,9 @@ git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git
 
 ## Models ##
 cd /workspace/stable-diffusion-webui/models/Stable-diffusion
-wget https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned.safetensors
-curl https://civitai.com/api/download/models/51913 -o edgeOfRealism.safetensors -L
+#wget https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned.safetensors
+#curl https://civitai.com/api/download/models/51913 -o edgeOfRealism.safetensors -L
+curl https://civitai.com/api/download/models/90072 -o Photon.safetensors -L
 
 ## VAE ##
 cd /workspace/stable-diffusion-webui/models/VAE

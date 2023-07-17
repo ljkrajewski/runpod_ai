@@ -30,7 +30,6 @@ wget https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-
 #curl https://civitai.com/api/download/models/77173 -o UnrealisticDream.?? -L
 #curl https://civitai.com/api/download/models/94057 -o FastNegativeV2.?? -L
 
-
 ## Extentions ##
 cd /workspace/stable-diffusion-webui/extensions
 # Kohya-ss/Additional Networks models (https://github.com/kohya-ss/sd-webui-additional-networks.git)
@@ -43,6 +42,8 @@ git clone https://github.com/AlUlkesh/stable-diffusion-webui-images-browser.git
 git clone https://github.com/thomasasfk/sd-webui-aspect-ratio-helper.git
 # System Info
 git clone https://github.com/vladmandic/sd-extension-system-info.git
+# Stable Diffusion Dynamic Prompts
+git clone https://github.com/adieyal/sd-dynamic-prompts.git
 # ControlNet for Stable Diffusion WebUI (https://github.com/Mikubill/sd-webui-controlnet)
 git clone https://github.com/Mikubill/sd-webui-controlnet.git
 cd sd-webui-controlnet/models

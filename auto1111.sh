@@ -44,7 +44,7 @@ git clone https://github.com/thomasasfk/sd-webui-aspect-ratio-helper.git
 # System Info
 git clone https://github.com/vladmandic/sd-extension-system-info.git
 # SDXL for A1111 (demo)
-git clone https://github.com/lifeisboringsoprogramming/sd-webui-xldemo-txt2img.git
+#git clone https://github.com/lifeisboringsoprogramming/sd-webui-xldemo-txt2img.git
 # ControlNet for Stable Diffusion WebUI (https://github.com/Mikubill/sd-webui-controlnet)
 git clone https://github.com/Mikubill/sd-webui-controlnet.git
 cd sd-webui-controlnet/models

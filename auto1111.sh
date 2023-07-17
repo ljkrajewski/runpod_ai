@@ -26,6 +26,10 @@ wget https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-
 ## Embeddings ##
 #cd /workspace/stable-diffusion-webui/embeddings
 #git clone https://huggingface.co/nolanaatama/embeddings
+#curl https://civitai.com/api/download/models/77169 -o BadDream.?? -L
+#curl https://civitai.com/api/download/models/77173 -o UnrealisticDream.?? -L
+#curl https://civitai.com/api/download/models/94057 -o FastNegativeV2.?? -L
+
 
 ## Extentions ##
 cd /workspace/stable-diffusion-webui/extensions

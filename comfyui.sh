@@ -2,6 +2,7 @@
 # ComfyUI for SDXL
 USERNAME='ljkrajewski'
 TOKEN='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'   #It's only a read token. Have fun.
+# But seriously, I'd appreciate it if you went to Hugging Face and got your own token. It's free.
 #apt install psmisc -y
 fuser -k 3000/tcp
 

@@ -19,6 +19,7 @@ git clone https://github.com/ljkrajewski/runpod_ai.git
 ```
 8. Click on the project you wish to run and follow its directections.
     - [AUTOMATIC1111/Stable Diffusion (text2image)](#automatic1111stable-diffusion-text2image)
+    - [ComfyUI/SDXL (text2image)](#comfyuisdxl-text2image)
     - [bmaltais/kohya_ss (text2image training)](#bmaltaiskohya_ss-text2image-training)
     - [oobabooga/text-generation-webui (text2text)](#oobaboogatext-generation-webui-text2text)
     - [Honkware/text-generation-webui (text2text)](#honkwaretext-generation-webui-text2text)
@@ -30,7 +31,16 @@ git clone https://github.com/ljkrajewski/runpod_ai.git
    ```
    /workspace/runpod_ai/auto1111.sh
    ```
-2. When the "Running on public URL:" line appears, click on the _gradio.live_ link to enter your Automatic 1111 session.
+2. When ... _[Changing the directions to no longer use gradio link]_
+## [ComfyUI/SDXL](https://github.com/comfyanonymous/ComfyUI) (text2image)
+### Training resources:
+- [[Tutorial] How To Use ComfyUI On Your PC, On Google Colab (Free) And On RunPod With SDXL Full Tutorial / Guide](https://github.com/FurkanGozukara/Stable-Diffusion/blob/main/Tutorials/How-To-Use-ComfyUI-On-Your-PC-On-RunPod-On-Colab-With-SDXL.md)
+### Directions:
+1. In Jupyter Notebook, open a new terminal tab and run
+   ```
+   /workspace/runpod_ai/comfyui.sh
+   ```
+2. When ... _[Changing the directions to no longer use gradio link]_
 ## [bmaltais/kohya_ss](https://github.com/bmaltais/kohya_ss) (text2image training)
 ### Training resources:
 - [Tutorial: Dreambooth LoRA training using Kohya_SS (article)](https://civitai.com/articles/391/tutorial-dreambooth-lora-training-using-kohyass)

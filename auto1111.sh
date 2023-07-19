@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+fuser -k 7860/tcp
 
 function dlFromGoogle {
 #because Google is a pain in the @$$.
@@ -53,6 +54,7 @@ git clone https://huggingface.co/lllyasviel/ControlNet-v1-1
 cd /workspace/stable-diffusion-webui/
 cp /workspace/runpod_ai/settings/config.json .
 cp /workspace/runpod_ai/emb.txt extensions/a1111-sd-webui-tagcomplete/tags/temp
-cmdlineArgs="--xformers --enable-insecure-extension-access --disable-safe-unpickle"
-sed -i 's/#export COMMANDLINE_ARGS=""/export COMMANDLINE_ARGS="--share $cmdlineArgs"/' webui-user.sh
+#cmdlineArgs="--share --xformers --enable-insecure-extension-access --disable-safe-unpickle"
+cmdlineArgs="--listen 0.0.0.0 --port 7860 --xformers --enable-insecure-extension-access --disable-safe-unpickle"
+sed -i 's/#export COMMANDLINE_ARGS=""/export COMMANDLINE_ARGS="$cmdlineArgs"/' webui-user.sh
 ./webui.sh -f

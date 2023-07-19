@@ -18,13 +18,13 @@ cd /workspace/ComfyUI/models/vae
 wget https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.safetensors
 
 cd /workspace/ComfyUI
-python -m venv venv
-cd venv
-source bin/activate
+#python -m venv venv
+#cd venv
+#source bin/activate
 pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 pip install -U --pre xformers
-cd ..
-#pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu118 xformers
+#cd ..
+
 # If you get the "Torch not compiled with CUDA enabled" error, uninstall torch with:
 #pip uninstall torch
 pip install -r requirements.txt

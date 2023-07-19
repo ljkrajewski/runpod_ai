@@ -15,6 +15,9 @@ source bin/activate
 pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 pip install -U --pre xformers
 cd ..
+#pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu118 xformers
+# If you get the "Torch not compiled with CUDA enabled" error, uninstall torch with:
+#pip uninstall torch
 pip install -r requirements.txt
 
 cd /workspace/ComfyUI/models/checkpoints
@@ -25,9 +28,4 @@ cd /workspace/ComfyUI/models/vae
 wget https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.safetensors
 
 cd /workspace/ComfyUI
-pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu118 xformers
-# If you get the "Torch not compiled with CUDA enabled" error, uninstall torch with:
-#pip uninstall torch
-pip install -r requirements.txt
-
 python main.py --listen 0.0.0.0 --port 3000

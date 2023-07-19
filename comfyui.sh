@@ -2,7 +2,7 @@
 # ComfyUI for SDXL
 USERNAME='ljkrajewski'
 TOKEN='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'   #It's only a read token. Have fun.
-apt install psmisc -y
+#apt install psmisc -y
 fuser -k 3000/tcp
 
 # Manual install - https://github.com/FurkanGozukara/Stable-Diffusion/blob/main/Tutorials/How-To-Use-ComfyUI-On-Your-PC-On-RunPod-On-Colab-With-SDXL.md

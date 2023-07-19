@@ -34,7 +34,8 @@ git clone https://github.com/ljkrajewski/runpod_ai.git
 2. When ... _[Changing the directions to no longer use gradio link]_
 ## [ComfyUI/SDXL](https://github.com/comfyanonymous/ComfyUI) (text2image)
 ### Training resources:
-- [[Tutorial] How To Use ComfyUI On Your PC, On Google Colab (Free) And On RunPod With SDXL Full Tutorial / Guide](https://github.com/FurkanGozukara/Stable-Diffusion/blob/main/Tutorials/How-To-Use-ComfyUI-On-Your-PC-On-RunPod-On-Colab-With-SDXL.md)
+- [How To Use ComfyUI On Your PC, On Google Colab (Free) And On RunPod With SDXL Full Tutorial / Guide](https://github.com/FurkanGozukara/Stable-Diffusion/blob/main/Tutorials/How-To-Use-ComfyUI-On-Your-PC-On-RunPod-On-Colab-With-SDXL.md)
+- [ComfyUI Master Tutorial - Stable Diffusion XL (SDXL) - Install On PC, Google Colab (Free) & RunPod (YouTube)](https://www.youtube.com/watch?v=FnMHbhvWUhE)
 ### Directions:
 1. In Jupyter Notebook, open a new terminal tab and run
    ```

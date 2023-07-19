@@ -6,7 +6,9 @@ _<sup>*</sup>This is a work in progress, so take the claim that these scripts/no
 3. Select a pod to start.  
     - 48GB+ VRAM for 13B+ LLMs or hi-res Stable Diffusion pictures.
     - 20GB VRAM for most other uses.
-4. Set container size to 50GB, volume size 100GB
+4. Set the following customizations:
+   - Volume size: 150GB
+   - TCP ports: 3000, 7860
 5. Start the pod instance.
 6. Once RunPod instance has finished booting up, connect to Jupyter Notebook and open a terminal tab.
 7. Inside the terminal tab, run the following commands:

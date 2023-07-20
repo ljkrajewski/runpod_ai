@@ -26,10 +26,10 @@ wget https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-
 
 ## Embeddings ##
 #cd /workspace/stable-diffusion-webui/embeddings
-#git clone https://huggingface.co/nolanaatama/embeddings
-#curl https://civitai.com/api/download/models/77169 -o BadDream.?? -L
-#curl https://civitai.com/api/download/models/77173 -o UnrealisticDream.?? -L
-#curl https://civitai.com/api/download/models/94057 -o FastNegativeV2.?? -L
+git clone https://huggingface.co/nolanaatama/embeddings
+curl https://civitai.com/api/download/models/77169 -o BadDream.pt -L
+curl https://civitai.com/api/download/models/77173 -o UnrealisticDream.pt -L
+curl https://civitai.com/api/download/models/94057 -o FastNegativeV2.pt -L
 
 ## Extentions ##
 cd /workspace/stable-diffusion-webui/extensions
@@ -55,6 +55,6 @@ cd /workspace/stable-diffusion-webui/
 cp /workspace/runpod_ai/settings/config.json .
 cp /workspace/runpod_ai/emb.txt extensions/a1111-sd-webui-tagcomplete/tags/temp
 #cmdlineArgs="--share --xformers --enable-insecure-extension-access --disable-safe-unpickle"
-cmdlineArgs="--listen 0.0.0.0 --port 7860 --xformers --enable-insecure-extension-access --disable-safe-unpickle"
-sed -i 's/#export COMMANDLINE_ARGS=""/export COMMANDLINE_ARGS="$cmdlineArgs"/' webui-user.sh
+cmdLineArgs="--listen --port 7860 --xformers --enable-insecure-extension-access --disable-safe-unpickle"
+sed -i "s/#export COMMANDLINE_ARGS=\"\"/export COMMANDLINE_ARGS=\"$cmdlineArgs\"/" webui-user.sh
 ./webui.sh -f

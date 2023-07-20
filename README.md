@@ -50,6 +50,7 @@ Contains examples of what is achievable with ComfyUI. Includes workflows for:
    /workspace/runpod_ai/comfyui.sh
    ```
 2. When ... _[Changing the directions to no longer use gradio link]_
+3. Download [ComfyUI_Workflow_SDXL.json](https://www.patreon.com/file?h=86104919&i=14970377) _[[source page]](https://www.patreon.com/posts/comfyui-workflow-86104919)_, then drag-and-drop it into the ComfyUI browser window.
 ## [bmaltais/kohya_ss](https://github.com/bmaltais/kohya_ss) (text2image training)
 ### Training resources:
 - [Tutorial: Dreambooth LoRA training using Kohya_SS (article)](https://civitai.com/articles/391/tutorial-dreambooth-lora-training-using-kohyass)

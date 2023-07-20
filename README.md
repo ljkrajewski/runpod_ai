@@ -36,6 +36,14 @@ git clone https://github.com/ljkrajewski/runpod_ai.git
 ### Training resources:
 - [How To Use ComfyUI On Your PC, On Google Colab (Free) And On RunPod With SDXL Full Tutorial / Guide](https://github.com/FurkanGozukara/Stable-Diffusion/blob/main/Tutorials/How-To-Use-ComfyUI-On-Your-PC-On-RunPod-On-Colab-With-SDXL.md)
 - [ComfyUI Master Tutorial - Stable Diffusion XL (SDXL) - Install On PC, Google Colab (Free) & RunPod (YouTube)](https://www.youtube.com/watch?v=FnMHbhvWUhE)
+- [ComfyUI Examples](https://comfyanonymous.github.io/ComfyUI_examples/)  
+Contains examples of what is achievable with ComfyUI. Includes workflows for:
+    - [2-pass txt2image](https://comfyanonymous.github.io/ComfyUI_examples/2_pass_txt2img/)
+    - [img2img](https://comfyanonymous.github.io/ComfyUI_examples/img2img/)
+    - [inpainting](https://comfyanonymous.github.io/ComfyUI_examples/inpaint/)
+    - [using LoRAs](https://comfyanonymous.github.io/ComfyUI_examples/lora/)
+    - [ControlNet and T2I-Adapter](https://comfyanonymous.github.io/ComfyUI_examples/controlnet/)
+    - [Textual Inversion Embeddings](https://comfyanonymous.github.io/ComfyUI_examples/textual_inversion_embeddings/)
 ### Directions:
 1. In Jupyter Notebook, open a new terminal tab and run
    ```

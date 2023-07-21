@@ -9,6 +9,9 @@ fuser -k 3000/tcp
 # Manual install - https://github.com/FurkanGozukara/Stable-Diffusion/blob/main/Tutorials/How-To-Use-ComfyUI-On-Your-PC-On-RunPod-On-Colab-With-SDXL.md
 cd /workspace
 git clone https://github.com/comfyanonymous/ComfyUI.git
+# Change default workflow
+mv /workspace/ComfyUI/web/scripts/defaultGraph.js{,.bak}
+cp /workspace/runpod_ai/settings/ComfyUI_Workflow_SDXL.js /workspace/ComfyUI/web/scripts/defaultGraph.js
 
 cd /workspace/ComfyUI/models/checkpoints
 wget https://$USERNAME:$TOKEN@huggingface.co/stabilityai/stable-diffusion-xl-base-0.9/resolve/main/sd_xl_base_0.9.safetensors
@@ -16,6 +19,20 @@ wget https://$USERNAME:$TOKEN@huggingface.co/stabilityai/stable-diffusion-xl-ref
 wget https://huggingface.co/SG161222/Realistic_Vision_V4.0/resolve/main/Realistic_Vision_V4.0.safetensors
 cd /workspace/ComfyUI/models/vae
 wget https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.safetensors
+
+cd /workspace/ComfyUI/models/embeddings
+#git clone https://huggingface.co/nolanaatama/embeddings
+curl https://civitai.com/api/download/models/77169 -o BadDream.pt -L
+curl https://civitai.com/api/download/models/77173 -o UnrealisticDream.pt -L
+curl https://civitai.com/api/download/models/94057 -o FastNegativeV2.pt -L
+
+cd /workspace/ComfyUI/models/vae
+wget https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.safetensors
+
+#cd /workspace/ComfyUI/models/loras
+
+cd /workspace/ComfyUI/models/controlnet
+git clone https://huggingface.co/lllyasviel/ControlNet-v1-1
 
 cd /workspace/ComfyUI
 #python -m venv venv

@@ -25,8 +25,8 @@ cd /workspace/stable-diffusion-webui/models/VAE
 wget https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.safetensors
 
 ## Embeddings ##
-#cd /workspace/stable-diffusion-webui/embeddings
-git clone https://huggingface.co/nolanaatama/embeddings
+cd /workspace/stable-diffusion-webui/embeddings
+#git clone https://huggingface.co/nolanaatama/embeddings
 curl https://civitai.com/api/download/models/77169 -o BadDream.pt -L
 curl https://civitai.com/api/download/models/77173 -o UnrealisticDream.pt -L
 curl https://civitai.com/api/download/models/94057 -o FastNegativeV2.pt -L

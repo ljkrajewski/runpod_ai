@@ -36,7 +36,8 @@ git clone https://github.com/ljkrajewski/runpod_ai.git
 ### Training resources:
 - [How To Use ComfyUI On Your PC, On Google Colab (Free) And On RunPod With SDXL Full Tutorial / Guide](https://github.com/FurkanGozukara/Stable-Diffusion/blob/main/Tutorials/How-To-Use-ComfyUI-On-Your-PC-On-RunPod-On-Colab-With-SDXL.md)
 - [ComfyUI Master Tutorial - Stable Diffusion XL (SDXL) - Install On PC, Google Colab (Free) & RunPod (YouTube)](https://www.youtube.com/watch?v=FnMHbhvWUhE)
-- [ComfyUI Examples](https://comfyanonymous.github.io/ComfyUI_examples/)  
+- [ComfyUI Examples](https://comfyanonymous.github.io/ComfyUI_examples/)
+- [ComfyUI SDXL Workflow](https://www.patreon.com/posts/comfyui-workflow-86104919)
 Contains examples of what is achievable with ComfyUI. Includes workflows for:
     - [2-pass txt2image](https://comfyanonymous.github.io/ComfyUI_examples/2_pass_txt2img/)
     - [img2img](https://comfyanonymous.github.io/ComfyUI_examples/img2img/)
@@ -50,7 +51,7 @@ Contains examples of what is achievable with ComfyUI. Includes workflows for:
    /workspace/runpod_ai/comfyui.sh
    ```
 2. When ... _[Changing the directions to no longer use gradio link]_
-3. Download [ComfyUI_Workflow_SDXL.json](https://www.patreon.com/file?h=86104919&i=14970377) _[[source page]](https://www.patreon.com/posts/comfyui-workflow-86104919)_, then drag-and-drop it into the ComfyUI browser window.
+3. When ComfyUI is running in your web browser, load the default workflow.
 ## [bmaltais/kohya_ss](https://github.com/bmaltais/kohya_ss) (text2image training)
 ### Training resources:
 - [Tutorial: Dreambooth LoRA training using Kohya_SS (article)](https://civitai.com/articles/391/tutorial-dreambooth-lora-training-using-kohyass)

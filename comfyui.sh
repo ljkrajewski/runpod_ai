@@ -13,6 +13,13 @@ git clone https://github.com/comfyanonymous/ComfyUI.git
 # Change default workflow
 #mv /workspace/ComfyUI/web/scripts/defaultGraph.js{,.bak}
 #sed 's/^{$/export const defaultGraph = {/' /workspace/runpod_ai/settings/ComfyUI_Workflow_SDXL.json > /workspace/ComfyUI/web/scripts/defaultGraph.js
+cd /workspace/ComfyUI
+#python -m venv venv
+#cd venv
+#source bin/activate
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+pip install -U --pre xformers
+pip install -r requirements.txt
 
 cd /workspace/ComfyUI/models/checkpoints
 wget https://$USERNAME:$TOKEN@huggingface.co/stabilityai/stable-diffusion-xl-base-0.9/resolve/main/sd_xl_base_0.9.safetensors
@@ -30,14 +37,6 @@ cd /workspace/ComfyUI/models/vae
 wget https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.safetensors
 
 #cd /workspace/ComfyUI/models/loras
-
-cd /workspace/ComfyUI
-#python -m venv venv
-#cd venv
-#source bin/activate
-pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
-pip install -U --pre xformers
-pip install -r requirements.txt
 
 cd /workspace/ComfyUI/models/custom_nodes
 #ComfyUI Manager

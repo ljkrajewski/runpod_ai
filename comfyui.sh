@@ -1,3 +1,4 @@
+
 #!/usr/bin/env bash
 # ComfyUI for SDXL
 USERNAME='ljkrajewski'
@@ -48,6 +49,10 @@ cd comfy_controlnet_preprocessors
 python install.py
 cd /workspace/ComfyUI/models/controlnet
 git clone https://huggingface.co/lllyasviel/ControlNet-v1-1
+#git clone https://huggingface.co/TencentARC/T2I-Adapter
+#--find a way to 'manually' create yaml files--
+#mv coadapter-style* /workspace/ComfyUI/models/style
+#mv t1adapter-style* /workspace/ComfyUI/models/style
 
 cd /workspace/ComfyUI
 python main.py --listen 0.0.0.0 --port 3000

@@ -30,20 +30,24 @@ wget https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-
 
 #cd /workspace/ComfyUI/models/loras
 
-cd /workspace/ComfyUI/models/controlnet
-git clone https://huggingface.co/lllyasviel/ControlNet-v1-1
-
 cd /workspace/ComfyUI
 #python -m venv venv
 #cd venv
 #source bin/activate
 pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 pip install -U --pre xformers
-#cd ..
-
-# If you get the "Torch not compiled with CUDA enabled" error, uninstall torch with:
-#pip uninstall torch
 pip install -r requirements.txt
+
+cd /workspace/ComfyUI/models/custom_nodes
+#ComfyUI Manager
+git clone https://github.com/ltdrdata/ComfyUI-Manager.git
+#ControlNet
+# Install instructions- https://www.youtube.com/watch?v=FJwcBTL_voc
+git clone https://github.com/Fannovel16/comfy_controlnet_preprocessors.git
+cd comfy_controlnet_preprocessors
+python install.py
+cd /workspace/ComfyUI/models/controlnet
+git clone https://huggingface.co/lllyasviel/ControlNet-v1-1
 
 cd /workspace/ComfyUI
 python main.py --listen 0.0.0.0 --port 3000

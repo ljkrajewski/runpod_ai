@@ -56,5 +56,5 @@ cp /workspace/runpod_ai/settings/config.json .
 cp /workspace/runpod_ai/emb.txt extensions/a1111-sd-webui-tagcomplete/tags/temp
 #cmdlineArgs="--share --xformers --enable-insecure-extension-access --disable-safe-unpickle"
 cmdLineArgs="--listen --port 7860 --xformers --enable-insecure-extension-access --disable-safe-unpickle"
-sed -i "s/#export COMMANDLINE_ARGS=\"\"/export COMMANDLINE_ARGS=\"$cmdlineArgs\"/" webui-user.sh
+sed -i "s/#export COMMANDLINE_ARGS=\"\"/export COMMANDLINE_ARGS=\"$cmdLineArgs\"/" webui-user.sh
 ./webui.sh -f

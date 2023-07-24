@@ -10,15 +10,14 @@ fuser -k 3000/tcp
 cd /workspace
 git clone https://github.com/comfyanonymous/ComfyUI.git
 # Change default workflow
-mv /workspace/ComfyUI/web/scripts/defaultGraph.js{,.bak}
-sed 's/^{$/export const defaultGraph = {/' /workspace/runpod_ai/settings/ComfyUI_Workflow_SDXL.json > /workspace/ComfyUI/web/scripts/defaultGraph.js
+#mv /workspace/ComfyUI/web/scripts/defaultGraph.js{,.bak}
+#sed 's/^{$/export const defaultGraph = {/' /workspace/runpod_ai/settings/ComfyUI_Workflow_SDXL.json > /workspace/ComfyUI/web/scripts/defaultGraph.js
 
 cd /workspace/ComfyUI/models/checkpoints
 wget https://$USERNAME:$TOKEN@huggingface.co/stabilityai/stable-diffusion-xl-base-0.9/resolve/main/sd_xl_base_0.9.safetensors
 wget https://$USERNAME:$TOKEN@huggingface.co/stabilityai/stable-diffusion-xl-refiner-0.9/resolve/main/sd_xl_refiner_0.9.safetensors
 wget https://huggingface.co/SG161222/Realistic_Vision_V4.0/resolve/main/Realistic_Vision_V4.0.safetensors
-cd /workspace/ComfyUI/models/vae
-wget https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.safetensors
+curl https://civitai.com/api/download/models/90072 -o Photon.safetensors -L
 
 cd /workspace/ComfyUI/models/embeddings
 #git clone https://huggingface.co/nolanaatama/embeddings

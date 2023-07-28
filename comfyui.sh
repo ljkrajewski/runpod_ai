@@ -1,4 +1,3 @@
-
 #!/usr/bin/env bash
 # ComfyUI for SDXL
 USERNAME='ljkrajewski'

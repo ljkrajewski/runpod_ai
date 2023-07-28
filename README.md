@@ -21,6 +21,7 @@ git clone https://github.com/ljkrajewski/runpod_ai.git
     - [AUTOMATIC1111/Stable Diffusion (text2image)](#automatic1111stable-diffusion-text2image)
     - [ComfyUI/SDXL (text2image)](#comfyuisdxl-text2image)
     - [bmaltais/kohya_ss (text2image training)](#bmaltaiskohya_ss-text2image-training)
+    - [kohya-ss/sd-scripts](#kohya-sssd-scripts-text2image-training)
     - [oobabooga/text-generation-webui (text2text)](#oobaboogatext-generation-webui-text2text)
     - [Honkware/text-generation-webui (text2text)](#honkwaretext-generation-webui-text2text)
 ## [AUTOMATIC1111/Stable Diffusion](https://github.com/AUTOMATIC1111/stable-diffusion-webui) (text2image)

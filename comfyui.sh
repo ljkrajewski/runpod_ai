@@ -32,6 +32,7 @@ cd /workspace/ComfyUI/models/embeddings
 curl https://civitai.com/api/download/models/77169 -o BadDream.pt -L
 curl https://civitai.com/api/download/models/77173 -o UnrealisticDream.pt -L
 curl https://civitai.com/api/download/models/94057 -o FastNegativeV2.pt -L
+curl https://civitai.com/api/download/models/125849 -o Bad-Hands-5.pt -L
 
 cd /workspace/ComfyUI/models/vae
 wget https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.safetensors
@@ -46,8 +47,8 @@ git clone https://github.com/ltdrdata/ComfyUI-Manager.git
 git clone https://github.com/Fannovel16/comfy_controlnet_preprocessors.git
 cd comfy_controlnet_preprocessors
 python install.py
-cd /workspace/ComfyUI/models/controlnet
-git clone https://huggingface.co/lllyasviel/ControlNet-v1-1
+#cd /workspace/ComfyUI/models/controlnet
+#git clone https://huggingface.co/lllyasviel/ControlNet-v1-1
 #git clone https://huggingface.co/TencentARC/T2I-Adapter
 #--find a way to 'manually' create yaml files--
 #mv coadapter-style* /workspace/ComfyUI/models/style

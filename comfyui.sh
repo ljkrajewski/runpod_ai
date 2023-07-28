@@ -44,9 +44,9 @@ cd /workspace/ComfyUI/models/custom_nodes
 git clone https://github.com/ltdrdata/ComfyUI-Manager.git
 #ControlNet
 # Install instructions- https://www.youtube.com/watch?v=FJwcBTL_voc
-git clone https://github.com/Fannovel16/comfy_controlnet_preprocessors.git
-cd comfy_controlnet_preprocessors
-python install.py
+#git clone https://github.com/Fannovel16/comfy_controlnet_preprocessors.git
+#cd comfy_controlnet_preprocessors
+#python install.py
 #cd /workspace/ComfyUI/models/controlnet
 #git clone https://huggingface.co/lllyasviel/ControlNet-v1-1
 #git clone https://huggingface.co/TencentARC/T2I-Adapter

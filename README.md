@@ -34,6 +34,8 @@ git clone https://github.com/ljkrajewski/runpod_ai.git
 2. When ... _[Changing the directions to no longer use gradio link]_
 ## [ComfyUI/SDXL](https://github.com/comfyanonymous/ComfyUI) (text2image)
 ### Training resources:
+- [Scott Detweiler's ComfyUI playlist (YouTube)](https://www.youtube.com/playlist?list=PLIF38owJLhR1EGDY4kOnsEnMyolZgza1x)
+IMO, best resource for learning to use ComfyUI from scratch.
 - [ComfyUI Tutorial](https://comfyanonymous.github.io/ComfyUI_tutorial_vn/)
 - [How To Use ComfyUI On Your PC, On Google Colab (Free) And On RunPod With SDXL Full Tutorial / Guide](https://github.com/FurkanGozukara/Stable-Diffusion/blob/main/Tutorials/How-To-Use-ComfyUI-On-Your-PC-On-RunPod-On-Colab-With-SDXL.md)
 - [ComfyUI Master Tutorial - Stable Diffusion XL (SDXL) - Install On PC, Google Colab (Free) & RunPod (YouTube)](https://www.youtube.com/watch?v=FnMHbhvWUhE)
@@ -65,6 +67,14 @@ Contains examples of what is achievable with ComfyUI. Includes workflows for:
    /workspace/runpod_ai/koyha_ss-1.sh
    ```
 2. Answer the prompts and follow the directions.
+## [kohya-ss/sd-scripts](https://github.com/kohya-ss/sd-scripts/tree/sdxl) (text2image training)
+### Training resources:
+- [Stable Diffusion SDXL LoRA Training Tutorial (YouTube)](https://www.youtube.com/watch?v=iNwB98P3V0k)
+- sd-scripts:
+  - [LoRA training](https://github.com/darkstorm2150/sd-scripts/blob/main/docs/train_network_README-en.md)
+  - [common learning guide](https://github.com/darkstorm2150/sd-scripts/blob/main/docs/train_README-en.md)  
+  
+_Coming soon_
 ## [oobabooga/text-generation-webui](https://github.com/oobabooga/text-generation-webui) (text2text)
 _Coming soon_
 ## [Honkware/text-generation-webui](https://github.com/Honkware/text-generation-webui) (text2text)

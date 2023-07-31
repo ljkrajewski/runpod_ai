@@ -73,7 +73,8 @@ Contains examples of what is achievable with ComfyUI. Includes workflows for:
 - [Stable Diffusion SDXL LoRA Training Tutorial (YouTube)](https://www.youtube.com/watch?v=iNwB98P3V0k)
 - sd-scripts:
   - [LoRA training](https://github.com/darkstorm2150/sd-scripts/blob/main/docs/train_network_README-en.md)
-  - [common learning guide](https://github.com/darkstorm2150/sd-scripts/blob/main/docs/train_README-en.md)  
+  - [common learning guide](https://github.com/darkstorm2150/sd-scripts/blob/main/docs/train_README-en.md)
+- [Super Resolution API](https://deepai.org/machine-learning-model/torch-srgan)
   
 _Coming soon_
 ## [oobabooga/text-generation-webui](https://github.com/oobabooga/text-generation-webui) (text2text)

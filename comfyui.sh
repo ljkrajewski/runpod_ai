@@ -25,6 +25,9 @@ wget https://$USERNAME:$TOKEN@huggingface.co/stabilityai/stable-diffusion-xl-bas
 wget https://$USERNAME:$TOKEN@huggingface.co/stabilityai/stable-diffusion-xl-refiner-0.9/resolve/main/sd_xl_refiner_0.9.safetensors
 wget https://huggingface.co/SG161222/Realistic_Vision_V4.0/resolve/main/Realistic_Vision_V4.0.safetensors
 curl https://civitai.com/api/download/models/90072 -o Photon.safetensors -L
+# EpicRealism: https://civitai.com/models/25694
+# Juggernaut: https://civitai.com/models/46422?modelVersionId=117037
+# Verisimilitude: https://civitai.com/models/10540
 
 cd /workspace/ComfyUI/models/embeddings
 #git clone https://huggingface.co/nolanaatama/embeddings

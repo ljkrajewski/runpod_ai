@@ -47,22 +47,18 @@ curl https://civitai.com/api/download/models/125849 -o Bad-Hands-5.pt -L
 cd /workspace/ComfyUI/models/vae
 wget https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.safetensors
 
-#cd /workspace/ComfyUI/models/loras
+cd /workspace/ComfyUI/models/loras
+curl https://civitai.com/api/download/models/63006 -o LowRA.safetensors -L
+curl https://civitai.com/api/download/models/17988 -o 20D.safetensors -L.
 
 cd /workspace/ComfyUI/models/custom_nodes
 #ComfyUI Manager
 git clone https://github.com/ltdrdata/ComfyUI-Manager.git
 #ControlNet
-# Install instructions- https://www.youtube.com/watch?v=FJwcBTL_voc
-#git clone https://github.com/Fannovel16/comfy_controlnet_preprocessors.git
-#cd comfy_controlnet_preprocessors
-#python install.py
-#cd /workspace/ComfyUI/models/controlnet
-#git clone https://huggingface.co/lllyasviel/ControlNet-v1-1
-#git clone https://huggingface.co/TencentARC/T2I-Adapter
-#--find a way to 'manually' create yaml files--
-#mv coadapter-style* /workspace/ComfyUI/models/style
-#mv t1adapter-style* /workspace/ComfyUI/models/style
+cd ComfyUI/custom_nodes
+git clone https://github.com/Fannovel16/comfy_controlnet_preprocessors
+cd comfy_controlnet_preprocessors
+install
 
 cd /workspace/ComfyUI
 python main.py --listen 0.0.0.0 --port 3000

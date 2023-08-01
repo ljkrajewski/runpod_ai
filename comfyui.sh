@@ -49,7 +49,7 @@ wget https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-
 
 cd /workspace/ComfyUI/models/loras
 curl https://civitai.com/api/download/models/63006 -o LowRA.safetensors -L
-curl https://civitai.com/api/download/models/17988 -o 20D.safetensors -L.
+curl https://civitai.com/api/download/models/17988 -o 20D.safetensors -L
 
 cd /workspace/ComfyUI/models/custom_nodes
 #ComfyUI Manager

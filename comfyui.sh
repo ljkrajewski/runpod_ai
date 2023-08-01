@@ -51,12 +51,11 @@ cd /workspace/ComfyUI/models/loras
 curl https://civitai.com/api/download/models/63006 -o LowRA.safetensors -L
 curl https://civitai.com/api/download/models/17988 -o 20D.safetensors -L
 
-cd /workspace/ComfyUI/models/custom_nodes
+cd /workspace/ComfyUI/custom_nodes
 #ComfyUI Manager
 git clone https://github.com/ltdrdata/ComfyUI-Manager.git
 #ControlNet
-cd ComfyUI/custom_nodes
-git clone https://github.com/Fannovel16/comfy_controlnet_preprocessors
+git clone https://github.com/Fannovel16/comfy_controlnet_preprocessors.git
 cd comfy_controlnet_preprocessors
 bash install.sh
 

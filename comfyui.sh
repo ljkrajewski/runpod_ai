@@ -25,17 +25,17 @@ wget https://$USERNAME:$TOKEN@huggingface.co/stabilityai/stable-diffusion-xl-bas
 wget https://$USERNAME:$TOKEN@huggingface.co/stabilityai/stable-diffusion-xl-refiner-0.9/resolve/main/sd_xl_refiner_0.9.safetensors
 wget https://huggingface.co/SG161222/Realistic_Vision_V4.0/resolve/main/Realistic_Vision_V4.0.safetensors
 curl https://civitai.com/api/download/models/90072 -o Photon.safetensors -L
-# EpicRealism: https://civitai.com/models/25694
-# Juggernaut: https://civitai.com/models/46422?modelVersionId=117037
-# Verisimilitude: https://civitai.com/models/10540
-# AbsoluteReality: https://civitai.com/models/81458/absolutereality
-# Lyriel: https://civitai.com/models/22922?modelVersionId=72396
-# Edge Of Realism: https://civitai.com/models/21813?modelVersionId=51913
-# Deliberate: https://civitai.com/models/4823?modelVersionId=15236
-# Dream Shaper: https://civitai.com/models/4384?modelVersionId=94081
-# Ghost Mix: https://civitai.com/models/36520/ghostmix
-# A Zovya Photoreal: https://civitai.com/models/57319?modelVersionId=99805
-# 526Mix: https://civitai.com/models/15022?modelVersionId=53814
+# curl https://civitai.com/models/25694 -o EpicRealism.safetensors -L
+# curl https://civitai.com/models/46422?modelVersionId=117037 -o Juggernaut.safetensors -L
+# curl https://civitai.com/models/10540 -o Verisimilitude.safetensors -L
+# curl https://civitai.com/models/81458/absolutereality -o AbsoluteReality.safetensors -L
+# curl https://civitai.com/models/22922?modelVersionId=72396 -o Lyriel.safetensors -L
+# curl https://civitai.com/models/21813?modelVersionId=51913 -o EdgeOfRealism.safetensors -L
+# curl https://civitai.com/models/4823?modelVersionId=15236 -o Deliberate.safetensors -L
+# curl https://civitai.com/models/4384?modelVersionId=94081 -o DreamShaper.safetensors -L
+# curl https://civitai.com/models/36520/ghostmix -o GhostMix.safetensors -L
+# curl https://civitai.com/models/57319?modelVersionId=99805 -o A-ZovyaPhotoreal.safetensors -L
+# curl https://civitai.com/models/15022?modelVersionId=53814 -o 526Mix.safetensors -L
 
 cd /workspace/ComfyUI/models/embeddings
 #git clone https://huggingface.co/nolanaatama/embeddings

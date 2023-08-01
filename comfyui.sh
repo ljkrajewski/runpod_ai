@@ -58,7 +58,7 @@ git clone https://github.com/ltdrdata/ComfyUI-Manager.git
 cd ComfyUI/custom_nodes
 git clone https://github.com/Fannovel16/comfy_controlnet_preprocessors
 cd comfy_controlnet_preprocessors
-install
+bash install.sh
 
 cd /workspace/ComfyUI
 python main.py --listen 0.0.0.0 --port 3000

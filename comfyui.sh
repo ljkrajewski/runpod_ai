@@ -6,7 +6,7 @@ USERNAME='ljkrajewski'
 TOKEN='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'   #It's only a read token. Have fun.
 # But seriously, I'd appreciate it if you went to Hugging Face and got your own token. It's free.
 #apt install psmisc -y
-fuser -k 3000/tcp
+#fuser -k 3000/tcp
 
 # Manual install - https://github.com/FurkanGozukara/Stable-Diffusion/blob/main/Tutorials/How-To-Use-ComfyUI-On-Your-PC-On-RunPod-On-Colab-With-SDXL.md
 cd $BASE
@@ -55,11 +55,11 @@ curl https://civitai.com/api/download/models/17988 -o 20D.safetensors -L
 
 cd $CUIBASE/custom_nodes
 #ComfyUI Manager
-git clone https://github.com/ltdrdata/ComfyUI-Manager.git
+#git clone https://github.com/ltdrdata/ComfyUI-Manager.git
 #ControlNet
-git clone https://github.com/Fannovel16/comfy_controlnet_preprocessors.git
-cd comfy_controlnet_preprocessors
-bash install.sh
+#git clone https://github.com/Fannovel16/comfy_controlnet_preprocessors.git
+#cd comfy_controlnet_preprocessors
+#bash install.sh
 
 cd $CUIBASE
 python main.py --listen 0.0.0.0 --port 3000

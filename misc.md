@@ -5,5 +5,8 @@ This online EXIF Viewer lets you view the data in your photos and the location w
 Effective image upscaling/enhancement 
 - [BIRME - Bulk Image Resizing Made Easy 2.0](https://www.birme.net/?target_width=512&target_height=512)  
 Free bulk resizer/cropper
-- [Stable Diffusion 1.5 - Style Cheat Sheet](https://supagruen.github.io/StableDiffusion-CheatSheet/)  
+- Styles
+  - [Stable Diffusion 1.5 - Style Cheat Sheet](https://supagruen.github.io/StableDiffusion-CheatSheet/)  
 A collection of what Stable Diffusion imagines these artists' styles look like.
+  - [Prompt Styles by Sebastian, Hili & Maui](https://www.patreon.com/posts/sebs-hilis-79649068)  
+Put this file (styles.csv) in your stable-diffusion-webui root folder.

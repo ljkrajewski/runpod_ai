@@ -57,11 +57,17 @@ curl https://civitai.com/api/download/models/17988 -o 20D.safetensors -L
 
 cd $CUIBASE/custom_nodes
 #ComfyUI Manager
-#git clone https://github.com/ltdrdata/ComfyUI-Manager.git
+git clone https://github.com/ltdrdata/ComfyUI-Manager.git
+#Impact Pack
+git clone https://github.com/ltdrdata/ComfyUI-Impact-Pack.git
+#cd ComfyUI-Impact-Pack
+#git submodule update --init --recursive
+#python install.py
+#cd ..
 #ControlNet
-#git clone https://github.com/Fannovel16/comfy_controlnet_preprocessors.git
-#cd comfy_controlnet_preprocessors
-#bash install.sh
+git clone https://github.com/Fannovel16/comfy_controlnet_preprocessors.git
+cd comfy_controlnet_preprocessors
+bash install.sh
 
 cd $CUIBASE
 python main.py --listen 0.0.0.0 --port 3000

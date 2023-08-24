@@ -55,6 +55,12 @@ cd $CUIBASE/models/loras
 curl https://civitai.com/api/download/models/63006 -o LowRA.safetensors -L
 curl https://civitai.com/api/download/models/17988 -o 20D.safetensors -L
 
+#ComfyUI FaceRestore Node - https://civitai.com/models/24690/comfyui-facerestore-node
+#cd $CUIBASE/models
+#curl https://civitai.com/api/download/models/122586 -o FaceRestore.zip -L
+#unzip FaceRestore.zip
+#???
+
 cd $CUIBASE/custom_nodes
 #ComfyUI Manager
 git clone https://github.com/ltdrdata/ComfyUI-Manager.git

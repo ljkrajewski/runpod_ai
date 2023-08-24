@@ -42,6 +42,7 @@ curl https://civitai.com/models/21813?modelVersionId=51913 -o EdgeOfRealism.safe
 # curl https://civitai.com/models/15022?modelVersionId=53814 -o 526Mix.safetensors -L
 curl https://civitai.com/api/download/models/130072 -o RealisticVisionV5-1.safetensors -L
 curl https://civitai.com/api/download/models/130090 -o RealisticVisionV5-1-inpainting.safetensors -L
+curl https://civitai.com/api/download/models/29682 -o LifeLikeDiffusion.safetensors -L
 
 cd $CUIBASE/models/embeddings
 #git clone https://huggingface.co/nolanaatama/embeddings

@@ -27,7 +27,7 @@ cd $CUIBASE/models/checkpoints
 #wget https://$USERNAME:$TOKEN@huggingface.co/stabilityai/stable-diffusion-xl-refiner-0.9/resolve/main/sd_xl_refiner_0.9.safetensors
 wget https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors
 wget https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0.safetensors
-wget https://huggingface.co/SG161222/Realistic_Vision_V4.0/resolve/main/Realistic_Vision_V4.0.safetensors
+#wget https://huggingface.co/SG161222/Realistic_Vision_V4.0/resolve/main/Realistic_Vision_V4.0.safetensors
 curl https://civitai.com/api/download/models/90072 -o Photon.safetensors -L
 curl https://civitai.com/models/25694 -o EpicRealism.safetensors -L
 # curl https://civitai.com/models/46422?modelVersionId=117037 -o Juggernaut.safetensors -L
@@ -40,6 +40,8 @@ curl https://civitai.com/models/21813?modelVersionId=51913 -o EdgeOfRealism.safe
 # curl https://civitai.com/models/36520/ghostmix -o GhostMix.safetensors -L
 # curl https://civitai.com/models/57319?modelVersionId=99805 -o A-ZovyaPhotoreal.safetensors -L
 # curl https://civitai.com/models/15022?modelVersionId=53814 -o 526Mix.safetensors -L
+curl https://civitai.com/api/download/models/130072 -o RealisticVisionV5-1.safetensors -L
+curl https://civitai.com/api/download/models/130090 -o RealisticVisionV5-1-inpainting.safetensors -L
 
 cd $CUIBASE/models/embeddings
 #git clone https://huggingface.co/nolanaatama/embeddings

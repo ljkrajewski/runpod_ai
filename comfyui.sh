@@ -65,9 +65,9 @@ git clone https://github.com/ltdrdata/ComfyUI-Impact-Pack.git
 #python install.py
 #cd ..
 #ControlNet
-git clone https://github.com/Fannovel16/comfy_controlnet_preprocessors.git
-cd comfy_controlnet_preprocessors
-bash install.sh
+git clone https://github.com/Fannovel16/comfyui_controlnet_aux.git
+cd comfyui_controlnet_aux
+python -s -m pip install -r requirements.txt
 
 cd $CUIBASE
 python main.py --listen 0.0.0.0 --port 3000

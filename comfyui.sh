@@ -59,15 +59,15 @@ curl https://civitai.com/api/download/models/63006 -o LowRA.safetensors -L
 curl https://civitai.com/api/download/models/17988 -o 20D.safetensors -L
 
 cd $CUIBASE/custom_nodes
-#ComfyUI Manager
+# -- ComfyUI Manager
 git clone https://github.com/ltdrdata/ComfyUI-Manager.git
-#Impact Pack
+# -- Impact Pack
 git clone https://github.com/ltdrdata/ComfyUI-Impact-Pack.git
 #cd ComfyUI-Impact-Pack
 #git submodule update --init --recursive
 #python install.py
 #cd ..
-#ComfyUI FaceRestore Node - https://civitai.com/models/24690/comfyui-facerestore-node
+# -- ComfyUI FaceRestore Node - https://civitai.com/models/24690/comfyui-facerestore-node
 curl https://civitai.com/api/download/models/122586  -o FaceRestore.zip -L
 unzip FaceRestore.zip
 cd $CUIBASE/models/facerestore_models/
@@ -80,9 +80,9 @@ wget https://github.com/sczhou/CodeFormer/releases/download/v0.1.0/yolov5l-face.
 wget https://github.com/sczhou/CodeFormer/releases/download/v0.1.0/yolov5n-face.pth
 wget https://github.com/sczhou/CodeFormer/releases/download/v0.1.0/parsing_parsenet.pth
 cd $CUIBASE/custom_nodes
-#ReActor
+# -- ReActor
 clone https://github.com/Gourieff/comfyui-reactor-node.git
-#ControlNet
+# -- ControlNet
 git clone https://github.com/Fannovel16/comfyui_controlnet_aux.git
 cd comfyui_controlnet_aux
 python -s -m pip install -r requirements.txt

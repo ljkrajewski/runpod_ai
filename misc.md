@@ -1,4 +1,22 @@
 # Misc tips/tools
+## Preparing your RunPod instance for development using git and github
+Run each line individually.
+```
+apt update
+apt install vim -y
+cd ~
+ssh-keygen -t ed25519 -f .ssh/runpod -C "Temp runpod key"
+cat .ssh/runpod.pub
+# Copy the public key above to https://github.com/settings/ssh/new now.
+
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/runpod
+git config --global user.name "Your Name"
+git config --global user.email your.email.address@example.com
+cd /workspace
+git clone git@github.com:ljkrajewski/runpod_ai.git
+```
+## Useful sites
 - [EXIF Data Viewer Online - Photo Location Viewer](https://linangdata.com/exif-reader/)  
 This online EXIF Viewer lets you view the data in your photos and the location where the photo was taken.
 - [AI Image Upscaling - Auto Enlarge Image Online](https://www.avaide.com/image-upscaler/)  

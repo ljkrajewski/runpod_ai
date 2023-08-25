@@ -1,14 +1,15 @@
 # Misc tips/tools
 ## Preparing your RunPod instance for development using git and github
-Run each line individually.
+1. Run the following commands.
 ```
 apt update
-apt install vim -y
 cd ~
 ssh-keygen -t ed25519 -f .ssh/runpod -C "Temp runpod key"
 cat .ssh/runpod.pub
-# Copy the public key above to https://github.com/settings/ssh/new now.
-
+```
+2. Copy the public key above to https://github.com/settings/ssh/new.
+3. Run the next block of commands with your name and email address in the appropriate places.
+```
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/runpod
 git config --global user.name "Your Name"

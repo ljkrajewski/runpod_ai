@@ -12,8 +12,9 @@ CUIBASE="$BASE/ComfyUI"
 cd $BASE
 git clone https://github.com/comfyanonymous/ComfyUI.git
 # Change default workflow
-#mv /workspace/ComfyUI/web/scripts/defaultGraph.js{,.bak}
+mv /workspace/ComfyUI/web/scripts/defaultGraph.js{,.bak}
 #sed 's/^{$/export const defaultGraph = {/' $BASE/runpod_ai/settings/ComfyUI_Workflow_SDXL.json > $CUIBASE/web/scripts/defaultGraph.js
+sed 's/^{$/export const defaultGraph = {/' $BASE/runpod_ai/settings/ComfyUI_default.json > $CUIBASE/web/scripts/defaultGraph.js
 cd $CUIBASE
 #python -m venv venv
 #cd venv
@@ -60,6 +61,10 @@ cd $CUIBASE/models/loras
 curl https://civitai.com/api/download/models/63006 -o LowRA.safetensors -L
 curl https://civitai.com/api/download/models/17988 -o 20D.safetensors -L
 
+cd $CUIBASE/models/upscale_models
+curl https://civitai.com/api/download/models/70526 -o VariousUpscalers.zip -L
+unzip VariousUpscalers.zip
+
 cd $CUIBASE/custom_nodes
 # -- ComfyUI Manager
 git clone https://github.com/ltdrdata/ComfyUI-Manager.git
@@ -83,7 +88,13 @@ wget https://github.com/sczhou/CodeFormer/releases/download/v0.1.0/yolov5n-face.
 wget https://github.com/sczhou/CodeFormer/releases/download/v0.1.0/parsing_parsenet.pth
 cd $CUIBASE/custom_nodes
 # -- ReActor
-clone https://github.com/Gourieff/comfyui-reactor-node.git
+git clone https://github.com/Gourieff/comfyui-reactor-node.git
+# -- UltimateSDUpscale
+git clone https://github.com/ssitu/ComfyUI_UltimateSDUpscale.git --recursive
+# -- ComfyMath
+git clone https://github.com/evanspearman/ComfyMath.git
+# -- Recommended Resolution Calculator
+git clone https://github.com/marhensa/sdxl-recommended-res-calc.git
 # -- ControlNet
 git clone https://github.com/Fannovel16/comfyui_controlnet_aux.git
 cd comfyui_controlnet_aux

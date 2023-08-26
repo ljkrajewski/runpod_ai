@@ -12,7 +12,7 @@ CUIBASE="$BASE/ComfyUI"
 cd $BASE
 git clone https://github.com/comfyanonymous/ComfyUI.git
 # Change default workflow
-mv /workspace/ComfyUI/web/scripts/defaultGraph.js{,.bak}
+mv $CUIBASE/web/scripts/defaultGraph.js{,.bak}
 #sed 's/^{$/export const defaultGraph = {/' $BASE/runpod_ai/settings/ComfyUI_Workflow_SDXL.json > $CUIBASE/web/scripts/defaultGraph.js
 sed 's/^{$/export const defaultGraph = {/' $BASE/runpod_ai/settings/ComfyUI_default.json > $CUIBASE/web/scripts/defaultGraph.js
 cd $CUIBASE

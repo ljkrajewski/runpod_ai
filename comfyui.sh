@@ -70,25 +70,41 @@ cd $CUIBASE/custom_nodes
 git clone https://github.com/ltdrdata/ComfyUI-Manager.git
 # -- Impact Pack
 git clone https://github.com/ltdrdata/ComfyUI-Impact-Pack.git
-#cd ComfyUI-Impact-Pack
-#git submodule update --init --recursive
-#python install.py
-#cd ..
-# -- ComfyUI FaceRestore Node - https://civitai.com/models/24690/comfyui-facerestore-node
-curl https://civitai.com/api/download/models/122586  -o FaceRestore.zip -L
-unzip FaceRestore.zip
-cd $CUIBASE/models/facerestore_models/
-wget https://github.com/TencentARC/GFPGAN/releases/download/v1.3.4/GFPGANv1.4.pth
-wget https://github.com/sczhou/CodeFormer/releases/download/v0.1.0/codeformer.pth
-cd $CUIBASE/models/facedetection/
-wget https://github.com/xinntao/facexlib/releases/download/v0.1.0/detection_Resnet50_Final.pth
-wget https://github.com/xinntao/facexlib/releases/download/v0.1.0/detection_mobilenet0.25_Final.pth
-wget https://github.com/sczhou/CodeFormer/releases/download/v0.1.0/yolov5l-face.pth
-wget https://github.com/sczhou/CodeFormer/releases/download/v0.1.0/yolov5n-face.pth
-wget https://github.com/sczhou/CodeFormer/releases/download/v0.1.0/parsing_parsenet.pth
+cd ComfyUI-Impact-Pack
+git submodule update --init --recursive
+python install.py
+cp impact-pack.ini{,.bu}
+sed -i 's/mmdet_skip = True/mmdet_skip = False/' impact-pack.ini
+#mkdir -p $CUIBASE/models/mmdets/bbox
+#cd $CUIBASE/models/mmdets/bbox
+#wget https://huggingface.co/dustysys/ddetailer/resolve/main/mmdet/bbox/mmdet_anime-face_yolov3.pth
+#wget https://raw.githubusercontent.com/Bing-su/dddetailer/master/config/mmdet_anime-face_yolov3.py
+#mkdir -p $CUIBASE/models/sams
+#cd $CUIBASE/models/sams
+#wget https://dl.fbaipublicfiles.com/segment_anything/sam_vit_b_01ec64.pth
 cd $CUIBASE/custom_nodes
+# -- ComfyUI FaceRestore Node - https://civitai.com/models/24690/comfyui-facerestore-node
+#curl https://civitai.com/api/download/models/122586  -o FaceRestore.zip -L
+#unzip FaceRestore.zip
+#mkdir -p $CUIBASE/models/facerestore_models/
+#cd $CUIBASE/models/facerestore_models/
+#wget https://github.com/TencentARC/GFPGAN/releases/download/v1.3.4/GFPGANv1.4.pth
+#wget https://github.com/sczhou/CodeFormer/releases/download/v0.1.0/codeformer.pth
+#mkdir -p $CUIBASE/models/facedetection/
+#cd $CUIBASE/models/facedetection/
+#wget https://github.com/xinntao/facexlib/releases/download/v0.1.0/detection_Resnet50_Final.pth
+#wget https://github.com/xinntao/facexlib/releases/download/v0.1.0/detection_mobilenet0.25_Final.pth
+#wget https://github.com/sczhou/CodeFormer/releases/download/v0.1.0/yolov5l-face.pth
+#wget https://github.com/sczhou/CodeFormer/releases/download/v0.1.0/yolov5n-face.pth
+#wget https://github.com/sczhou/CodeFormer/releases/download/v0.1.0/parsing_parsenet.pth
+#cd $CUIBASE/custom_nodes
+# -- Derfuu_ComfyUI_ModdedNodes
+git clone https://github.com/Derfuu/Derfuu_ComfyUI_ModdedNodes.git
 # -- ReActor
 git clone https://github.com/Gourieff/comfyui-reactor-node.git
+cd comfyui-reactor-node
+python install.py
+cd $CUIBASE/custom_nodes
 # -- UltimateSDUpscale
 git clone https://github.com/ssitu/ComfyUI_UltimateSDUpscale.git --recursive
 # -- ComfyMath

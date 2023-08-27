@@ -7,7 +7,7 @@ cd ~
 ssh-keygen -t ed25519 -f .ssh/runpod -C "Temp runpod key"
 cat .ssh/runpod.pub
 ```
-2. Copy the public key above to https://github.com/settings/ssh/new.
+2. Copy the public key above to https://github.com/settings/ssh/new. Remember to clean up your keys and delete the old one.
 3. Run the next block of commands with your name and email address in the appropriate places.
 ```
 eval "$(ssh-agent -s)"

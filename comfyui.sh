@@ -55,6 +55,7 @@ wget https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-
 cd $CUIBASE/models/loras
 curl https://civitai.com/api/download/models/63006 -o LowRA.safetensors -L
 curl https://civitai.com/api/download/models/17988 -o 20D.safetensors -L
+curl https://civitai.com/api/download/models/62833 -o DetailTweaker.safetensors -L
 
 cd $CUIBASE/models/upscale_models
 curl https://civitai.com/api/download/models/70526 -o VariousUpscalers.zip -L

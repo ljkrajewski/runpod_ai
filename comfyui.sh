@@ -1,10 +1,7 @@
 #!/usr/bin/env bash
-# ComfyUI for SDXL
+# ComfyUI for SD
 BASE='/workspace'
 CUIBASE="$BASE/ComfyUI"
-#USERNAME='ljkrajewski'
-#TOKEN='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'   #It's only a read token. Have fun.
-# But seriously, I'd appreciate it if you went to Hugging Face and got your own token. It's free.
 #apt install psmisc -y
 #fuser -k 3000/tcp
 
@@ -24,10 +21,8 @@ pip install -U --pre xformers
 pip install -r requirements.txt
 
 cd $CUIBASE/models/checkpoints
-#wget https://$USERNAME:$TOKEN@huggingface.co/stabilityai/stable-diffusion-xl-base-0.9/resolve/main/sd_xl_base_0.9.safetensors
-#wget https://$USERNAME:$TOKEN@huggingface.co/stabilityai/stable-diffusion-xl-refiner-0.9/resolve/main/sd_xl_refiner_0.9.safetensors
-wget https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors
-wget https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0.safetensors
+#wget https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors
+#wget https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0.safetensors
 #wget https://huggingface.co/SG161222/Realistic_Vision_V4.0/resolve/main/Realistic_Vision_V4.0.safetensors
 #curl https://civitai.com/api/download/models/90072 -o Photon.safetensors -L
 #curl https://civitai.com/models/25694 -o EpicRealism.safetensors -L
@@ -84,20 +79,20 @@ sed -i 's/mmdet_skip = True/mmdet_skip = False/' impact-pack.ini
 #wget https://dl.fbaipublicfiles.com/segment_anything/sam_vit_b_01ec64.pth
 cd $CUIBASE/custom_nodes
 # -- ComfyUI FaceRestore Node - https://civitai.com/models/24690/comfyui-facerestore-node
-#curl https://civitai.com/api/download/models/122586  -o FaceRestore.zip -L
-#unzip FaceRestore.zip
-#mkdir -p $CUIBASE/models/facerestore_models/
-#cd $CUIBASE/models/facerestore_models/
-#wget https://github.com/TencentARC/GFPGAN/releases/download/v1.3.4/GFPGANv1.4.pth
-#wget https://github.com/sczhou/CodeFormer/releases/download/v0.1.0/codeformer.pth
-#mkdir -p $CUIBASE/models/facedetection/
-#cd $CUIBASE/models/facedetection/
-#wget https://github.com/xinntao/facexlib/releases/download/v0.1.0/detection_Resnet50_Final.pth
-#wget https://github.com/xinntao/facexlib/releases/download/v0.1.0/detection_mobilenet0.25_Final.pth
-#wget https://github.com/sczhou/CodeFormer/releases/download/v0.1.0/yolov5l-face.pth
-#wget https://github.com/sczhou/CodeFormer/releases/download/v0.1.0/yolov5n-face.pth
-#wget https://github.com/sczhou/CodeFormer/releases/download/v0.1.0/parsing_parsenet.pth
-#cd $CUIBASE/custom_nodes
+curl https://civitai.com/api/download/models/122586  -o FaceRestore.zip -L
+unzip FaceRestore.zip
+mkdir -p $CUIBASE/models/facerestore_models/
+cd $CUIBASE/models/facerestore_models/
+wget https://github.com/TencentARC/GFPGAN/releases/download/v1.3.4/GFPGANv1.4.pth
+wget https://github.com/sczhou/CodeFormer/releases/download/v0.1.0/codeformer.pth
+mkdir -p $CUIBASE/models/facedetection/
+cd $CUIBASE/models/facedetection/
+wget https://github.com/xinntao/facexlib/releases/download/v0.1.0/detection_Resnet50_Final.pth
+wget https://github.com/xinntao/facexlib/releases/download/v0.1.0/detection_mobilenet0.25_Final.pth
+wget https://github.com/sczhou/CodeFormer/releases/download/v0.1.0/yolov5l-face.pth
+wget https://github.com/sczhou/CodeFormer/releases/download/v0.1.0/yolov5n-face.pth
+wget https://github.com/sczhou/CodeFormer/releases/download/v0.1.0/parsing_parsenet.pth
+cd $CUIBASE/custom_nodes
 # -- Derfuu_ComfyUI_ModdedNodes
 git clone https://github.com/Derfuu/Derfuu_ComfyUI_ModdedNodes.git
 # -- ReActor

@@ -29,13 +29,13 @@ cd $CUIBASE/models/checkpoints
 wget https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors
 wget https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0.safetensors
 #wget https://huggingface.co/SG161222/Realistic_Vision_V4.0/resolve/main/Realistic_Vision_V4.0.safetensors
-curl https://civitai.com/api/download/models/90072 -o Photon.safetensors -L
-curl https://civitai.com/models/25694 -o EpicRealism.safetensors -L
+#curl https://civitai.com/api/download/models/90072 -o Photon.safetensors -L
+#curl https://civitai.com/models/25694 -o EpicRealism.safetensors -L
 # curl https://civitai.com/models/46422?modelVersionId=117037 -o Juggernaut.safetensors -L
 # curl https://civitai.com/models/10540 -o Verisimilitude.safetensors -L
-curl https://civitai.com/models/81458/absolutereality -o AbsoluteReality.safetensors -L
+#curl https://civitai.com/models/81458/absolutereality -o AbsoluteReality.safetensors -L
 # curl https://civitai.com/models/22922?modelVersionId=72396 -o Lyriel.safetensors -L
-curl https://civitai.com/models/21813?modelVersionId=51913 -o EdgeOfRealism.safetensors -L
+#curl https://civitai.com/models/21813?modelVersionId=51913 -o EdgeOfRealism.safetensors -L
 # curl https://civitai.com/models/4823?modelVersionId=15236 -o Deliberate.safetensors -L
 # curl https://civitai.com/models/4384?modelVersionId=94081 -o DreamShaper.safetensors -L
 # curl https://civitai.com/models/36520/ghostmix -o GhostMix.safetensors -L
@@ -43,7 +43,7 @@ curl https://civitai.com/models/21813?modelVersionId=51913 -o EdgeOfRealism.safe
 # curl https://civitai.com/models/15022?modelVersionId=53814 -o 526Mix.safetensors -L
 curl https://civitai.com/api/download/models/130072 -o RealisticVisionV5-1.safetensors -L
 curl https://civitai.com/api/download/models/130090 -o RealisticVisionV5-1-inpainting.safetensors -L
-curl https://civitai.com/api/download/models/29682 -o LifeLikeDiffusion.safetensors -L
+#curl https://civitai.com/api/download/models/29682 -o LifeLikeDiffusion.safetensors -L
 curl https://civitai.com/api/download/models/145885 -o EpicPhotoGasm.safetensors -L
 curl https://civitai.com/api/download/models/146074 -o EpicPhotoGasm-inpanting.safetensors -L
 

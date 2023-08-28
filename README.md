@@ -8,7 +8,7 @@ _<sup>*</sup>This is a work in progress, so take the claim that these scripts/no
     - 20GB VRAM for most other uses.
 4. Set the following customizations:
    - Volume size: 150GB
-   - HTTP service ports: 3000, 7860, 8000
+   - HTTP service ports: 8888, 3000, 7860, 8000
 5. Start the pod instance.
 6. Once RunPod instance has finished booting up, connect to Jupyter Notebook and open a terminal tab.
 7. Inside the terminal tab, run the following commands:

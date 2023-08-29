@@ -16,6 +16,7 @@ cd $CUIBASE
 python -m venv venv
 cd venv
 source bin/activate
+cd ..
 pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 pip install -U --pre xformers
 pip install -r requirements.txt

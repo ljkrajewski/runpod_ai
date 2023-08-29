@@ -10,12 +10,20 @@ function dlFromGoogle {
   curl -Lb ./cookie "https://drive.google.com/uc?export=download&`echo $html|grep -Po '(confirm=[a-zA-Z0-9\-_]+)'`&id=$fileid" -o $2
 }
 
-cd /workspace
+BASE='/workspace'
+SDBASE="$BASE/stable-diffusion-webui"
+
+cd $BASE
 #git lfs install
 git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git
 
+cd $SDBASE
+python -m venv venv
+cd venv
+source bin/activate
+
 ## Models ##
-cd /workspace/stable-diffusion-webui/models/Stable-diffusion
+cd $SDBASE/models/Stable-diffusion
 #wget https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned.safetensors
 #curl https://civitai.com/api/download/models/51913 -o edgeOfRealism.safetensors -L
 #curl https://civitai.com/api/download/models/90072 -o Photon.safetensors -L
@@ -25,17 +33,17 @@ curl https://civitai.com/api/download/models/145885 -o EpicPhotoGasm.safetensors
 curl https://civitai.com/api/download/models/146074 -o EpicPhotoGasm-inpanting.safetensors -L
 
 ## VAE ##
-cd /workspace/stable-diffusion-webui/models/VAE
+cd $SDBASE/models/VAE
 wget https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.safetensors
 
 ## LoRAs ##
-cd /workspace/stable-diffusion-webui/models/Lora
+cd $SDBASE/models/Lora
 curl https://civitai.com/api/download/models/63006 -o LowRA.safetensors -L
 curl https://civitai.com/api/download/models/17988 -o 20D.safetensors -L
 curl https://civitai.com/api/download/models/62833 -o DetailTweaker.safetensors -L
 
 ## Embeddings ##
-cd /workspace/stable-diffusion-webui/embeddings
+cd $SDBASE/embeddings
 #git clone https://huggingface.co/nolanaatama/embeddings
 curl https://civitai.com/api/download/models/77169 -o BadDream.pt -L
 curl https://civitai.com/api/download/models/77173 -o UnrealisticDream.pt -L
@@ -43,7 +51,7 @@ curl https://civitai.com/api/download/models/94057 -o FastNegativeV2.pt -L
 curl https://civitai.com/api/download/models/125849 -o Bad-Hands-5.pt -L
 
 ## Extentions ##
-cd /workspace/stable-diffusion-webui/extensions
+cd $SDBASE/extensions
 # Kohya-ss/Additional Networks models (https://github.com/kohya-ss/sd-webui-additional-networks.git)
 git clone https://github.com/kohya-ss/sd-webui-additional-networks.git
 # Booru Tag Autocomplete
@@ -62,7 +70,7 @@ cd sd-webui-controlnet/models
 git clone https://huggingface.co/lllyasviel/ControlNet-v1-1
 
 ## Start the GUI ##
-cd /workspace/stable-diffusion-webui/
+cd $SDBASE
 cp /workspace/runpod_ai/settings/config.json .
 cp /workspace/runpod_ai/emb.txt extensions/a1111-sd-webui-tagcomplete/tags/temp
 #cmdlineArgs="--share --xformers --enable-insecure-extension-access --disable-safe-unpickle"

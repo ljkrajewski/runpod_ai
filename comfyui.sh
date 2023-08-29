@@ -13,9 +13,9 @@ mv $CUIBASE/web/scripts/defaultGraph.js{,.bak}
 #sed 's/^{$/export const defaultGraph = {/' $BASE/runpod_ai/settings/ComfyUI_Workflow_SDXL.json > $CUIBASE/web/scripts/defaultGraph.js
 sed 's/^{$/export const defaultGraph = {/' $BASE/runpod_ai/settings/ComfyUI_default.json > $CUIBASE/web/scripts/defaultGraph.js
 cd $CUIBASE
-#python -m venv venv
-#cd venv
-#source bin/activate
+python -m venv venv
+cd venv
+source bin/activate
 pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 pip install -U --pre xformers
 pip install -r requirements.txt

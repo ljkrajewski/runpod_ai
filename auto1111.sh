@@ -18,11 +18,21 @@ git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git
 cd /workspace/stable-diffusion-webui/models/Stable-diffusion
 #wget https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned.safetensors
 #curl https://civitai.com/api/download/models/51913 -o edgeOfRealism.safetensors -L
-curl https://civitai.com/api/download/models/90072 -o Photon.safetensors -L
+#curl https://civitai.com/api/download/models/90072 -o Photon.safetensors -L
+curl https://civitai.com/api/download/models/130072 -o RealisticVisionV5-1.safetensors -L
+curl https://civitai.com/api/download/models/130090 -o RealisticVisionV5-1-inpainting.safetensors -L
+curl https://civitai.com/api/download/models/145885 -o EpicPhotoGasm.safetensors -L
+curl https://civitai.com/api/download/models/146074 -o EpicPhotoGasm-inpanting.safetensors -L
 
 ## VAE ##
 cd /workspace/stable-diffusion-webui/models/VAE
 wget https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.safetensors
+
+## LoRAs ##
+cd /workspace/stable-diffusion-webui/models/Lora
+curl https://civitai.com/api/download/models/63006 -o LowRA.safetensors -L
+curl https://civitai.com/api/download/models/17988 -o 20D.safetensors -L
+curl https://civitai.com/api/download/models/62833 -o DetailTweaker.safetensors -L
 
 ## Embeddings ##
 cd /workspace/stable-diffusion-webui/embeddings
@@ -30,6 +40,7 @@ cd /workspace/stable-diffusion-webui/embeddings
 curl https://civitai.com/api/download/models/77169 -o BadDream.pt -L
 curl https://civitai.com/api/download/models/77173 -o UnrealisticDream.pt -L
 curl https://civitai.com/api/download/models/94057 -o FastNegativeV2.pt -L
+curl https://civitai.com/api/download/models/125849 -o Bad-Hands-5.pt -L
 
 ## Extentions ##
 cd /workspace/stable-diffusion-webui/extensions

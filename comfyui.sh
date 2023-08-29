@@ -23,6 +23,7 @@ pip install -r requirements.txt
 cd $CUIBASE/models/checkpoints
 #wget https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors
 #wget https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0.safetensors
+wget https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned.safetensors
 #wget https://huggingface.co/SG161222/Realistic_Vision_V4.0/resolve/main/Realistic_Vision_V4.0.safetensors
 #curl https://civitai.com/api/download/models/90072 -o Photon.safetensors -L
 #curl https://civitai.com/models/25694 -o EpicRealism.safetensors -L

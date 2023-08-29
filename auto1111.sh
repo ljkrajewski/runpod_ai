@@ -37,6 +37,7 @@ cd $SDBASE/models/VAE
 wget https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.safetensors
 
 ## LoRAs ##
+mkdir -p $SDBASE/models/Lora
 cd $SDBASE/models/Lora
 curl https://civitai.com/api/download/models/63006 -o LowRA.safetensors -L
 curl https://civitai.com/api/download/models/17988 -o 20D.safetensors -L

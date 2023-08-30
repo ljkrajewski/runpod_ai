@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 fuser -k 7860/tcp
 
+BASE='/workspace'
+SDBASE="$BASE/stable-diffusion-webui"
+RPBASE="$BASE/runpod_ai"
+source $RPBASE/initial_setup.sh
+
 function dlFromGoogle {
 #because Google is a pain in the @$$.
 #Downloads a file from Google drive to the current directory.
@@ -9,9 +14,6 @@ function dlFromGoogle {
   html=`curl -c ./cookie -s -L "https://drive.google.com/uc?export=download&id=$fileid"`
   curl -Lb ./cookie "https://drive.google.com/uc?export=download&`echo $html|grep -Po '(confirm=[a-zA-Z0-9\-_]+)'`&id=$fileid" -o $2
 }
-
-BASE='/workspace'
-SDBASE="$BASE/stable-diffusion-webui"
 
 cd $BASE
 #git lfs install
@@ -27,7 +29,7 @@ VAE_DIR="$SDBASE/models/VAE"
 LORA_DIR="$SDBASE/models/Lora"
 EMBEDDING_DIR="$SDBASE/embeddings"
 UPSCALERS_DIR="$SDBASE/models/ESRGAN"
-source ./sd-config-models.sh
+source $RPBASE/sd-config-models.sh
 
 :<<COMMENT
 ## Models ##

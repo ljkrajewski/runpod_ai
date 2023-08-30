@@ -4,7 +4,7 @@ fuser -k 7860/tcp
 BASE='/workspace'
 SDBASE="$BASE/stable-diffusion-webui"
 RPBASE="$BASE/runpod_ai"
-source $RPBASE/initial_setup.sh
+#source $RPBASE/initial_setup.sh
 
 function dlFromGoogle {
 #because Google is a pain in the @$$.

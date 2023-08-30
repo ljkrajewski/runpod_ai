@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
 # ComfyUI for SD
-BASE='/workspace'
-CUIBASE="$BASE/ComfyUI"
 #apt install psmisc -y
 #fuser -k 3000/tcp
 
-source ./initial_setup.sh
+BASE='/workspace'
+CUIBASE="$BASE/ComfyUI"
+RPBASE="$BASE/runpod_ai"
+source $RPBASE/initial_setup.sh
 
 # Manual install - https://github.com/FurkanGozukara/Stable-Diffusion/blob/main/Tutorials/How-To-Use-ComfyUI-On-Your-PC-On-RunPod-On-Colab-With-SDXL.md
 cd $BASE
@@ -28,7 +29,7 @@ VAE_DIR="$CUIBASE/models/vae"
 LORA_DIR="$CUIBASE/models/loras"
 EMBEDDING_DIR="$CUIBASE/models/embeddings"
 UPSCALERS_DIR="$CUIBASE/models/upscale_models"
-source ./sd-config-models.sh
+source $RPBASE/sd-config-models.sh
 
 :<<COMMENT
 cd $CUIBASE/models/checkpoints

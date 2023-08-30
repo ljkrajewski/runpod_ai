@@ -66,7 +66,7 @@ mkdir -p $SDBASE/models/ESRGAN
 cd $SDBASE/models/ESRGAN
 wget https://huggingface.co/uwg/upscaler/resolve/main/ESRGAN/8x_NMKD-Superscale_150000_G.pth
 wget https://nmkd.de/shared/ESRGAN/Models/Faces/8x_NMKD-Faces_160000_G.pth
-COMMNET
+COMMENT
 
 ## Extentions ##
 cd $SDBASE/extensions

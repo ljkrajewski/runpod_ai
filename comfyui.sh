@@ -5,6 +5,8 @@ CUIBASE="$BASE/ComfyUI"
 #apt install psmisc -y
 #fuser -k 3000/tcp
 
+source ./initial_setup.sh
+
 # Manual install - https://github.com/FurkanGozukara/Stable-Diffusion/blob/main/Tutorials/How-To-Use-ComfyUI-On-Your-PC-On-RunPod-On-Colab-With-SDXL.md
 cd $BASE
 git clone https://github.com/comfyanonymous/ComfyUI.git

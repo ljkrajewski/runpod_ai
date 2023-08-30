@@ -96,12 +96,10 @@ cd $CUIBASE/custom_nodes
 # -- ComfyUI FaceRestore Node - https://civitai.com/models/24690/comfyui-facerestore-node
 curl https://civitai.com/api/download/models/122586  -o FaceRestore.zip -L
 unzip FaceRestore.zip
-mkdir -p $CUIBASE/models/facerestore_models/
-cd $CUIBASE/models/facerestore_models/
+[ -d "$CUIBASE/models/facerestore_models/" ] || mkdir "$CUIBASE/models/facerestore_models/" && cd "$CUIBASE/models/facerestore_models/"
 wget https://github.com/TencentARC/GFPGAN/releases/download/v1.3.4/GFPGANv1.4.pth
 wget https://github.com/sczhou/CodeFormer/releases/download/v0.1.0/codeformer.pth
-mkdir -p $CUIBASE/models/facedetection/
-cd $CUIBASE/models/facedetection/
+[ -d "$CUIBASE/models/facedetection/" ] || mkdir "$CUIBASE/models/facedetection/" && cd "$CUIBASE/models/facedetection/"
 wget https://github.com/xinntao/facexlib/releases/download/v0.1.0/detection_Resnet50_Final.pth
 wget https://github.com/xinntao/facexlib/releases/download/v0.1.0/detection_mobilenet0.25_Final.pth
 wget https://github.com/sczhou/CodeFormer/releases/download/v0.1.0/yolov5l-face.pth

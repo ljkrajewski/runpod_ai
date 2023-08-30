@@ -15,6 +15,7 @@ _<sup>*</sup>This is a work in progress, so take the claim that these scripts/no
 ```
 cd /workspace
 git clone https://github.com/ljkrajewski/runpod_ai.git
+/workspace/runpod_ai/run_me_first.sh
 ```
 8. Click on the project you wish to run and follow its directections.
     - [AUTOMATIC1111/Stable Diffusion (text2image)](#automatic1111stable-diffusion-text2image)

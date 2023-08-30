@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # Configure common downloaded files for Stable Diffusion here.
+# Make sure this script is called with 'source', eg, source ./sd-config-modules.sh
 
 ## Models
 [ -d "$MODELS_DIR" ] || mkdir "$MODELS_DIR" && cd "$MODELS_DIR"

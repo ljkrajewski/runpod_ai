@@ -1,44 +1,7 @@
 {
-  "last_node_id": 98,
-  "last_link_id": 204,
+  "last_node_id": 107,
+  "last_link_id": 218,
   "nodes": [
-    {
-      "id": 38,
-      "type": "Reroute",
-      "pos": [
-        888.5992553710922,
-        709.8000396728518
-      ],
-      "size": [
-        82,
-        26
-      ],
-      "flags": {},
-      "order": 35,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "",
-          "type": "*",
-          "link": 52
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            63,
-            106
-          ],
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "showOutputText": true,
-        "horizontal": false
-      }
-    },
     {
       "id": 39,
       "type": "Reroute",
@@ -57,7 +20,7 @@
         {
           "name": "",
           "type": "*",
-          "link": 113,
+          "link": 208,
           "slot_index": 0
         }
       ],
@@ -105,42 +68,6 @@
             95
           ],
           "slot_index": 0
-        }
-      ],
-      "properties": {
-        "showOutputText": true,
-        "horizontal": false
-      }
-    },
-    {
-      "id": 61,
-      "type": "Reroute",
-      "pos": [
-        1742,
-        60
-      ],
-      "size": [
-        82,
-        26
-      ],
-      "flags": {},
-      "order": 31,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "",
-          "type": "*",
-          "link": 115
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            112,
-            113
-          ]
         }
       ],
       "properties": {
@@ -403,42 +330,6 @@
       }
     },
     {
-      "id": 62,
-      "type": "Reroute",
-      "pos": [
-        1560,
-        81
-      ],
-      "size": [
-        82,
-        26
-      ],
-      "flags": {},
-      "order": 29,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "",
-          "type": "*",
-          "link": 114
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            115
-          ],
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "showOutputText": true,
-        "horizontal": false
-      }
-    },
-    {
       "id": 7,
       "type": "CLIPTextEncode",
       "pos": [
@@ -515,7 +406,7 @@
         "Node name for S&R": "Positive Prompt"
       },
       "widgets_values": [
-        "full body attractive young woman, brunette with a pixie cut, in her early 20s wearing an unbuttoned blouse, pleated miniskirt, 20D, and flats, dancing, giggling, (drunk), (unsteady),in a furnished living room"
+        "full body attractive young woman, light brown hair, in her late 20s, wearing an unbuttoned tweed jacket with matching miniskirt, unbuttoned blouse, 20D, and pumps with medium heel, giggling, (drunk), (unsteady)"
       ],
       "color": "#232",
       "bgcolor": "#353"
@@ -936,13 +827,13 @@
         26
       ],
       "flags": {},
-      "order": 37,
+      "order": 38,
       "mode": 0,
       "inputs": [
         {
           "name": "",
           "type": "*",
-          "link": 106
+          "link": 211
         }
       ],
       "outputs": [
@@ -999,47 +890,6 @@
       "properties": {
         "showOutputText": true,
         "horizontal": true
-      }
-    },
-    {
-      "id": 75,
-      "type": "VAEDecode",
-      "pos": [
-        2064,
-        867
-      ],
-      "size": {
-        "0": 210,
-        "1": 46
-      },
-      "flags": {},
-      "order": 42,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "samples",
-          "type": "LATENT",
-          "link": 177
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": 157
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            155
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "VAEDecode"
       }
     },
     {
@@ -1109,7 +959,7 @@
         26
       ],
       "flags": {},
-      "order": 43,
+      "order": 46,
       "mode": 0,
       "inputs": [
         {
@@ -1122,56 +972,13 @@
         {
           "name": "IMAGE",
           "type": "IMAGE",
-          "links": [
-            161
-          ],
+          "links": [],
           "slot_index": 0
         }
       ],
       "properties": {
         "showOutputText": true,
         "horizontal": false
-      }
-    },
-    {
-      "id": 74,
-      "type": "VAEEncode",
-      "pos": [
-        1802.6009033203145,
-        867.9997558593752
-      ],
-      "size": {
-        "0": 210,
-        "1": 46
-      },
-      "flags": {},
-      "order": 39,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "pixels",
-          "type": "IMAGE",
-          "link": 154
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": 156
-        }
-      ],
-      "outputs": [
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [
-            178
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "VAEEncode"
       }
     },
     {
@@ -1227,85 +1034,6 @@
       ]
     },
     {
-      "id": 43,
-      "type": "PreviewImage",
-      "pos": [
-        2322,
-        66
-      ],
-      "size": {
-        "0": 305.54583740234375,
-        "1": 516.6363525390625
-      },
-      "flags": {},
-      "order": 36,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 63
-        }
-      ],
-      "title": "After Face Restore",
-      "properties": {
-        "Node name for S&R": "PreviewImage"
-      }
-    },
-    {
-      "id": 42,
-      "type": "PreviewImage",
-      "pos": [
-        1969,
-        69
-      ],
-      "size": {
-        "0": 314.8185729980469,
-        "1": 519.272705078125
-      },
-      "flags": {},
-      "order": 32,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 112,
-          "slot_index": 0
-        }
-      ],
-      "title": "First Image",
-      "properties": {
-        "Node name for S&R": "PreviewImage"
-      }
-    },
-    {
-      "id": 44,
-      "type": "PreviewImage",
-      "pos": [
-        2671,
-        72
-      ],
-      "size": {
-        "0": 296.0912780761719,
-        "1": 506.72723388671875
-      },
-      "flags": {},
-      "order": 40,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 160
-        }
-      ],
-      "title": "After Upscale",
-      "properties": {
-        "Node name for S&R": "PreviewImage"
-      }
-    },
-    {
       "id": 5,
       "type": "EmptyLatentImage",
       "pos": [
@@ -1337,32 +1065,6 @@
         1024,
         1
       ]
-    },
-    {
-      "id": 77,
-      "type": "PreviewImage",
-      "pos": [
-        3014,
-        68
-      ],
-      "size": {
-        "0": 296.0912780761719,
-        "1": 506.72723388671875
-      },
-      "flags": {},
-      "order": 44,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 161
-        }
-      ],
-      "title": "After Upscale (de-banded)",
-      "properties": {
-        "Node name for S&R": "PreviewImage"
-      }
     },
     {
       "id": 64,
@@ -1646,107 +1348,6 @@
       }
     },
     {
-      "id": 40,
-      "type": "UltimateSDUpscale",
-      "pos": [
-        1428,
-        811
-      ],
-      "size": {
-        "0": 298.32855224609375,
-        "1": 590
-      },
-      "flags": {},
-      "order": 38,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 107
-        },
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 153
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 102
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 103
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": 101
-        },
-        {
-          "name": "upscale_model",
-          "type": "UPSCALE_MODEL",
-          "link": 61,
-          "slot_index": 5
-        },
-        {
-          "name": "seed",
-          "type": "INT",
-          "link": 203,
-          "widget": {
-            "name": "seed",
-            "config": [
-              "INT",
-              {
-                "default": 0,
-                "min": 0,
-                "max": 18446744073709552000
-              }
-            ]
-          },
-          "slot_index": 6
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            154,
-            160
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "UltimateSDUpscale"
-      },
-      "widgets_values": [
-        2,
-        869526410196154,
-        "randomize",
-        20,
-        9.5,
-        "euler_ancestral",
-        "normal",
-        0.25,
-        "Linear",
-        512,
-        512,
-        8,
-        32,
-        "None",
-        1,
-        64,
-        8,
-        16,
-        "enable"
-      ]
-    },
-    {
       "id": 3,
       "type": "KSampler",
       "pos": [
@@ -1813,7 +1414,7 @@
         "Node name for S&R": "KSampler"
       },
       "widgets_values": [
-        562968560967337,
+        506291616390493,
         "randomize",
         20,
         7,
@@ -1861,7 +1462,7 @@
       ],
       "properties": {},
       "widgets_values": [
-        146645572425011,
+        671706972707844,
         "randomize"
       ]
     },
@@ -1877,7 +1478,7 @@
         "1": 264.3011169433594
       },
       "flags": {},
-      "order": 41,
+      "order": 43,
       "mode": 0,
       "inputs": [
         {
@@ -1933,7 +1534,7 @@
         "Node name for S&R": "KSampler"
       },
       "widgets_values": [
-        220799086938110,
+        737446035778222,
         "randomize",
         20,
         4,
@@ -1941,6 +1542,548 @@
         "normal",
         0.15000000000000005
       ]
+    },
+    {
+      "id": 62,
+      "type": "Reroute",
+      "pos": [
+        1554,
+        91
+      ],
+      "size": [
+        82,
+        26
+      ],
+      "flags": {},
+      "order": 29,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 114
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            206
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "showOutputText": true,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 99,
+      "type": "Reroute",
+      "pos": [
+        1725.412517578125,
+        -44.60747442626953
+      ],
+      "size": [
+        82,
+        26
+      ],
+      "flags": {},
+      "order": 31,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 206
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            207,
+            208
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "showOutputText": true,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 38,
+      "type": "Reroute",
+      "pos": [
+        888.5992553710922,
+        709.8000396728518
+      ],
+      "size": [
+        82,
+        26
+      ],
+      "flags": {},
+      "order": 35,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 52
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            209
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "showOutputText": true,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 40,
+      "type": "UltimateSDUpscale",
+      "pos": [
+        1428,
+        811
+      ],
+      "size": {
+        "0": 298.32855224609375,
+        "1": 590
+      },
+      "flags": {},
+      "order": 39,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 107
+        },
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 153
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 102
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 103
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 101
+        },
+        {
+          "name": "upscale_model",
+          "type": "UPSCALE_MODEL",
+          "link": 61,
+          "slot_index": 5
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": 203,
+          "widget": {
+            "name": "seed",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": 0,
+                "max": 18446744073709552000
+              }
+            ]
+          },
+          "slot_index": 6
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            212,
+            216
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UltimateSDUpscale"
+      },
+      "widgets_values": [
+        2,
+        1185496685973,
+        "randomize",
+        20,
+        9.5,
+        "euler_ancestral",
+        "normal",
+        0.25,
+        "Linear",
+        512,
+        512,
+        8,
+        32,
+        "None",
+        1,
+        64,
+        8,
+        16,
+        "enable"
+      ]
+    },
+    {
+      "id": 74,
+      "type": "VAEEncode",
+      "pos": [
+        1802.6009033203145,
+        867.9997558593752
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 41,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "pixels",
+          "type": "IMAGE",
+          "link": 216,
+          "slot_index": 0
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 156
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            178
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEEncode"
+      }
+    },
+    {
+      "id": 103,
+      "type": "Reroute",
+      "pos": [
+        1773,
+        716
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 40,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 212
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "IMAGE",
+          "links": [
+            213
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 75,
+      "type": "VAEDecode",
+      "pos": [
+        2064,
+        867
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 45,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 177
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 157
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            155,
+            217
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 100,
+      "type": "PreviewImage",
+      "pos": [
+        1723,
+        46
+      ],
+      "size": [
+        281.1168749999997,
+        558.2599791259763
+      ],
+      "flags": {},
+      "order": 32,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 207
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 101,
+      "type": "Reroute",
+      "pos": [
+        2043,
+        -31
+      ],
+      "size": [
+        82,
+        26
+      ],
+      "flags": {},
+      "order": 36,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 209
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            210,
+            211
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "showOutputText": true,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 102,
+      "type": "PreviewImage",
+      "pos": [
+        2040,
+        49
+      ],
+      "size": [
+        283.5568749999993,
+        552.5979791259763
+      ],
+      "flags": {},
+      "order": 37,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 210
+        }
+      ],
+      "title": "After Face Restore",
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 104,
+      "type": "Reroute",
+      "pos": [
+        2365,
+        -31
+      ],
+      "size": [
+        82,
+        26
+      ],
+      "flags": {},
+      "order": 42,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 213
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            214
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "showOutputText": true,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 106,
+      "type": "Reroute",
+      "pos": [
+        2683,
+        -32
+      ],
+      "size": [
+        82,
+        26
+      ],
+      "flags": {},
+      "order": 47,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 217
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            218
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "showOutputText": true,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 105,
+      "type": "PreviewImage",
+      "pos": [
+        2363,
+        54
+      ],
+      "size": [
+        276.82763671875,
+        549.7003021240234
+      ],
+      "flags": {},
+      "order": 44,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 214
+        }
+      ],
+      "title": "After upscale",
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 107,
+      "type": "PreviewImage",
+      "pos": [
+        2671,
+        56
+      ],
+      "size": [
+        269.699580925555,
+        548.4613462085565
+      ],
+      "flags": {},
+      "order": 48,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 218
+        }
+      ],
+      "title": "After De-banding",
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
     }
   ],
   "links": [
@@ -1983,14 +2126,6 @@
       40,
       5,
       "UPSCALE_MODEL"
-    ],
-    [
-      63,
-      38,
-      0,
-      43,
-      0,
-      "IMAGE"
     ],
     [
       82,
@@ -2113,14 +2248,6 @@
       "BASIC_PIPE"
     ],
     [
-      106,
-      38,
-      0,
-      59,
-      0,
-      "*"
-    ],
-    [
       107,
       59,
       0,
@@ -2137,34 +2264,10 @@
       "VAE"
     ],
     [
-      112,
-      61,
-      0,
-      42,
-      0,
-      "IMAGE"
-    ],
-    [
-      113,
-      61,
-      0,
-      39,
-      0,
-      "*"
-    ],
-    [
       114,
       8,
       0,
       62,
-      0,
-      "*"
-    ],
-    [
-      115,
-      62,
-      0,
-      61,
       0,
       "*"
     ],
@@ -2289,14 +2392,6 @@
       "MODEL"
     ],
     [
-      154,
-      40,
-      0,
-      74,
-      0,
-      "IMAGE"
-    ],
-    [
       155,
       75,
       0,
@@ -2319,22 +2414,6 @@
       75,
       1,
       "VAE"
-    ],
-    [
-      160,
-      40,
-      0,
-      44,
-      0,
-      "IMAGE"
-    ],
-    [
-      161,
-      60,
-      0,
-      77,
-      0,
-      "IMAGE"
     ],
     [
       163,
@@ -2447,6 +2526,102 @@
       76,
       4,
       "INT"
+    ],
+    [
+      206,
+      62,
+      0,
+      99,
+      0,
+      "*"
+    ],
+    [
+      207,
+      99,
+      0,
+      100,
+      0,
+      "IMAGE"
+    ],
+    [
+      208,
+      99,
+      0,
+      39,
+      0,
+      "*"
+    ],
+    [
+      209,
+      38,
+      0,
+      101,
+      0,
+      "*"
+    ],
+    [
+      210,
+      101,
+      0,
+      102,
+      0,
+      "IMAGE"
+    ],
+    [
+      211,
+      101,
+      0,
+      59,
+      0,
+      "*"
+    ],
+    [
+      212,
+      40,
+      0,
+      103,
+      0,
+      "*"
+    ],
+    [
+      213,
+      103,
+      0,
+      104,
+      0,
+      "*"
+    ],
+    [
+      214,
+      104,
+      0,
+      105,
+      0,
+      "IMAGE"
+    ],
+    [
+      216,
+      40,
+      0,
+      74,
+      0,
+      "IMAGE"
+    ],
+    [
+      217,
+      75,
+      0,
+      106,
+      0,
+      "*"
+    ],
+    [
+      218,
+      106,
+      0,
+      107,
+      0,
+      "IMAGE"
     ]
   ],
   "groups": [

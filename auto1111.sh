@@ -22,6 +22,14 @@ python -m venv venv
 cd venv
 source bin/activate
 
+MODELS_DIR="$SDBASE/models/Stable-diffusion"
+VAE_DIR="$SDBASE/models/VAE"
+LORA_DIR="$SDBASE/models/Lora"
+EMBEDDING_DIR="$SDBASE/embeddings"
+UPSCALERS_DIR="$SDBASE/models/ESRGAN"
+source ./sd-config-models.sh
+
+:<<COMMENT
 ## Models ##
 cd $SDBASE/models/Stable-diffusion
 wget https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned.safetensors
@@ -58,6 +66,7 @@ mkdir -p $SDBASE/models/ESRGAN
 cd $SDBASE/models/ESRGAN
 wget https://huggingface.co/uwg/upscaler/resolve/main/ESRGAN/8x_NMKD-Superscale_150000_G.pth
 wget https://nmkd.de/shared/ESRGAN/Models/Faces/8x_NMKD-Faces_160000_G.pth
+COMMNET
 
 ## Extentions ##
 cd $SDBASE/extensions

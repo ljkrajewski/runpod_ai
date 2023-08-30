@@ -21,6 +21,14 @@ pip3 install torch torchvision torchaudio --index-url https://download.pytorch.o
 pip install -U --pre xformers
 pip install -r requirements.txt
 
+MODELS_DIR="$CUIBASE/models/checkpoints"
+VAE_DIR="$CUIBASE/models/vae"
+LORA_DIR="$CUIBASE/models/loras"
+EMBEDDING_DIR="$CUIBASE/models/embeddings"
+UPSCALERS_DIR="$CUIBASE/models/upscale_models"
+source ./sd-config-models.sh
+
+:<<COMMENT
 cd $CUIBASE/models/checkpoints
 #wget https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors
 #wget https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0.safetensors
@@ -62,6 +70,7 @@ curl https://civitai.com/api/download/models/62833 -o DetailTweaker.safetensors 
 cd $CUIBASE/models/upscale_models
 curl https://civitai.com/api/download/models/70526 -o VariousUpscalers.zip -L
 unzip VariousUpscalers.zip
+COMMENT
 
 cd $CUIBASE/custom_nodes
 # -- ComfyUI Manager

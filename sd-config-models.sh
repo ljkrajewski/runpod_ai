@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Configure common downloaded files for Stable Diffusion here.
 # Make sure this script is called with 'source', eg, source ./sd-config-modules.sh
+# and that the directories are set in their variables before calling this script.
 
 ## Models
 [ -d "$MODELS_DIR" ] || mkdir "$MODELS_DIR" && cd "$MODELS_DIR"
@@ -35,3 +36,5 @@ curl https://civitai.com/api/download/models/125849 -o Bad-Hands-5.pt -L
 [ -d "$UPSCALERS_DIR" ] || mkdir "$UPSCALERS_DIR" && cd "$UPSCALERS_DIR"
 wget https://huggingface.co/uwg/upscaler/resolve/main/ESRGAN/8x_NMKD-Superscale_150000_G.pth
 wget https://nmkd.de/shared/ESRGAN/Models/Faces/8x_NMKD-Faces_160000_G.pth
+curl https://civitai.com/api/download/models/70526 -o VariousUpscalers.zip -L
+unzip VariousUpscalers.zip

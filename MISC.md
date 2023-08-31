@@ -1,15 +1,15 @@
 # Misc tips/tools
 ## Preparing your RunPod instance for development using git and github
 1. Go to https://github.com/settings/keys and delete the old "Temp runpod key" public key.
-2. Run the following commands.
+2. In your Runpod terminal, run the following commands.
 ```
 apt update
 cd ~
 ssh-keygen -t ed25519 -f .ssh/runpod -C "Temp runpod key"
 cat .ssh/runpod.pub
 ```
-3. Copy the public key above to https://github.com/settings/ssh/new.
-4. Run the next block of commands replacing _Your Name_ and _<nolink>your.email.address<span>@example.com_ with your name and email address respectively.
+3. Copy the public key generated above to https://github.com/settings/ssh/new.
+4. In your Runpod terminal, run the next block of commands replacing _Your Name_ and _<nolink>your.email.address<span>@example.com_ with your name and email address respectively.
 ```
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/runpod

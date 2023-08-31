@@ -1,7 +1,12 @@
 #!/usr/bin/env bash
 # Configure common downloaded files for Stable Diffusion here.
 # Make sure this script is called with 'source', eg, source ./sd-config-modules.sh
-# and that the directories are set in their variables before calling this script.
+# and that the following variables are set before this script is called:
+#  - MODELS_DIR
+#  - VAE_DIR
+#  - LORA_DIR
+#  - EMBEDDING_DIR
+#  - UPSCALERS_DIR
 
 ## Models
 [ ! -d "$MODELS_DIR" ] && mkdir "$MODELS_DIR" && cd "$MODELS_DIR"

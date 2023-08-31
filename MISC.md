@@ -1,4 +1,7 @@
 # Misc tips/tools
+## Table of Contents
+- [Preparing your RunPod instance for development using git and github](#preparing-your-runpod-instance-for-development-using-git-and-github)
+- [Useful sites](#preparing-your-runpod-instance-for-development-using-git-and-github)
 ## Preparing your RunPod instance for development using git and github
 1. Go to https://github.com/settings/keys and delete the old "Temp runpod key" public key.
 2. In your Runpod terminal, run the following commands.

@@ -9,7 +9,8 @@
 #  - UPSCALERS_DIR
 
 ## Models
-[ ! -d "$MODELS_DIR" ] && mkdir "$MODELS_DIR" && cd "$MODELS_DIR"
+[ ! -d "$MODELS_DIR" ] && mkdir "$MODELS_DIR"
+cd "$MODELS_DIR"
 [ ! -f v1-5-pruned.safetensors ] && \
   wget https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned.safetensors
 #curl https://civitai.com/api/download/models/51913 -o edgeOfRealism.safetensors -L
@@ -24,7 +25,8 @@
   curl https://civitai.com/api/download/models/146074 -o EpicPhotoGasm-inpanting.safetensors -L
 
 ## VAEs
-[ ! -d "$VAE_DIR" ] || mkdir "$VAE_DIR" && cd "$VAE_DIR"
+[ ! -d "$VAE_DIR" ] || mkdir "$VAE_DIR"
+cd "$VAE_DIR"
 [ ! -f vae-ft-mse-840000-ema-pruned.safetensors ] && \
   wget https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.safetensors
 [ ! -f anything-v4.0.vae.pt ] && \
@@ -33,7 +35,8 @@
   wget https://huggingface.co/iZELX1/Grapefruit/raw/main/Grapefruit.vae.pt
 
 ## LoRAs
-[ ! -d "$LORA_DIR" ] && mkdir "$LORA_DIR" && cd "$LORA_DIR"
+[ ! -d "$LORA_DIR" ] && mkdir "$LORA_DIR"
+cd "$LORA_DIR"
 [ ! -f LowRA.safetensors ] && \
   curl https://civitai.com/api/download/models/63006 -o LowRA.safetensors -L
 [ ! -f 20D.safetensors ] && \
@@ -42,7 +45,8 @@
   curl https://civitai.com/api/download/models/62833 -o DetailTweaker.safetensors -L
 
 ## Embeddings
-[ ! -d "$EMBEDDING_DIR" ] && mkdir "$EMBEDDING_DIR" && cd "$EMBEDDING_DIR"
+[ ! -d "$EMBEDDING_DIR" ] && mkdir "$EMBEDDING_DIR"
+cd "$EMBEDDING_DIR"
 [ ! -f BadDream.pt ] && \
   curl https://civitai.com/api/download/models/77169 -o BadDream.pt -L
 [ ! -f UnrealisticDream.pt ] && \
@@ -53,7 +57,8 @@
   curl https://civitai.com/api/download/models/125849 -o Bad-Hands-5.pt -L
 
 ## Upscalers
-[ ! -d "$UPSCALERS_DIR" ] || mkdir "$UPSCALERS_DIR" && cd "$UPSCALERS_DIR"
+[ ! -d "$UPSCALERS_DIR" ] || mkdir "$UPSCALERS_DIR"
+cd "$UPSCALERS_DIR"
 [ ! -f 8x_NMKD-Superscale_150000_G.pth ] && \
   wget https://huggingface.co/uwg/upscaler/resolve/main/ESRGAN/8x_NMKD-Superscale_150000_G.pth
 [ ! -f 8x_NMKD-Faces_160000_G.pth ] && \

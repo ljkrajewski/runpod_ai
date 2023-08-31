@@ -10,7 +10,8 @@ cd venv
 source bin/activate
 
 cd $BASE
-wget https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned.safetensors
+[ ! -f v1-5-pruned.safetensors ] && \
+  wget https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned.safetensors
 #curl https://civitai.com/api/download/models/90072 -o Photon.safetensors -L
 
 cd kohya_ss/

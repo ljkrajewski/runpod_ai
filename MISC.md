@@ -12,7 +12,7 @@ ssh-keygen -t ed25519 -f .ssh/runpod -C "Temp runpod key"
 cat .ssh/runpod.pub
 ```
 3. Copy the public key generated above to https://github.com/settings/ssh/new.
-4. In your Runpod terminal, run the next block of commands replacing _Your Name_ and _<nolink>your.email.address<span>@example.com_ with your name and email address respectively.
+4. In your Runpod terminal, run the next block of commands replacing _Your Name_ and _<nolink>your.email.address<span>@example.com_ with your name and email address respectively. If desired, change the code branch from _dev_ to whichever branch you wish to work on.
 ```
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/runpod
@@ -20,6 +20,9 @@ git config --global user.name "Your Name"
 git config --global user.email your.email.address@example.com
 cd /workspace
 git clone git@github.com:ljkrajewski/runpod_ai.git
+cd runpod_ai
+git checkout dev
+./run_me_first.sh
 ```
 ## Useful sites
 - [EXIF Data Viewer Online - Photo Location Viewer](https://linangdata.com/exif-reader/)  

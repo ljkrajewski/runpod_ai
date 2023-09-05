@@ -5,15 +5,6 @@ BASE='/workspace'
 SDBASE="$BASE/stable-diffusion-webui"
 RPBASE="$BASE/runpod_ai"
 
-function dlFromGoogle {
-#because Google is a pain in the @$$.
-#Downloads a file from Google drive to the current directory.
-#Usage: dlFromGoogle 'http://drive.google.com/link/to/file' 'filename.ext'
-  fileid=`echo $1 | awk -F '/' '{ print $6 }'`
-  html=`curl -c ./cookie -s -L "https://drive.google.com/uc?export=download&id=$fileid"`
-  curl -Lb ./cookie "https://drive.google.com/uc?export=download&`echo $html|grep -Po '(confirm=[a-zA-Z0-9\-_]+)'`&id=$fileid" -o $2
-}
-
 cd $BASE
 git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git
 

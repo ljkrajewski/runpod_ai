@@ -36,7 +36,7 @@ cd "$MODELS_DIR"
   curl https://civitai.com/api/download/models/146074 -o EpicPhotoGasm-inpanting.safetensors -L
 
 ## VAEs
-[ ! -d "$VAE_DIR" ] || mkdir "$VAE_DIR"
+[ ! -d "$VAE_DIR" ] && mkdir "$VAE_DIR"
 cd "$VAE_DIR"
 [ ! -f vae-ft-mse-840000-ema-pruned.safetensors ] && \
   wget https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.safetensors
@@ -68,7 +68,7 @@ cd "$EMBEDDING_DIR"
   curl https://civitai.com/api/download/models/125849 -o Bad-Hands-5.pt -L
 
 ## Upscalers
-[ ! -d "$UPSCALERS_DIR" ] || mkdir "$UPSCALERS_DIR"
+[ ! -d "$UPSCALERS_DIR" ] && mkdir "$UPSCALERS_DIR"
 cd "$UPSCALERS_DIR"
 [ ! -f 8x_NMKD-Superscale_150000_G.pth ] && \
   wget https://huggingface.co/uwg/upscaler/resolve/main/ESRGAN/8x_NMKD-Superscale_150000_G.pth

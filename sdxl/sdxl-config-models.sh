@@ -26,10 +26,10 @@ cd "$MODELS_DIR"
   wget https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0.safetensors
 [ ! -f DreamShaperXL.safetensors ] && \
   curl https://civitai.com/api/download/models/126688 -o DreamShaperXL.safetensors -L  
-[ ! -f CrystalClearXL.safetensors ] && \
-  curl https://civitai.com/api/download/models/133832 -o CrystalClearXL.safetensors -L
-[ ! -f JuggernautXL.safetensors ] && \
-  curl https://civitai.com/api/download/models/156005 -o JuggernautXL.safetensors -L
+[ ! -f crystalClearXL-ccxl.safetensors ] && \
+  curl https://civitai.com/api/download/models/133832 -o crystalClearXL-ccxl.safetensors -L
+[ ! -f JuggernautXL_version3.safetensors ] && \
+  curl https://civitai.com/api/download/models/156005 -o JuggernautXL_version3.safetensors -L
 
 ## VAEs
 [ ! -d "$VAE_DIR" ] && mkdir "$VAE_DIR"
@@ -40,16 +40,16 @@ cd "$VAE_DIR"
   wget https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0_0.9vae.safetensors
 [ ! -f sdxl_vae.safetensors ] && \
   wget https://huggingface.co/stabilityai/sdxl-vae/resolve/main/sdxl_vae.safetensors
-[ ! -f CrystalClearXLvae.??? ] && \
-  curl 'https://civitai.com/api/download/models/133832?type=VAE' -o CrystalClearXLvae.??? -L
-[ ! -f JuggernautXLvae.??? ] && \
-  curl 'https://civitai.com/api/download/models/156005?type=VAE' -o JuggernautXLvae.??? -L
+#[ ! -f CrystalClearXLvae.??? ] && \
+#  curl 'https://civitai.com/api/download/models/133832?type=VAE' -o crystalClearXL-ccxlvae.safetensors -L
+#[ ! -f JuggernautXLvae.??? ] && \
+#  curl 'https://civitai.com/api/download/models/156005?type=VAE' -o JuggernautXLvae.safetensors -L
 
 ## LoRAs
 [ ! -d "$LORA_DIR" ] && mkdir "$LORA_DIR"
 cd "$LORA_DIR"
-[ ! -f itoStyleLycoris.??? ] && \
-  curl 'https://civitai.com/api/download/models/131386' -o itoStyleLycoris.??? -L
+[ ! -f XL_itoStyleLycoris.safetensors ] && \
+  curl 'https://civitai.com/api/download/models/131386' -o XL_itoStyleLycoris.safetensors -L
 
 ## Embeddings
 # [ ! -d "$EMBEDDING_DIR" ] && mkdir "$EMBEDDING_DIR"

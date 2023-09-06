@@ -10,7 +10,7 @@ cd $BASE
 git clone https://github.com/comfyanonymous/ComfyUI.git
 # Change default workflow
 mv $CUIBASE/web/scripts/defaultGraph.js{,.bak}
-sed 's/^{$/export const defaultGraph = {/' $RPBASE/settings/ComfyUI_default.json > $CUIBASE/web/scripts/defaultGraph.js
+sed 's/^{$/export const defaultGraph = {/' $RPBASE/settings/ComfyUI_Workflow_SDXL.json > $CUIBASE/web/scripts/defaultGraph.js
 
 cd $CUIBASE
 python -m venv venv
@@ -39,21 +39,6 @@ git submodule update --init --recursive
 python install.py
 cp impact-pack.ini{,.bu}
 sed -i 's/mmdet_skip = True/mmdet_skip = False/' impact-pack.ini
-cd $CUIBASE/custom_nodes
-# -- ComfyUI FaceRestore Node - https://civitai.com/models/24690/comfyui-facerestore-node
-curl https://civitai.com/api/download/models/122586  -o FaceRestore.zip -L
-unzip FaceRestore.zip
-[ ! -d "$CUIBASE/models/facerestore_models/" ] && mkdir "$CUIBASE/models/facerestore_models/"
-cd "$CUIBASE/models/facerestore_models/"
-wget https://github.com/TencentARC/GFPGAN/releases/download/v1.3.4/GFPGANv1.4.pth
-wget https://github.com/sczhou/CodeFormer/releases/download/v0.1.0/codeformer.pth
-[ ! -d "$CUIBASE/models/facedetection/" ] && mkdir "$CUIBASE/models/facedetection/"
-cd "$CUIBASE/models/facedetection/"
-wget https://github.com/xinntao/facexlib/releases/download/v0.1.0/detection_Resnet50_Final.pth
-wget https://github.com/xinntao/facexlib/releases/download/v0.1.0/detection_mobilenet0.25_Final.pth
-wget https://github.com/sczhou/CodeFormer/releases/download/v0.1.0/yolov5l-face.pth
-wget https://github.com/sczhou/CodeFormer/releases/download/v0.1.0/yolov5n-face.pth
-wget https://github.com/sczhou/CodeFormer/releases/download/v0.1.0/parsing_parsenet.pth
 cd $CUIBASE/custom_nodes
 # -- Derfuu_ComfyUI_ModdedNodes
 git clone https://github.com/Derfuu/Derfuu_ComfyUI_ModdedNodes.git

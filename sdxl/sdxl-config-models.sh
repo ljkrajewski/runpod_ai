@@ -50,10 +50,10 @@ cd "$LORA_DIR"
   curl 'https://civitai.com/api/download/models/131386' -o itoStyleLycoris.??? -L
 
 ## Embeddings
-[ ! -d "$EMBEDDING_DIR" ] && mkdir "$EMBEDDING_DIR"
-cd "$EMBEDDING_DIR"
+# [ ! -d "$EMBEDDING_DIR" ] && mkdir "$EMBEDDING_DIR"
+# cd "$EMBEDDING_DIR"
 
 ## Upscalers
-[ ! -d "$UPSCALERS_DIR" ] && mkdir "$UPSCALERS_DIR"
-cd "$UPSCALERS_DIR"
+# [ ! -d "$UPSCALERS_DIR" ] && mkdir "$UPSCALERS_DIR"
+# cd "$UPSCALERS_DIR"
 

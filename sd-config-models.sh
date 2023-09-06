@@ -76,6 +76,6 @@ cd "$UPSCALERS_DIR"
   wget https://nmkd.de/shared/ESRGAN/Models/Faces/8x_NMKD-Faces_160000_G.pth
 [ ! -f 4x-UltraSharp.pth ] && \
   wget https://huggingface.co/lokCX/4x-Ultrasharp/resolve/main/4x-UltraSharp.pth
-[ ! -f VariousUpscalers.zip ] && \
-  curl https://civitai.com/api/download/models/70526 -o VariousUpscalers.zip -L && \
-  unzip VariousUpscalers.zip
+#[ ! -f VariousUpscalers.zip ] && \
+#  curl https://civitai.com/api/download/models/70526 -o VariousUpscalers.zip -L && \
+#  unzip VariousUpscalers.zip

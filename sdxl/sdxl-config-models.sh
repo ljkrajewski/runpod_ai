@@ -26,6 +26,8 @@ cd "$MODELS_DIR"
   wget https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0.safetensors
 [ ! -f CrystalClearXL.safetensors ] && \
   curl https://civitai.com/api/download/models/133832 -o CrystalClearXL.safetensors -L
+[ ! -f JuggernautXL.safetensors ] && \
+  curl https://civitai.com/api/download/models/156005 -o JuggernautXL.safetensors -L
 
 ## VAEs
 [ ! -d "$VAE_DIR" ] && mkdir "$VAE_DIR"
@@ -36,6 +38,8 @@ cd "$VAE_DIR"
   wget https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0_0.9vae.safetensors
 [ ! -f CrystalClearXLvae.safetensors ] && \
   curl 'https://civitai.com/api/download/models/133832?type=VAE' -o CrystalClearXLvae.safetensors -L
+[ ! -f JuggernautXLvae.safetensors ] && \
+  curl 'https://civitai.com/api/download/models/156005?type=VAE' -o JuggernautXLvae.safetensors -L
 
 ## LoRAs
 [ ! -d "$LORA_DIR" ] && mkdir "$LORA_DIR"

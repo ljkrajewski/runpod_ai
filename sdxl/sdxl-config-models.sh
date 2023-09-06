@@ -24,6 +24,8 @@ cd "$MODELS_DIR"
   wget https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors
 [ ! -f sd_xl_refiner_1.0.safetensors ] && \
   wget https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0.safetensors
+[ ! -f CrystalClearXL.safetensors ] && \
+  curl https://civitai.com/api/download/models/133832 -o CrystalClearXL.safetensors -L
 
 ## VAEs
 [ ! -d "$VAE_DIR" ] && mkdir "$VAE_DIR"
@@ -32,3 +34,18 @@ cd "$VAE_DIR"
   wget https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0_0.9vae.safetensors
 [ ! -f sd_xl_refiner_1.0_0.9vae.safetensors ] && \
   wget https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0_0.9vae.safetensors
+[ ! -f CrystalClearXLvae.safetensors ] && \
+  curl 'https://civitai.com/api/download/models/133832?type=VAE' -o CrystalClearXLvae.safetensors -L
+
+## LoRAs
+[ ! -d "$LORA_DIR" ] && mkdir "$LORA_DIR"
+cd "$LORA_DIR"
+
+## Embeddings
+[ ! -d "$EMBEDDING_DIR" ] && mkdir "$EMBEDDING_DIR"
+cd "$EMBEDDING_DIR"
+
+## Upscalers
+[ ! -d "$UPSCALERS_DIR" ] && mkdir "$UPSCALERS_DIR"
+cd "$UPSCALERS_DIR"
+

@@ -24,8 +24,6 @@ cd "$MODELS_DIR"
   wget https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors
 [ ! -f sd_xl_refiner_1.0.safetensors ] && \
   wget https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0.safetensors
-[ ! -f sd_xl_refiner_1.0.safetensors ] && \
-  wget https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0.safetensors
 [ ! -f DreamShaperXL.safetensors ] && \
   curl https://civitai.com/api/download/models/126688 -o DreamShaperXL.safetensors -L  
 [ ! -f CrystalClearXL.safetensors ] && \

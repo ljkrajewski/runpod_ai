@@ -23,7 +23,12 @@ git clone https://github.com/ljkrajewski/runpod_ai.git
 _See sd/README.md_
       - Stable Diffusion XL (ComfyUI-XL)  
 _See sdxl/README.md_  
-    - **Text-to-image training (kohya_ss)**  
-_See kohya-ss/README.md_  
+    - **Text-to-image training**
+      - LoRA (kohya_ss)
+_See kohya-ss/README.md_
+      - Textual Inversion/Embeddings  
+Currently done in AUTOMATIC1111. _See sd/README.md_
+      - Checkpoints  
+Coming soon.
     - **Text generation**  
-_See text2text/README.md_ 
+Coming soon. _See text2text/README.md_ 

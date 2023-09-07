@@ -3,10 +3,10 @@
 read -p "Token name: " tokenName
 read -p "Class:  " className
 
-mkdir -p /workspace/training/log
-mkdir -p /workspace/training/img/tmp
-mkdir -p /workspace/training/model
-mkdir -p /workspace/training/reg/tmp
+[ ! -d /workspace/training/log ] && mkdir -p /workspace/training/log
+[ ! -d /workspace/training/img/tmp ] && mkdir -p /workspace/training/img/tmp
+[ ! -d /workspace/training/model ] && mkdir -p /workspace/training/model
+[ ! -d /workspace/training/reg/tmp ] && mkdir -p /workspace/training/reg/tmp
 echo "Upload your training images to /workspace/training/img/tmp now."
 echo "You can proceed when all training images are uploaded."
 read -p "Press <enter> to continue" tmpPause

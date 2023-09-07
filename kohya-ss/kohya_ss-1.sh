@@ -59,6 +59,7 @@ echo "Remember to add '$tokenName' to the captioning prefix along with any other
 echo
 sed "s/TOKENNAME/$tokenName/g" $RPBASE/kohya-ss.conf.orig > $TRAININGDIR/kohya-ss.conf
 sed -i "s/CLASSNAME/$className/g" $TRAININGDIR/kohya-ss.conf
+sed -i "s/TRAININGDIR/$TRAININGDIR/g" $TRAININGDIR/kohya-ss.conf
 echo "2\) Load the configuration file at $TRAININGDIR/kohya-ss.conf into kohya-ss."
 echo "Confirm your sample prompt, make any other parameter changes you wish to, then begin training."
 

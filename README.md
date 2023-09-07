@@ -31,4 +31,4 @@ Currently done in AUTOMATIC1111. _See sd/README.md_
       - Checkpoints  
 Coming soon.
     - **Text generation**  
-Coming soon. _See text2text/README.md_ 
+Coming soon. _See textgen/README.md_ 

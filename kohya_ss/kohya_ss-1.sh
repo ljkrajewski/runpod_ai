@@ -1,17 +1,21 @@
 #!/usr/bin/env bash
 
+BASE='/workplace'
+RPBASE="$BASE/runpod_ai/kohya_ss"
+TRAININGDIR="$BASE/training"
+
 read -p "Token name: " tokenName
 read -p "Class:  " className
 
-[ ! -d /workspace/training/log ] && mkdir -p /workspace/training/log
-[ ! -d /workspace/training/img/tmp ] && mkdir -p /workspace/training/img/tmp
-[ ! -d /workspace/training/model ] && mkdir -p /workspace/training/model
-[ ! -d /workspace/training/reg/tmp ] && mkdir -p /workspace/training/reg/tmp
-echo "Upload your training images to /workspace/training/img/tmp now."
+[ ! -d $TRAININGDIR/log ] && mkdir -p $TRAININGDIR/log
+[ ! -d $TRAININGDIR/img/tmp ] && mkdir -p $TRAININGDIR/img/tmp
+[ ! -d $TRAININGDIR/model ] && mkdir -p $TRAININGDIR/model
+[ ! -d $TRAININGDIR/reg/tmp ] && mkdir -p $TRAININGDIR/reg/tmp
+echo "Upload your training images to $TRAININGDIR/img/tmp now."
 echo "You can proceed when all training images are uploaded."
 read -p "Press <enter> to continue" tmpPause
 
-numTrainingFiles=$((`ls -l /workspace/training/img/tmp | wc -l` - 1))
+numTrainingFiles=$((`ls -l $TRAININGDIR/img/tmp | wc -l` - 1))
 #for LoRA training, btw 1500-6000 steps per epoch
 minRecRepeats=$(((1500/$numTrainingFiles)+1))
 if [[ "$minRecRepeats" -lt "10" ]]; then
@@ -25,20 +29,20 @@ echo
 echo "Recommended number of repeats is between $minRecRepeats and $maxRecRepeats per image."
 echo "Note: Easy subjects like faces can use fewer repeats."
 read -p "Enter number of repeats per image:  " numRepeats
-cd /workspace/training/img
+cd $TRAININGDIR/img
 imgDirName=$numRepeats"_$tokenName $className"
 mv tmp "$imgDirName"
 
 numRegFiles=$(($numRepeats * $numTrainingFiles))
 echo
 echo "You will need at least $numRegFiles regularization images of class $className."
-echo "Run /workspace/runpod_ai/auto1111.sh in a new terminal to install and run AUTOMATIC1111/Stable Diffusion to create your regularization images."
-echo "In another terminal, run /workspace/runpod_ai/kohya_ss-2.sh to install and run kohya_ss."
-echo "When your regularization images are complete, move them to /workspace/training/reg/tmp."
+echo "Create your regularization images in Stable Diffusion."
+echo "In another terminal, run $RPBASE/kohya_ss-2.sh to install and run kohya_ss."
+echo "When your regularization images are complete, move them to $TRAININGDIR/reg/tmp."
 echo "You can proceed when the regularization images are moved."
 read -p "Press <enter> to continue" tmpPause
 
-cd /workspace/training/reg
+cd $TRAININGDIR/reg
 mv tmp "1_$className"
 
 echo
@@ -48,12 +52,12 @@ read -p "Press <enter> to continue" tmpPause
 echo
 echo "Last few steps..."
 echo "1\) Caption your training files."
-echo "Captioning directory: /workspace/training/img/$imgDirName"
+echo "Captioning directory: $TRAININGDIR/img/$imgDirName"
 echo "BLIP is recommended for phrotorealistic models, WD14 for anime/drawings."
 echo "Remember to add '$tokenName' to the captioning prefix along with any other words you wish to train on."
 echo
-sed "s/TOKENNAME/$tokenName/g" /workspace/runpod_ai/settings/kohya-ss.conf.orig > /workspace/kohya-ss.conf
-sed -i "s/CLASSNAME/$className/g" /workspace/kohya-ss.conf
-echo "2\) Load the configuration file at /workspace/kohya-ss.conf into hohya-ss."
+sed "s/TOKENNAME/$tokenName/g" $RPBASE/kohya-ss.conf.orig > $TRAININGDIR/kohya-ss.conf
+sed -i "s/CLASSNAME/$className/g" $TRAININGDIR/kohya-ss.conf
+echo "2\) Load the configuration file at $TRAININGDIR/kohya-ss.conf into kohya-ss."
 echo "Confirm your sample prompt, make any other parameter changes you wish to, then begin training."
 

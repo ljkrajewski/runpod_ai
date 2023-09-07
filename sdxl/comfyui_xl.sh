@@ -3,14 +3,14 @@
 
 BASE='/workspace'
 CUIBASE="$BASE/ComfyUI"
-RPBASE="$BASE/runpod_ai"
+RPBASE="$BASE/runpod_ai/sdxl"
 
 # Manual install - https://github.com/FurkanGozukara/Stable-Diffusion/blob/main/Tutorials/How-To-Use-ComfyUI-On-Your-PC-On-RunPod-On-Colab-With-SDXL.md
 cd $BASE
 git clone https://github.com/comfyanonymous/ComfyUI.git
 # Change default workflow
 mv $CUIBASE/web/scripts/defaultGraph.js{,.bak}
-sed 's/^{$/export const defaultGraph = {/' $RPBASE/settings/ComfyUI_Workflow_SDXL.json > $CUIBASE/web/scripts/defaultGraph.js
+sed 's/^{$/export const defaultGraph = {/' $RPBASE/ComfyUI_Workflow_SDXL.json > $CUIBASE/web/scripts/defaultGraph.js
 
 cd $CUIBASE
 python -m venv venv
@@ -27,7 +27,7 @@ VAE_DIR="$CUIBASE/models/vae"
 LORA_DIR="$CUIBASE/models/loras"
 EMBEDDING_DIR="$CUIBASE/models/embeddings"
 UPSCALERS_DIR="$CUIBASE/models/upscale_models"
-source $RPBASE/sdxl/sdxl-config-models.sh
+source $RPBASE/sdxl-config-models.sh
 
 cd $CUIBASE/custom_nodes
 # -- ComfyUI Manager

@@ -22,56 +22,12 @@ git clone https://github.com/ljkrajewski/runpod_ai.git
 _See sd/README.md_ 
     - ComfyUI (text2image)  
 _See sd/README.md_
-    - [ComfyUI/SDXL (text2image)](#comfyuisdxl-text2image)
+    - [ComfyUI/SDXL (text2image)](#comfyuisdxl-text2image)  
+_See sdxl/README.md_
     - [bmaltais/kohya_ss (text2image training)](#bmaltaiskohya_ss-text2image-training)
     - [kohya-ss/sd-scripts](#kohya-sssd-scripts-text2image-training)
     - [oobabooga/text-generation-webui (text2text)](#oobaboogatext-generation-webui-text2text)
     - [Honkware/text-generation-webui (text2text)](#honkwaretext-generation-webui-text2text)
-## [AUTOMATIC1111/Stable Diffusion](https://github.com/AUTOMATIC1111/stable-diffusion-webui) (text2image)
-### Training resources:
-- [AMAZING SD Models - And how to get the MOST out of them! (YouTube)](https://www.youtube.com/watch?v=ezNDCWhv4pQ)
-### Directions:
-1. In a new terminal session, run
-   ```
-   cd /workspace/runpod_ai/sd
-   ./auto1111.sh
-   ```
-2. When ... _[Changing the directions to no longer use gradio link]_
-## [ComfyUI](https://github.com/comfyanonymous/ComfyUI) (text2image)
-### Training resources:
-- [Scott Detweiler's ComfyUI playlist (YouTube)](https://www.youtube.com/playlist?list=PLIF38owJLhR1EGDY4kOnsEnMyolZgza1x)
-IMO, best resource for learning to use ComfyUI from scratch.
-- [ComfyUI Tutorial](https://comfyanonymous.github.io/ComfyUI_tutorial_vn/)
-- [ComfyUI Examples](https://comfyanonymous.github.io/ComfyUI_examples/)
-Contains examples of what is achievable with ComfyUI. Includes workflows for:
-    - [2-pass txt2image](https://comfyanonymous.github.io/ComfyUI_examples/2_pass_txt2img/)
-    - [img2img](https://comfyanonymous.github.io/ComfyUI_examples/img2img/)
-    - [inpainting](https://comfyanonymous.github.io/ComfyUI_examples/inpaint/)
-    - [using LoRAs](https://comfyanonymous.github.io/ComfyUI_examples/lora/)
-    - [ControlNet and T2I-Adapter](https://comfyanonymous.github.io/ComfyUI_examples/controlnet/)
-    - [Textual Inversion Embeddings](https://comfyanonymous.github.io/ComfyUI_examples/textual_inversion_embeddings/)
-### Directions:
-1. In a new terminal session, run
-   ```
-   cd /workspace/runpod_ai/sd
-   ./comfyui.sh
-   ```
-2. When ... _[Changing the directions to no longer use gradio link]_
-3. When ComfyUI is running in your web browser, load the default workflow.
-## [ComfyUI/SDXL](https://github.com/comfyanonymous/ComfyUI) (text2image)
-### Training resources:
-See also the ComfyUI resources above.
-- [How To Use ComfyUI On Your PC, On Google Colab (Free) And On RunPod With SDXL Full Tutorial / Guide](https://github.com/FurkanGozukara/Stable-Diffusion/blob/main/Tutorials/How-To-Use-ComfyUI-On-Your-PC-On-RunPod-On-Colab-With-SDXL.md)
-- [ComfyUI Master Tutorial - Stable Diffusion XL (SDXL) - Install On PC, Google Colab (Free) & RunPod (YouTube)](https://www.youtube.com/watch?v=FnMHbhvWUhE)
-- [ComfyUI SDXL Workflow](https://www.patreon.com/posts/comfyui-workflow-86104919)
-### Directions:
-1. In a new terminal session, run
-   ```
-   cd /workspace/runpod_ai/sdxl
-   ./comfyui_xl.sh
-   ```
-2. When ... _[Changing the directions to no longer use gradio link]_
-3. When ComfyUI is running in your web browser, load the default workflow.
 ## [bmaltais/kohya_ss](https://github.com/bmaltais/kohya_ss) (text2image training)
 ### Training resources:
 - [Tutorial: Dreambooth LoRA training using Kohya_SS (article)](https://civitai.com/articles/391/tutorial-dreambooth-lora-training-using-kohyass)

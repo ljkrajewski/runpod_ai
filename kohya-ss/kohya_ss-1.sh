@@ -2,6 +2,7 @@
 
 BASE='/workplace'
 RPBASE="$BASE/runpod_ai/kohya_ss"
+KSSBASE="$BASE/kohya_ss"
 TRAININGDIR="$BASE/training"
 
 read -p "Token name: " tokenName

@@ -17,20 +17,15 @@ cd /workspace
 git clone https://github.com/ljkrajewski/runpod_ai.git
 /workspace/runpod_ai/run_me_first.sh
 ```
-8. Click on the project you wish to run and follow its directections.
-    - AUTOMATIC1111/Stable Diffusion (text2image)  
-_See sd/README.md_ 
-    - ComfyUI (text2image)  
+8. Select the project you wish to run and follow its directections.
+    - Stable Diffusion text-to-image (AUTOMATIC1111, ComfyUI)  
 _See sd/README.md_
-    - ComfyUI/SDXL (text2image)  
-_See sdxl/README.md_
-    - [bmaltais/kohya_ss (text2image training)]  
-_See sdxl/README.md_
-    - [kohya-ss/sd-scripts]  
-_See sdxl/README.md_
-    - [oobabooga/text-generation-webui (text2text)](#oobaboogatext-generation-webui-text2text)
-    - [Honkware/text-generation-webui (text2text)](#honkwaretext-generation-webui-text2text)
-## [oobabooga/text-generation-webui](https://github.com/oobabooga/text-generation-webui) (text2text)
+    - Stable Diffusion XL text-to-image (ComfyUI-XL)  
+_See sdxl/README.md_  
+    - Stable Diffusion training (kohya_ss)  
+_See kohya-ss/README.md_  
+    - Text-to-speech  
+        - oobabooga/text-generation-webui  
 _Coming soon_
-## [Honkware/text-generation-webui](https://github.com/Honkware/text-generation-webui) (text2text)
+        - Honkware/text-generation-webui  
 _Coming soon_

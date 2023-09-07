@@ -41,9 +41,9 @@ cd "$VAE_DIR"
 [ ! -f sdxl_vae.safetensors ] && \
   wget https://huggingface.co/stabilityai/sdxl-vae/resolve/main/sdxl_vae.safetensors
 #[ ! -f CrystalClearXLvae.??? ] && \
-#  curl 'https://civitai.com/api/download/models/133832?type=VAE' -o crystalClearXL-ccxlvae.safetensors -L
+#  curl 'https://civitai.com/api/download/models/133832?type=VAE' -o sdxl_vae.safetensors -L
 #[ ! -f JuggernautXLvae.??? ] && \
-#  curl 'https://civitai.com/api/download/models/156005?type=VAE' -o JuggernautXLvae.safetensors -L
+#  curl 'https://civitai.com/api/download/models/156005?type=VAE' -o sdxl_vae.safetensors -L
 
 ## LoRAs
 [ ! -d "$LORA_DIR" ] && mkdir "$LORA_DIR"

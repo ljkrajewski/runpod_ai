@@ -24,8 +24,5 @@ _See sd/README.md_
 _See sdxl/README.md_  
     - Stable Diffusion training (kohya_ss)  
 _See kohya-ss/README.md_  
-    - Text-to-speech  
-        - oobabooga/text-generation-webui  
-_Coming soon_
-        - Honkware/text-generation-webui  
-_Coming soon_
+    - Text generation  
+_See text2text/README.md_ 

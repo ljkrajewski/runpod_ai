@@ -1,4 +1,4 @@
-## [ComfyUI/SDXL](https://github.com/comfyanonymous/ComfyUI) (text2image)
+## [ComfyUI (SDXL)](https://github.com/comfyanonymous/ComfyUI)
 ### Training resources:
 See also the ComfyUI resources above.
 - [How To Use ComfyUI On Your PC, On Google Colab (Free) And On RunPod With SDXL Full Tutorial / Guide](https://github.com/FurkanGozukara/Stable-Diffusion/blob/main/Tutorials/How-To-Use-ComfyUI-On-Your-PC-On-RunPod-On-Colab-With-SDXL.md)

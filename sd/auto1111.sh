@@ -41,8 +41,8 @@ git clone https://huggingface.co/lllyasviel/ControlNet-v1-1
 
 ## Start the GUI ##
 cd $SDBASE
-cp /workspace/runpod_ai/settings/config.json .
-cp /workspace/runpod_ai/emb.txt extensions/a1111-sd-webui-tagcomplete/tags/temp
+cp $RPBASE/config.json .
+cp $RPBASE/emb.txt extensions/a1111-sd-webui-tagcomplete/tags/temp
 #cmdlineArgs="--share --xformers --enable-insecure-extension-access --disable-safe-unpickle"
 cmdLineArgs="--listen --port 7860 --xformers --enable-insecure-extension-access --disable-safe-unpickle"
 sed -i "s/#export COMMANDLINE_ARGS=\"\"/export COMMANDLINE_ARGS=\"$cmdLineArgs\"/" webui-user.sh

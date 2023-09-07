@@ -3,7 +3,7 @@ fuser -k 7860/tcp
 
 BASE='/workspace'
 SDBASE="$BASE/stable-diffusion-webui"
-RPBASE="$BASE/runpod_ai"
+RPBASE="$BASE/sd/runpod_ai"
 
 cd $BASE
 git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git

@@ -1,4 +1,4 @@
-## [AUTOMATIC1111/Stable Diffusion](https://github.com/AUTOMATIC1111/stable-diffusion-webui) (text2image)
+## [AUTOMATIC1111/Stable Diffusion](https://github.com/AUTOMATIC1111/stable-diffusion-webui)
 ### Training resources:
 - [AMAZING SD Models - And how to get the MOST out of them! (YouTube)](https://www.youtube.com/watch?v=ezNDCWhv4pQ)
 ### Directions:
@@ -8,7 +8,7 @@
    ./auto1111.sh
    ```
 2. When ... _[Changing the directions to no longer use gradio link]_
-## [ComfyUI](https://github.com/comfyanonymous/ComfyUI) (text2image)
+## [ComfyUI](https://github.com/comfyanonymous/ComfyUI)
 ### Training resources:
 - [Scott Detweiler's ComfyUI playlist (YouTube)](https://www.youtube.com/playlist?list=PLIF38owJLhR1EGDY4kOnsEnMyolZgza1x)
 IMO, best resource for learning to use ComfyUI from scratch.

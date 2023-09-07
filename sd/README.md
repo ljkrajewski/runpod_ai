@@ -1,4 +1,4 @@
-## [AUTOMATIC1111/Stable Diffusion](https://github.com/AUTOMATIC1111/stable-diffusion-webui)
+## [AUTOMATIC1111/stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui)
 ### Training resources:
 - [AMAZING SD Models - And how to get the MOST out of them! (YouTube)](https://www.youtube.com/watch?v=ezNDCWhv4pQ)
 ### Directions:

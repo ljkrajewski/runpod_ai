@@ -3,7 +3,7 @@
 
 BASE='/workspace'
 CUIBASE="$BASE/ComfyUI"
-RPBASE="$BASE/runpod_ai"
+RPBASE="$BASE/sd/runpod_ai"
 
 # Manual install - https://github.com/FurkanGozukara/Stable-Diffusion/blob/main/Tutorials/How-To-Use-ComfyUI-On-Your-PC-On-RunPod-On-Colab-With-SDXL.md
 cd $BASE

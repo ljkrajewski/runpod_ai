@@ -22,7 +22,7 @@ git clone https://github.com/ljkrajewski/runpod_ai.git
 _See sd/README.md_ 
     - ComfyUI (text2image)  
 _See sd/README.md_
-    - [ComfyUI/SDXL (text2image)](#comfyuisdxl-text2image)  
+    - ComfyUI/SDXL (text2image)  
 _See sdxl/README.md_
     - [bmaltais/kohya_ss (text2image training)](#bmaltaiskohya_ss-text2image-training)
     - [kohya-ss/sd-scripts](#kohya-sssd-scripts-text2image-training)

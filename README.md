@@ -18,8 +18,10 @@ git clone https://github.com/ljkrajewski/runpod_ai.git
 /workspace/runpod_ai/run_me_first.sh
 ```
 8. Click on the project you wish to run and follow its directections.
-    - [AUTOMATIC1111/Stable Diffusion (text2image)](#automatic1111stable-diffusion-text2image)
-    - [ComfyUI (text2image)](#comfyui-text2image)
+    - AUTOMATIC1111/Stable Diffusion (text2image)  
+See sd/README.md  
+    - ComfyUI (text2image)  
+See sd/README.md
     - [ComfyUI/SDXL (text2image)](#comfyuisdxl-text2image)
     - [bmaltais/kohya_ss (text2image training)](#bmaltaiskohya_ss-text2image-training)
     - [kohya-ss/sd-scripts](#kohya-sssd-scripts-text2image-training)

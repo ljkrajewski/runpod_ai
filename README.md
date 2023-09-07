@@ -10,8 +10,8 @@ _<sup>*</sup>This is a work in progress, so take the claim that these scripts/no
    - Volume size: 150GB
    - HTTP service ports: 8888, 3000, 7860, 8000
 5. Start the pod instance.
-6. Once RunPod instance has finished booting up, connect to Jupyter Notebook and open a terminal tab.
-7. Inside the terminal tab, run the following commands:
+6. Once RunPod instance has finished booting up, open a terminal either in Jupyter Notebook or through an SSH connection.
+7. Inside the terminal, run the following commands:
 ```
 cd /workspace
 git clone https://github.com/ljkrajewski/runpod_ai.git
@@ -29,9 +29,10 @@ git clone https://github.com/ljkrajewski/runpod_ai.git
 ### Training resources:
 - [AMAZING SD Models - And how to get the MOST out of them! (YouTube)](https://www.youtube.com/watch?v=ezNDCWhv4pQ)
 ### Directions:
-1. In Jupyter Notebook, open a new terminal tab and run
+1. In a new terminal session, run
    ```
-   /workspace/runpod_ai/auto1111.sh
+   cd /workspace/runpod_ai/sd
+   ./auto1111.sh
    ```
 2. When ... _[Changing the directions to no longer use gradio link]_
 ## [ComfyUI](https://github.com/comfyanonymous/ComfyUI) (text2image)
@@ -48,9 +49,10 @@ Contains examples of what is achievable with ComfyUI. Includes workflows for:
     - [ControlNet and T2I-Adapter](https://comfyanonymous.github.io/ComfyUI_examples/controlnet/)
     - [Textual Inversion Embeddings](https://comfyanonymous.github.io/ComfyUI_examples/textual_inversion_embeddings/)
 ### Directions:
-1. In Jupyter Notebook, open a new terminal tab and run
+1. In a new terminal session, run
    ```
-   /workspace/runpod_ai/comfyui.sh
+   cd /workspace/runpod_ai/sd
+   ./comfyui.sh
    ```
 2. When ... _[Changing the directions to no longer use gradio link]_
 3. When ComfyUI is running in your web browser, load the default workflow.
@@ -61,7 +63,13 @@ See also the ComfyUI resources above.
 - [ComfyUI Master Tutorial - Stable Diffusion XL (SDXL) - Install On PC, Google Colab (Free) & RunPod (YouTube)](https://www.youtube.com/watch?v=FnMHbhvWUhE)
 - [ComfyUI SDXL Workflow](https://www.patreon.com/posts/comfyui-workflow-86104919)
 ### Directions:
-_Coming soon_
+1. In a new terminal session, run
+   ```
+   cd /workspace/runpod_ai/sdxl
+   ./comfyui_xl.sh
+   ```
+2. When ... _[Changing the directions to no longer use gradio link]_
+3. When ComfyUI is running in your web browser, load the default workflow.
 ## [bmaltais/kohya_ss](https://github.com/bmaltais/kohya_ss) (text2image training)
 ### Training resources:
 - [Tutorial: Dreambooth LoRA training using Kohya_SS (article)](https://civitai.com/articles/391/tutorial-dreambooth-lora-training-using-kohyass)
@@ -69,9 +77,10 @@ _Coming soon_
 - [Training LoRA with Kohya (theory included!) (YouTube)](https://www.youtube.com/watch?v=xholR62Q2tY)
 - [LORA + Checkpoint Model Training GUIDE - Get the BEST RESULTS super easy (YouTube)](https://www.youtube.com/watch?v=j-So4VYTL98)
 ### Directions:
-1. In Jupyter Notebook, open a new terminal tab and run:
+1. In a new terminal session, run
    ```
-   /workspace/runpod_ai/koyha_ss-1.sh
+   cd /workspace/runpod_ai/koyha-ss
+   ./koyha_ss-1.sh
    ```
 2. Answer the prompts and follow the directions.
 ## [kohya-ss/sd-scripts](https://github.com/kohya-ss/sd-scripts/tree/sdxl) (text2image training)

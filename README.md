@@ -19,9 +19,9 @@ git clone https://github.com/ljkrajewski/runpod_ai.git
 ```
 8. Click on the project you wish to run and follow its directections.
     - AUTOMATIC1111/Stable Diffusion (text2image)  
-See sd/README.md  
+_See sd/README.md_ 
     - ComfyUI (text2image)  
-See sd/README.md
+_See sd/README.md_
     - [ComfyUI/SDXL (text2image)](#comfyuisdxl-text2image)
     - [bmaltais/kohya_ss (text2image training)](#bmaltaiskohya_ss-text2image-training)
     - [kohya-ss/sd-scripts](#kohya-sssd-scripts-text2image-training)

@@ -4,6 +4,31 @@ BASE='/workplace'
 RPBASE="$BASE/runpod_ai/kohya_ss"
 KSSBASE="$BASE/kohya_ss"
 TRAININGDIR="$BASE/training"
+INSTALLLOG="$BASE/install.log"
+
+function install_kohya {
+  cd $TRAININGDIR
+  [ ! -f v1-5-pruned.safetensors ] && \
+    wget -nv https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned.safetensors
+  #curl https://civitai.com/api/download/models/90072 -o Photon.safetensors -L
+  
+  cd $KSSBASE
+  ./setup-runpod.sh
+#  ./gui.sh --share --headless
+}
+
+echo "Starting kohya-ss install. To follow the install log, enter:"
+echo "    tail -f $INSTALLOG"
+echo "in a different terminal window."
+echo
+
+cd $BASE
+git clone https://github.com/bmaltais/kohya_ss.git
+cd $KSSBASE
+python -m venv venv
+cd venv
+source bin/activate
+install_kohya > $INSTALLLOG &
 
 read -p "Token name: " tokenName
 read -p "Class:  " className
@@ -38,7 +63,6 @@ numRegFiles=$(($numRepeats * $numTrainingFiles))
 echo
 echo "You will need at least $numRegFiles regularization images of class $className."
 echo "Create your regularization images in Stable Diffusion."
-echo "In another terminal, run $RPBASE/kohya_ss-2.sh to install and run kohya_ss."
 echo "When your regularization images are complete, move them to $TRAININGDIR/reg/tmp."
 echo "You can proceed when the regularization images are moved."
 read -p "Press <enter> to continue" tmpPause
@@ -47,8 +71,10 @@ cd $TRAININGDIR/reg
 mv tmp "1_$className"
 
 echo
-echo "Wait here until you are able to enter the koyha_ss UI."
-read -p "Press <enter> to continue" tmpPause
+echo "Waiting here until you are able to enter the koyha_ss UI...."
+#read -p "Press <enter> to continue" tmpPause
+
+wait
 
 echo
 echo "Last few steps..."
@@ -62,4 +88,8 @@ sed -i "s/CLASSNAME/$className/g" $TRAININGDIR/kohya-ss.conf
 sed -i "s/TRAININGDIR/$TRAININGDIR/g" $TRAININGDIR/kohya-ss.conf
 echo "2\) Load the configuration file at $TRAININGDIR/kohya-ss.conf into kohya-ss."
 echo "Confirm your sample prompt, make any other parameter changes you wish to, then begin training."
+echo
+read -p "Press <enter> to start the kohya-ss GUI." tmpPause
 
+cd $KSSBASE
+./gui.sh --listen=0.0.0.0 --headless #--server_port 7860 

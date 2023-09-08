@@ -7,6 +7,7 @@ TRAININGDIR="$BASE/training"
 INSTALLLOG="$BASE/install.log"
 
 function install_kohya {
+  [ ! -d $TRAININGDIR ] && mkdir -p $TRAININGDIR
   cd $TRAININGDIR
   [ ! -f v1-5-pruned.safetensors ] && \
     wget -nv https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned.safetensors

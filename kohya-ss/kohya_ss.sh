@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-BASE='/workplace'
+BASE='/workspace'
 RPBASE="$BASE/runpod_ai/kohya_ss"
 KSSBASE="$BASE/kohya_ss"
 TRAININGDIR="$BASE/training"
@@ -19,7 +19,7 @@ function install_kohya {
 }
 
 echo "Starting kohya-ss install. To follow the install log, enter:"
-echo "    tail -f $INSTALLOG"
+echo "    tail -f $INSTALLLOG"
 echo "in a different terminal window."
 echo
 
@@ -29,7 +29,7 @@ cd $KSSBASE
 python -m venv venv
 cd venv
 source bin/activate
-install_kohya > $INSTALLLOG &
+install_kohya > $INSTALLLOG 2>&1 &
 
 read -p "Token name: " tokenName
 read -p "Class:  " className

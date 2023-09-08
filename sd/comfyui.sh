@@ -42,6 +42,7 @@ sed -i 's/mmdet_skip = True/mmdet_skip = False/' impact-pack.ini
 cd $CUIBASE/custom_nodes
 # -- ComfyUI Face Restore
 # Use DDetailer from Impact Pack (https://github.com/ltdrdata/ComfyUI-Impact-Pack#how-to-use-ddetailer-feature)
+# Tutorial: https://www.youtube.com/watch?v=z4JzuuFyr1Y
 # -- Derfuu_ComfyUI_ModdedNodes
 git clone https://github.com/Derfuu/Derfuu_ComfyUI_ModdedNodes.git
 # -- ReActor

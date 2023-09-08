@@ -318,7 +318,7 @@
         0,
         0,
         1024,
-        2048,
+        1024,
         "cartoon, nude, frizzy hair, ugly, scary",
         "cartoon, nude, frizzy hair, ugly, scary"
       ],
@@ -393,11 +393,11 @@
       },
       "widgets_values": [
         4096,
-        8192,
+        4096,
         0,
         0,
         1024,
-        2048,
+        1024,
         "photorealistic, (full body view), looking at viewer, tickle succubus, ((female)), (sexy), with many long arms and long fingers reaching for the viewer, scantily clad, laughing",
         "photorealistic, (full body view), looking at viewer, tickle succubus, ((female)), (sexy), with many long arms and long fingers reaching for the viewer, scantily clad, laughing"
       ],
@@ -433,7 +433,7 @@
       },
       "widgets_values": [
         1024,
-        2048,
+        1024,
         6
       ]
     },

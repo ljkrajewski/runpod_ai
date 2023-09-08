@@ -31,6 +31,7 @@ This online EXIF Viewer lets you view the data in your photos and the location w
 Effective image upscaling/enhancement 
 - [BIRME - Bulk Image Resizing Made Easy 2.0](https://www.birme.net/?target_width=512&target_height=512)  
 Free bulk resizer/cropper
+- [ComfyUI Impact Pack tutorials](https://github.com/ltdrdata/ComfyUI-extension-tutorials/tree/Main/ComfyUI-Impact-Pack/tutorial)
 - Styles
   - [Stable Diffusion 1.5 - Style Cheat Sheet](https://supagruen.github.io/StableDiffusion-CheatSheet/)  
 A collection of what Stable Diffusion imagines these artists' styles look like.

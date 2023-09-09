@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 BASE='/workspace'
-RPBASE="$BASE/runpod_ai/kohya_ss"
+RPBASE="$BASE/runpod_ai/kohya-ss"
 KSSBASE="$BASE/kohya_ss"
 TrainingDir="$BASE/training"
 INSTALLLOG="$BASE/install.log"
@@ -79,7 +79,7 @@ wait
 
 echo
 echo "Last few steps..."
-echo "1\) Caption your training files."
+echo "1) Caption your training files."
 echo "Captioning directory: $TrainingDir/img/$imgDirName"
 echo "BLIP is recommended for phrotorealistic models, WD14 for anime/drawings."
 echo "Remember to add '$tokenName' to the captioning prefix along with any other words you wish to train on."
@@ -87,7 +87,7 @@ echo
 sed "s/TOKENNAME/$tokenName/g" $RPBASE/kohya-ss.conf.orig > $TrainingDir/kohya-ss.conf
 sed -i "s/CLASSNAME/$className/g" $TrainingDir/kohya-ss.conf
 sed -i "s/TRAININGDIR/$TrainingDir/g" $TrainingDir/kohya-ss.conf
-echo "2\) Load the configuration file at $TrainingDir/kohya-ss.conf into kohya-ss."
+echo "2) Load the configuration file at $TrainingDir/kohya-ss.conf into kohya-ss."
 echo "Confirm your sample prompt, make any other parameter changes you wish to, then begin training."
 echo
 read -p "Press <enter> to start the kohya-ss GUI." tmpPause

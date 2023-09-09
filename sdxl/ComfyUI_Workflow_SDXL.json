@@ -1,56 +1,43 @@
 {
-  "last_node_id": 11,
-  "last_link_id": 14,
+  "last_node_id": 28,
+  "last_link_id": 37,
   "nodes": [
     {
-      "id": 4,
-      "type": "PrimitiveNode",
+      "id": 12,
+      "type": "VAELoader",
       "pos": [
-        259,
-        312
+        241,
+        671
       ],
-      "size": [
-        341.29700622558596,
-        124.25698852539062
-      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
       "flags": {},
       "order": 0,
       "mode": 0,
       "outputs": [
         {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            3,
-            4
-          ],
-          "widget": {
-            "name": "text_g",
-            "config": [
-              "STRING",
-              {
-                "multiline": true,
-                "default": "CLIP_G"
-              }
-            ]
-          },
+          "name": "VAE",
+          "type": "VAE",
+          "links": [],
+          "shape": 3,
           "slot_index": 0
         }
       ],
-      "title": "Positive Prompt",
-      "properties": {},
+      "properties": {
+        "Node name for S&R": "VAELoader"
+      },
       "widgets_values": [
-        "photorealistic, (full body view), looking at viewer, succubus, ((female)), (sexy), with many long arms and long fingers reaching for the viewer, scantily clad, laughing"
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
+        "sdxl_vae.safetensors"
+      ]
     },
     {
       "id": 6,
       "type": "PrimitiveNode",
       "pos": [
-        265,
-        638
+        255,
+        -21
       ],
       "size": {
         "0": 340,
@@ -65,7 +52,8 @@
           "type": "STRING",
           "links": [
             6,
-            7
+            7,
+            29
           ],
           "widget": {
             "name": "text_g",
@@ -83,24 +71,134 @@
       "title": "Negative Prompt",
       "properties": {},
       "widgets_values": [
-        "cartoon, nude, frizzy hair, ugly, scary"
+        ""
       ],
       "color": "#322",
       "bgcolor": "#533"
     },
     {
-      "id": 8,
+      "id": 4,
+      "type": "PrimitiveNode",
+      "pos": [
+        265,
+        -221
+      ],
+      "size": {
+        "0": 341.2969970703125,
+        "1": 124.25698852539062
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            3,
+            4,
+            28
+          ],
+          "widget": {
+            "name": "text_g",
+            "config": [
+              "STRING",
+              {
+                "multiline": true,
+                "default": "CLIP_G"
+              }
+            ]
+          },
+          "slot_index": 0
+        }
+      ],
+      "title": "Positive Prompt",
+      "properties": {},
+      "widgets_values": [
+        "photorealistic, (full body view) from above, sleeping 18-year-old woman, blonde hair, pixie cut, wearing satin pajama shorts and matching crop top with bare midriff and spaghetti straps, lying in bed, giggling"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 15,
       "type": "KSamplerAdvanced",
       "pos": [
-        1308,
-        111
+        1147,
+        221
       ],
       "size": {
         "0": 315,
         "1": 334
       },
       "flags": {},
-      "order": 6,
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 20
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 26
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 27
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 19
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            21
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "KSampler (Advanced. Refiner)",
+      "properties": {
+        "Node name for S&R": "KSamplerAdvanced"
+      },
+      "widgets_values": [
+        "enable",
+        812930806572562,
+        "randomize",
+        20,
+        5.5,
+        "euler",
+        "normal",
+        12,
+        10000,
+        "disable"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 8,
+      "type": "KSamplerAdvanced",
+      "pos": [
+        1147,
+        -194
+      ],
+      "size": {
+        "0": 315,
+        "1": 334
+      },
+      "flags": {},
+      "order": 12,
       "mode": 0,
       "inputs": [
         {
@@ -130,7 +228,8 @@
           "name": "LATENT",
           "type": "LATENT",
           "links": [
-            12
+            12,
+            19
           ],
           "shape": 3,
           "slot_index": 0
@@ -141,83 +240,70 @@
       },
       "widgets_values": [
         "enable",
-        130711470478713,
+        1049538958189138,
         "randomize",
-        20,
+        12,
         8,
         "euler",
         "normal",
         0,
         10000,
-        "disable"
-      ]
-    },
-    {
-      "id": 1,
-      "type": "CheckpointLoaderSimple",
-      "pos": [
-        282,
-        107
-      ],
-      "size": {
-        "0": 315,
-        "1": 98
-      },
-      "flags": {},
-      "order": 2,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            10
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            1,
-            5
-          ],
-          "shape": 3,
-          "slot_index": 1
-        },
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "links": [
-            13
-          ],
-          "shape": 3,
-          "slot_index": 2
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CheckpointLoaderSimple"
-      },
-      "widgets_values": [
-        "sd_xl_base_1.0.safetensors"
+        "enable"
       ],
       "color": "#223",
       "bgcolor": "#335"
     },
     {
+      "id": 14,
+      "type": "Reroute",
+      "pos": [
+        1509,
+        652
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 17
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            18
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "showOutputText": true,
+        "horizontal": false
+      }
+    },
+    {
       "id": 10,
       "type": "VAEDecode",
       "pos": [
-        1775,
-        109
+        1605,
+        -149
       ],
       "size": {
         "0": 210,
         "1": 46
       },
-      "flags": {},
-      "order": 7,
+      "flags": {
+        "collapsed": true
+      },
+      "order": 16,
       "mode": 0,
       "inputs": [
         {
@@ -228,7 +314,7 @@
         {
           "name": "vae",
           "type": "VAE",
-          "link": 13
+          "link": 18
         }
       ],
       "outputs": [
@@ -244,100 +330,232 @@
       ],
       "properties": {
         "Node name for S&R": "VAEDecode"
-      }
+      },
+      "color": "#223",
+      "bgcolor": "#335"
     },
     {
-      "id": 5,
-      "type": "CLIPTextEncodeSDXL",
+      "id": 13,
+      "type": "Reroute",
       "pos": [
-        711,
-        557
+        719,
+        652
       ],
-      "size": {
-        "0": 400,
-        "1": 270
-      },
+      "size": [
+        75,
+        26
+      ],
       "flags": {},
-      "order": 5,
+      "order": 8,
       "mode": 0,
       "inputs": [
         {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 5
-        },
-        {
-          "name": "text_g",
-          "type": "STRING",
-          "link": 6,
-          "widget": {
-            "name": "text_g",
-            "config": [
-              "STRING",
-              {
-                "multiline": true,
-                "default": "CLIP_G"
-              }
-            ]
-          },
-          "slot_index": 1
-        },
-        {
-          "name": "text_l",
-          "type": "STRING",
-          "link": 7,
-          "widget": {
-            "name": "text_l",
-            "config": [
-              "STRING",
-              {
-                "multiline": true,
-                "default": "CLIP_L"
-              }
-            ]
-          }
+          "name": "",
+          "type": "*",
+          "link": 34
         }
       ],
       "outputs": [
         {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
+          "name": "VAE",
+          "type": "VAE",
           "links": [
-            9
+            17
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "showOutputText": true,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 16,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        248,
+        322
+      ],
+      "size": {
+        "0": 315,
+        "1": 98
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            20
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            24,
+            25
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            35
+          ],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "title": "Load Checkpoint (Refiner)",
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "sd_xl_refiner_1.0.safetensors"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 26,
+      "type": "Reroute",
+      "pos": [
+        715.0478881835938,
+        715.8231855468753
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 35
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            36
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "showOutputText": true,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 27,
+      "type": "Reroute",
+      "pos": [
+        1521.6338881835939,
+        723.8091855468751
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 36
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            37
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "showOutputText": true,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 17,
+      "type": "VAEDecode",
+      "pos": [
+        1595,
+        233
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 21
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 37
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            23
           ],
           "shape": 3,
           "slot_index": 0
         }
       ],
       "properties": {
-        "Node name for S&R": "CLIPTextEncodeSDXL"
+        "Node name for S&R": "VAEDecode"
       },
-      "widgets_values": [
-        4096,
-        4096,
-        0,
-        0,
-        1024,
-        1024,
-        "cartoon, nude, frizzy hair, ugly, scary",
-        "cartoon, nude, frizzy hair, ugly, scary"
-      ],
-      "color": "#322",
-      "bgcolor": "#533"
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
     },
     {
       "id": 2,
       "type": "CLIPTextEncodeSDXL",
       "pos": [
-        742,
-        177
+        701,
+        -174
       ],
-      "size": [
-        400,
-        270
-      ],
-      "flags": {},
-      "order": 4,
+      "size": {
+        "0": 400,
+        "1": 270
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 6,
       "mode": 0,
       "inputs": [
         {
@@ -398,25 +616,226 @@
         0,
         1024,
         1024,
-        "photorealistic, (full body view), looking at viewer, tickle succubus, ((female)), (sexy), with many long arms and long fingers reaching for the viewer, scantily clad, laughing",
-        "photorealistic, (full body view), looking at viewer, tickle succubus, ((female)), (sexy), with many long arms and long fingers reaching for the viewer, scantily clad, laughing"
+        "photorealistic, (full body view) from above, sleeping 18-year-old woman, blonde hair, pixie cut, wearing satin pajama shorts and matching crop top with bare midriff and spaghetti straps, lying in bed, giggling",
+        "photorealistic, (full body view) from above, sleeping 18-year-old woman, blonde hair, pixie cut, wearing satin pajama shorts and matching crop top with bare midriff and spaghetti straps, lying in bed, giggling"
       ],
       "color": "#232",
       "bgcolor": "#353"
     },
     {
+      "id": 19,
+      "type": "CLIPTextEncodeSDXLRefiner",
+      "pos": [
+        692,
+        -112
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 24
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 28,
+          "widget": {
+            "name": "text",
+            "config": [
+              "STRING",
+              {
+                "multiline": true
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            26
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncodeSDXLRefiner"
+      },
+      "widgets_values": [
+        6,
+        1024,
+        1024,
+        "photorealistic, (full body view) from above, sleeping 18-year-old woman, blonde hair, pixie cut, wearing satin pajama shorts and matching crop top with bare midriff and spaghetti straps, lying in bed, giggling"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 5,
+      "type": "CLIPTextEncodeSDXL",
+      "pos": [
+        701,
+        11
+      ],
+      "size": {
+        "0": 400,
+        "1": 270
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 5
+        },
+        {
+          "name": "text_g",
+          "type": "STRING",
+          "link": 6,
+          "widget": {
+            "name": "text_g",
+            "config": [
+              "STRING",
+              {
+                "multiline": true,
+                "default": "CLIP_G"
+              }
+            ]
+          },
+          "slot_index": 1
+        },
+        {
+          "name": "text_l",
+          "type": "STRING",
+          "link": 7,
+          "widget": {
+            "name": "text_l",
+            "config": [
+              "STRING",
+              {
+                "multiline": true,
+                "default": "CLIP_L"
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            9
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncodeSDXL"
+      },
+      "widgets_values": [
+        4096,
+        4096,
+        0,
+        0,
+        1024,
+        1024,
+        "",
+        ""
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 20,
+      "type": "CLIPTextEncodeSDXLRefiner",
+      "pos": [
+        691,
+        68
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 25
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 29,
+          "widget": {
+            "name": "text",
+            "config": [
+              "STRING",
+              {
+                "multiline": true
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            27
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncodeSDXLRefiner"
+      },
+      "widgets_values": [
+        2.5,
+        1024,
+        1024,
+        ""
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
       "id": 9,
       "type": "EmptyLatentImage",
       "pos": [
-        787,
-        921
+        243,
+        492
       ],
       "size": {
         "0": 315,
         "1": 106
       },
       "flags": {},
-      "order": 3,
+      "order": 5,
       "mode": 0,
       "outputs": [
         {
@@ -438,18 +857,98 @@
       ]
     },
     {
+      "id": 1,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        250,
+        158
+      ],
+      "size": {
+        "0": 315,
+        "1": 98
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            10
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            1,
+            5
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            34
+          ],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "sd_xl_base_1.0.safetensors"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 18,
+      "type": "PreviewImage",
+      "pos": [
+        2360,
+        -139
+      ],
+      "size": [
+        466.7180619673295,
+        527.6917336203835
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 23
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      },
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
       "id": 11,
       "type": "PreviewImage",
       "pos": [
-        1759,
-        254
+        1819,
+        -143
       ],
-      "size": [
-        461.25701904296875,
-        531.8670043945312
-      ],
+      "size": {
+        "0": 461.25701904296875,
+        "1": 531.8670043945312
+      },
       "flags": {},
-      "order": 8,
+      "order": 18,
       "mode": 0,
       "inputs": [
         {
@@ -460,7 +959,9 @@
       ],
       "properties": {
         "Node name for S&R": "PreviewImage"
-      }
+      },
+      "color": "#223",
+      "bgcolor": "#335"
     }
   ],
   "links": [
@@ -553,20 +1054,140 @@
       "LATENT"
     ],
     [
-      13,
-      1,
-      2,
-      10,
-      1,
-      "VAE"
-    ],
-    [
       14,
       10,
       0,
       11,
       0,
       "IMAGE"
+    ],
+    [
+      17,
+      13,
+      0,
+      14,
+      0,
+      "*"
+    ],
+    [
+      18,
+      14,
+      0,
+      10,
+      1,
+      "VAE"
+    ],
+    [
+      19,
+      8,
+      0,
+      15,
+      3,
+      "LATENT"
+    ],
+    [
+      20,
+      16,
+      0,
+      15,
+      0,
+      "MODEL"
+    ],
+    [
+      21,
+      15,
+      0,
+      17,
+      0,
+      "LATENT"
+    ],
+    [
+      23,
+      17,
+      0,
+      18,
+      0,
+      "IMAGE"
+    ],
+    [
+      24,
+      16,
+      1,
+      19,
+      0,
+      "CLIP"
+    ],
+    [
+      25,
+      16,
+      1,
+      20,
+      0,
+      "CLIP"
+    ],
+    [
+      26,
+      19,
+      0,
+      15,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      27,
+      20,
+      0,
+      15,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      28,
+      4,
+      0,
+      19,
+      1,
+      "STRING"
+    ],
+    [
+      29,
+      6,
+      0,
+      20,
+      1,
+      "STRING"
+    ],
+    [
+      34,
+      1,
+      2,
+      13,
+      0,
+      "*"
+    ],
+    [
+      35,
+      16,
+      2,
+      26,
+      0,
+      "*"
+    ],
+    [
+      36,
+      26,
+      0,
+      27,
+      0,
+      "*"
+    ],
+    [
+      37,
+      27,
+      0,
+      17,
+      1,
+      "VAE"
     ]
   ],
   "groups": [],

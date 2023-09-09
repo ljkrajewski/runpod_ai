@@ -3,12 +3,12 @@
 BASE='/workspace'
 RPBASE="$BASE/runpod_ai/kohya_ss"
 KSSBASE="$BASE/kohya_ss"
-TRAININGDIR="$BASE/training"
+TrainingDir="$BASE/training"
 INSTALLLOG="$BASE/install.log"
 
 function install_kohya {
-  [ ! -d $TRAININGDIR ] && mkdir -p $TRAININGDIR
-  cd $TRAININGDIR
+  [ ! -d $TrainingDir ] && mkdir -p $TrainingDir
+  cd $TrainingDir
   [ ! -f v1-5-pruned.safetensors ] && \
     wget -nv https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned.safetensors
   #curl https://civitai.com/api/download/models/90072 -o Photon.safetensors -L
@@ -34,15 +34,15 @@ install_kohya > $INSTALLLOG 2>&1 &
 read -p "Token name: " tokenName
 read -p "Class:  " className
 
-[ ! -d $TRAININGDIR/log ] && mkdir -p $TRAININGDIR/log
-[ ! -d $TRAININGDIR/img/tmp ] && mkdir -p $TRAININGDIR/img/tmp
-[ ! -d $TRAININGDIR/model ] && mkdir -p $TRAININGDIR/model
-[ ! -d $TRAININGDIR/reg/tmp ] && mkdir -p $TRAININGDIR/reg/tmp
-echo "Upload your training images to $TRAININGDIR/img/tmp now."
+[ ! -d $TrainingDir/log ] && mkdir -p $TrainingDir/log
+[ ! -d $TrainingDir/img/tmp ] && mkdir -p $TrainingDir/img/tmp
+[ ! -d $TrainingDir/model ] && mkdir -p $TrainingDir/model
+[ ! -d $TrainingDir/reg/tmp ] && mkdir -p $TrainingDir/reg/tmp
+echo "Upload your training images to $TrainingDir/img/tmp now."
 echo "You can proceed when all training images are uploaded."
 read -p "Press <enter> to continue" tmpPause
 
-numTrainingFiles=$((`ls -l $TRAININGDIR/img/tmp | wc -l` - 1))
+numTrainingFiles=$((`ls -l $TrainingDir/img/tmp | wc -l` - 1))
 #for LoRA training, btw 1500-6000 steps per epoch
 minRecRepeats=$(((1500/$numTrainingFiles)+1))
 if [[ "$minRecRepeats" -lt "10" ]]; then
@@ -56,7 +56,7 @@ echo
 echo "Recommended number of repeats is between $minRecRepeats and $maxRecRepeats per image."
 echo "Note: Easy subjects like faces can use fewer repeats."
 read -p "Enter number of repeats per image:  " numRepeats
-cd $TRAININGDIR/img
+cd $TrainingDir/img
 imgDirName=$numRepeats"_$tokenName $className"
 mv tmp "$imgDirName"
 
@@ -64,11 +64,11 @@ numRegFiles=$(($numRepeats * $numTrainingFiles))
 echo
 echo "You will need at least $numRegFiles regularization images of class $className."
 echo "Create your regularization images in Stable Diffusion."
-echo "When your regularization images are complete, move them to $TRAININGDIR/reg/tmp."
+echo "When your regularization images are complete, move them to $TrainingDir/reg/tmp."
 echo "You can proceed when the regularization images are moved."
 read -p "Press <enter> to continue" tmpPause
 
-cd $TRAININGDIR/reg
+cd $TrainingDir/reg
 mv tmp "1_$className"
 
 echo
@@ -80,14 +80,14 @@ wait
 echo
 echo "Last few steps..."
 echo "1\) Caption your training files."
-echo "Captioning directory: $TRAININGDIR/img/$imgDirName"
+echo "Captioning directory: $TrainingDir/img/$imgDirName"
 echo "BLIP is recommended for phrotorealistic models, WD14 for anime/drawings."
 echo "Remember to add '$tokenName' to the captioning prefix along with any other words you wish to train on."
 echo
-sed "s/TOKENNAME/$tokenName/g" $RPBASE/kohya-ss.conf.orig > $TRAININGDIR/kohya-ss.conf
-sed -i "s/CLASSNAME/$className/g" $TRAININGDIR/kohya-ss.conf
-sed -i "s/TRAININGDIR/$TRAININGDIR/g" $TRAININGDIR/kohya-ss.conf
-echo "2\) Load the configuration file at $TRAININGDIR/kohya-ss.conf into kohya-ss."
+sed "s/TOKENNAME/$tokenName/g" $RPBASE/kohya-ss.conf.orig > $TrainingDir/kohya-ss.conf
+sed -i "s/CLASSNAME/$className/g" $TrainingDir/kohya-ss.conf
+sed -i "s/TRAININGDIR/$TrainingDir/g" $TrainingDir/kohya-ss.conf
+echo "2\) Load the configuration file at $TrainingDir/kohya-ss.conf into kohya-ss."
 echo "Confirm your sample prompt, make any other parameter changes you wish to, then begin training."
 echo
 read -p "Press <enter> to start the kohya-ss GUI." tmpPause

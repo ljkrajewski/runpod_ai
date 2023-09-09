@@ -50,6 +50,8 @@ cd "$VAE_DIR"
 cd "$LORA_DIR"
 [ ! -f XL_itoStyleLycoris.safetensors ] && \
   curl 'https://civitai.com/api/download/models/131386' -o XL_itoStyleLycoris.safetensors -L
+[ ! -f sdxl_photorealistic_slider-v1.0.safetensors ] && \
+  curl 'https://civitai.com/api/download/models/126807' -o sdxl_photorealistic_slider-v1.0.safetensors -L
 
 ## Embeddings
 # [ ! -d "$EMBEDDING_DIR" ] && mkdir "$EMBEDDING_DIR"

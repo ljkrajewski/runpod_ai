@@ -93,4 +93,4 @@ echo
 read -p "Press <enter> to start the kohya-ss GUI." tmpPause
 
 cd $KSSBASE
-./gui.sh --listen=0.0.0.0 --headless #--server_port 7860 
+./gui.sh --listen=0.0.0.0 --headless --server_port 8000

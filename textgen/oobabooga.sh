@@ -17,8 +17,8 @@ sed -i 's/gpuchoice = input("Input> ").lower()/gpuchoice = "a"/' webui.py
 sed -i 's/^        launch_webui()/#        launch_webui()/' webui.py
 bash start_linux.sh
 
-# -- Mode;s
-cd $TGWBASE
+# -- Models
+cd $TGWBASE/models
 git clone --single-branch --branch gptq-4bit-32g-actorder_True https://huggingface.co/TheBloke/Pygmalion-2-13B-GPTQ
 
 cd $INSTALLBASE

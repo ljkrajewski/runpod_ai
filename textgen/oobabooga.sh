@@ -15,12 +15,13 @@ cd $INSTALLBASE
 cp webui.py{,.bak}
 sed -i 's/gpuchoice = input("Input> ").lower()/gpuchoice = "a"/' webui.py
 sed -i 's/^        launch_webui()/#        launch_webui()/' webui.py
-export OOBABOOGA_FLAGS="--listen"
 bash start_linux.sh
 
 # -- Mode;s
 cd $TGWBASE
 git clone --single-branch --branch gptq-4bit-32g-actorder_True https://huggingface.co/TheBloke/Pygmalion-2-13B-GPTQ
 
-cd $TGWBASE
-python server.py $OOBABOOGA_FLAGS
+cd $INSTALLBASE
+sed -i 's/^#        launch_webui()/        launch_webui()/' webui.py
+export OOBABOOGA_FLAGS="--listen"
+bash start_linux.sh

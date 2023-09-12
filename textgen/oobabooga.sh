@@ -20,7 +20,7 @@ bash start_linux.sh
 
 # -- Mode;s
 cd $TGWBASE
-wget https://huggingface.co/TheBloke/Pygmalion-2-13B-GPTQ/resolve/main/model.safetensors
+git clone --single-branch --branch gptq-4bit-32g-actorder_True https://huggingface.co/TheBloke/Pygmalion-2-13B-GPTQ
 
 cd $TGWBASE
 python server.py $OOBABOOGA_FLAGS

@@ -19,7 +19,8 @@ bash start_linux.sh
 
 # -- Models
 cd $TGWBASE/models
-git clone --single-branch --branch gptq-4bit-32g-actorder_True https://huggingface.co/TheBloke/Pygmalion-2-13B-GPTQ
+#git clone --single-branch --branch gptq-4bit-32g-actorder_True https://huggingface.co/TheBloke/Pygmalion-2-13B-GPTQ
+git clone --single-branch --branch main https://huggingface.co/TehVenom/Pygmalion-7b-4bit-GPTQ-Safetensors
 
 cd $INSTALLBASE
 cp webui.py{.bak,}

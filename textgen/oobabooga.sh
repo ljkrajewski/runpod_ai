@@ -22,6 +22,6 @@ cd $TGWBASE/models
 git clone --single-branch --branch gptq-4bit-32g-actorder_True https://huggingface.co/TheBloke/Pygmalion-2-13B-GPTQ
 
 cd $INSTALLBASE
-sed -i 's/^#        launch_webui()/        launch_webui()/' webui.py
+cp webui.py{.bak,}
 export OOBABOOGA_FLAGS="--listen"
 bash start_linux.sh

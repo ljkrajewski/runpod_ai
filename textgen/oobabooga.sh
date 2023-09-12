@@ -11,6 +11,7 @@ cd $BASE
 wget https://github.com/oobabooga/text-generation-webui/releases/download/installers/oobabooga_linux.zip
 unzip oobabooga_linux.zip
 
+# -- Install
 cd $INSTALLBASE
 cp webui.py{,.bak}
 sed -i 's/gpuchoice = input("Input> ").lower()/gpuchoice = "a"/' webui.py
@@ -22,6 +23,7 @@ cd $TGWBASE/models
 #git clone --single-branch --branch gptq-4bit-32g-actorder_True https://huggingface.co/TheBloke/Pygmalion-2-13B-GPTQ
 git clone --single-branch --branch main https://huggingface.co/TehVenom/Pygmalion-7b-4bit-GPTQ-Safetensors
 
+# -- Start UI
 cd $INSTALLBASE
 cp webui.py{.bak,}
 export OOBABOOGA_FLAGS="--listen"

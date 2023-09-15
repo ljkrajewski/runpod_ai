@@ -1,6 +1,4 @@
-#!/usr/bin/env bash
-fuser -k 7860/tcp
+FROM runpod/pytorch:2.0.1-py3.10-cuda11.8.0-devel
 
-BASE='/workspace'
-SDBASE="$BASE/stable-diffusion-webui"
-RPBASE="$BASE/runpod_ai/sd"
+
+RUN sed -i 's/BASE="/workspace"/BASE="/root"/' auto1111.sh

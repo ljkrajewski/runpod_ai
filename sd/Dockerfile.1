@@ -3,6 +3,7 @@ RUN FROM runpod/pytorch:2.0.1-py3.10-cuda11.8.0-devel
 ARG BASE=/usr/local
 ARG SDBASE=$BASE/stable-diffusion-webui
 #ARG RPBASE=$BASE/runpod_ai/sd
+ARG TCPPORT=7860
 
 ARG MODELS_DIR=$SDBASE/models/Stable-diffusion
 ARG VAE_DIR=$SDBASE/models/VAE
@@ -70,8 +71,9 @@ WORKDIR $SDBASE
 COPY config.json $SDBASE
 COPY emb.txt $SDBASE/extensions/a1111-sd-webui-tagcomplete/tags/temp
 # RUN sed -i 's/BASE=\"/workspace\"/BASE=\"$BASE\"/' $RPBASE/auto1111.sh
-ARG cmdLineArgs "--listen --port 7860 --xformers --enable-insecure-extension-access --disable-safe-unpickle"
+ARG cmdLineArgs "--listen --port $TCPPORT --xformers --enable-insecure-extension-access --disable-safe-unpickle"
 RUN sed -i "s/#export COMMANDLINE_ARGS=\"\"/export COMMANDLINE_ARGS=\"$cmdLineArgs\"/" webui-user.sh
 # ./webui.sh -f
 
+EXPOSE $TCPPORT
 CMD [ "/start.sh" ]

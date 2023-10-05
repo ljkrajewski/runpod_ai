@@ -1,35 +1,26 @@
 #!/usr/bin/env bash
 
 BASE='/workspace'
-INSTALLBASE="$BASE/oobabooga_linux"
-TGWBASE="$BASE/oobabooga_linux/text-generation-webui"
-RPBASE="$BASE/runpod_ai/textget"
+TGWBASE="$BASE/text-generation-webui"
+MODEL='TheBloke/WizardCoder-15B-1.0-GPTQ'
+
+MODEL_DIR=$(echo $MODEL | awk -F '/' '{ print $2 }')
+pip install auto-gptq
 
 cd $BASE
-wget https://github.com/oobabooga/text-generation-webui/releases/download/installers/oobabooga_linux.zip
-unzip oobabooga_linux.zip
+git clone https://github.com/oobabooga/text-generation-webui.git
+cd $TGWBASE
+python -m venv venv
+source venv/bin/activate
 
-cd $INSTALLBASE
-mkdir repositories
-cd repositories
-git clone https://github.com/oobabooga/GPTQ-for-LLaMa.git -b cuda
-cd GPTQ-for-LLaMa && python setup_cuda.py install
-
-cd $INSTALLBASE
-cp webui.py{,.bak}
-sed -i 's/gpuchoice = input("Input> ").lower()/gpuchoice = "a"/' webui.py
-sed -i 's/^        launch_webui()/#        launch_webui()/' webui.py
-bash start_linux.sh
 cd $TGWBASE/models
 git lfs install
-#git clone --single-branch --branch main https://huggingface.co/TheBloke/Guanaco-13B-Uncensored-GPTQ  
-git clone --single-branch --branch main https://huggingface.co/TheBloke/WizardCoder-15B-1.0-GPTQ
+export GIT_LFS_SKIP_SMUDGE=1; git clone https://huggingface.co/$MODEL
+cd $MODEL_DIR
+wget https://huggingface.co/$MODEL/resolve/main/model.safetensors
 
 cd $TGWBASE
-pip install scipy
-
-cd $INSTALLBASE
-cp webui.py{.bak,}
-export OOBABOOGA_FLAGS="--listen --chat --auto-devices --model llama"
+#echo "--listen --chat --auto-devices --model llama" >> CMD_FLAGS.txt
+echo "--listen --chat --auto-devices --model $MODEL_DIR" >> CMD_FLAGS.txt
+export GPU_CHOICE='A'
 bash start_linux.sh
-

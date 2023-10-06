@@ -29,7 +29,7 @@ git checkout dev
 This online EXIF Viewer lets you view the data in your photos and the location where the photo was taken.
 - [AI Image Upscaling - Auto Enlarge Image Online](https://www.avaide.com/image-upscaler/)  
 Effective image upscaling/enhancement
-- [Colorize Pictures](https://palette.fm/color/filters)
+- [Colorize Pictures](https://palette.fm/color/filters)  
 Free AI colorizer. Multiple palettes. No sign-in required.
 - [BIRME - Bulk Image Resizing Made Easy 2.0](https://www.birme.net/?target_width=512&target_height=512)  
 Free bulk resizer/cropper

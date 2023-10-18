@@ -12,7 +12,8 @@ MODEL='TheBloke/Pygmalion-2-13B-SuperCOT-weighed-GPTQ'
 
 BASE='/workspace'
 TGWBASE="$BASE/text-generation-webui"
-MODEL_DIR=$(echo $MODEL | awk -F '/' '{ print $2 }')
+#MODEL_DIR=$(echo $MODEL | awk -F '/' '{ print $2 }')
+MODEL_DIR=$(echo $MODEL | tr '/' '-')
 
 ## Install Oobabooga & start virtual environment
 cd $BASE
@@ -33,11 +34,11 @@ pip install scipy
 ## Download model from Hugging Face
 cd $TGWBASE/models
 git lfs install
-git clone --single-branch --branch main https://huggingface.co/$MODEL
+#git clone --single-branch --branch main https://huggingface.co/$MODEL
 ##  If git chokes on the large files...
-#export GIT_LFS_SKIP_SMUDGE=1; git clone --single-branch --branch main https://huggingface.co/$MODEL
-#cd $MODEL_DIR
-#wget https://huggingface.co/$MODEL/resolve/main/model.safetensors
+export GIT_LFS_SKIP_SMUDGE=1; git clone --single-branch --branch main https://huggingface.co/$MODEL
+cd $MODEL_DIR
+wget https://huggingface.co/$MODEL/resolve/main/model.safetensors
 
 ## Command-line flag options:  https://github.com/oobabooga/text-generation-webui#starting-the-web-ui
 cd $TGWBASE

@@ -22,6 +22,8 @@ function dlFromGoogle {
 cd "$MODELS_DIR"
 [ ! -f v1-5-pruned.safetensors ] && \
   wget https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned.safetensors
+[ ! -f sd-v1-5-inpainting.ckpt ] && \
+  wget https://huggingface.co/runwayml/stable-diffusion-inpainting/resolve/main/sd-v1-5-inpainting.ckpt
 #[ ! -f edgeOfRealism.safetensors ] && \
 #  curl https://civitai.com/api/download/models/51913 -o edgeOfRealism.safetensors -L
 #[ ! -f Photon.safetensors ] && \

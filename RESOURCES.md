@@ -33,10 +33,11 @@ Effective image upscaling/enhancement
 Free bulk resizer/cropper
 - [ComfyUI extention tutorials](https://github.com/ltdrdata/ComfyUI-extension-tutorials/tree/Main)  
 Includes tutorials for [Impact Pack](https://github.com/ltdrdata/ComfyUI-Impact-Pack), [Inspire Pack](https://github.com/ltdrdata/ComfyUI-Inspire-Pack), and [Workflow Component](https://github.com/ltdrdata/ComfyUI-Workflow-Component).
+- [Pika Labs](https://www.pika.art/)  
+Text-to-video platform.
 - Styles
   - [Stable Diffusion 1.5 - Style Cheat Sheet](https://supagruen.github.io/StableDiffusion-CheatSheet/)  
 A collection of what Stable Diffusion imagines these artists' styles look like.
   - [Prompt Styles by Sebastian, Hili & Maui](https://www.patreon.com/posts/sebs-hilis-79649068)  
 Put this file (styles.csv) in your stable-diffusion-webui root folder.
-  - [Pika Labs](https://www.pika.art/)
-Text-to-video platform.
+

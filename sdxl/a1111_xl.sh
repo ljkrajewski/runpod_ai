@@ -22,7 +22,7 @@ source $RPBASE/sdxl-config-models.sh
 
 ## Extentions ##
 cd $SDBASE/extensions
-#ControlNet
+#ControlNet (not ready for SDXL)
 #Aspect Ratio selector plus
 
 ## Start the GUI ##

@@ -48,6 +48,8 @@ cd "$VAE_DIR"
 ## LoRAs
 [ ! -d "$LORA_DIR" ] && mkdir "$LORA_DIR"
 cd "$LORA_DIR"
+[ ! -f sd_xl_offset_example-lora_1.0.safetensors ] && \
+  wget https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_offset_example-lora_1.0.safetensors
 [ ! -f XL_itoStyleLycoris.safetensors ] && \
   curl 'https://civitai.com/api/download/models/131386' -o XL_itoStyleLycoris.safetensors -L
 [ ! -f sdxl_photorealistic_slider-v1.0.safetensors ] && \

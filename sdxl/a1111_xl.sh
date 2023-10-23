@@ -27,6 +27,7 @@ cd $SDBASE/extensions
 ## Start the GUI ##
 cd $SDBASE
 cp $RPBASE/config.json .
+cp $RPBASE/styles.csv .
 cp $RPBASE/emb.txt extensions/a1111-sd-webui-tagcomplete/tags/temp
 #cmdlineArgs="--share --xformers --enable-insecure-extension-access --disable-safe-unpickle"
 cmdLineArgs="--listen --port 7860 --xformers --enable-insecure-extension-access --disable-safe-unpickle"

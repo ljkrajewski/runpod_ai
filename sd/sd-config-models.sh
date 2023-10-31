@@ -62,6 +62,8 @@ cd "$LORA_DIR"
   curl https://civitai.com/api/download/models/62833 -o DetailTweaker.safetensors -L
 [ ! -f EpicRealLife.safetensors ] && \
   curl https://civitai.com/api/download/models/156286 -o EpicRealLife.safetensors -L
+[ ! -f EpicRealismHelper.safetensors ] && \
+  curl https://civitai.com/api/download/models/118945 -o EpicRealismHelper.safetensors -L
 
 ## Embeddings
 [ ! -d "$EMBEDDING_DIR" ] && mkdir "$EMBEDDING_DIR"
@@ -87,3 +89,5 @@ cd "$UPSCALERS_DIR"
 #[ ! -f VariousUpscalers.zip ] && \
 #  curl https://civitai.com/api/download/models/70526 -o VariousUpscalers.zip -L && \
 #  unzip VariousUpscalers.zip
+[ ! -f 4x_NMKD-Superscale-SP_178000_G.pth ] && \
+  wget https://huggingface.co/gemasai/4x_NMKD-Superscale-SP_178000_G/resolve/main/4x_NMKD-Superscale-SP_178000_G.pth

@@ -62,6 +62,8 @@ cd "$LORA_DIR"
   curl https://civitai.com/api/download/models/62833 -o DetailTweaker.safetensors -L
 [ ! -f EpicRealLife.safetensors ] && \
   curl https://civitai.com/api/download/models/156286 -o EpicRealLife.safetensors -L
+[ ! -f EpicRealismHelper.safetensors ] && \
+  curl https://civitai.com/api/download/models/118945 -o EpicRealismHelper.safetensors -L
 
 ## Embeddings
 [ ! -d "$EMBEDDING_DIR" ] && mkdir "$EMBEDDING_DIR"

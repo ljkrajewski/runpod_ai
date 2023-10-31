@@ -36,6 +36,8 @@ cd "$MODELS_DIR"
   curl https://civitai.com/api/download/models/145885 -o EpicPhotoGasm.safetensors -L
 [ ! -f EpicPhotoGasm-inpanting.safetensors ] && \
   curl https://civitai.com/api/download/models/146074 -o EpicPhotoGasm-inpanting.safetensors -L
+[ ! -f epicrealismNaturalSinRC1.safetensors ] && \
+  curl https://civitai.com/api/download/models/143497 -o epicrealismNaturalSinRC1.safetensors -L
 
 ## VAEs
 [ ! -d "$VAE_DIR" ] && mkdir "$VAE_DIR"
@@ -46,6 +48,8 @@ cd "$VAE_DIR"
   wget https://huggingface.co/LarryAIDraw/anything-v4.0.vae/resolve/main/anything-v4.0.vae.pt
 [ ! -f Grapefruit.vae.pt ] && \
   wget https://huggingface.co/iZELX1/Grapefruit/raw/main/Grapefruit.vae.pt
+[ ! -f epicrealismNaturalSinRC1VAE.safetensors ] && \
+  curl https://civitai.com/api/download/models/143906 -o epicrealismNaturalSinRC1VAE.safetensors -L
 
 ## LoRAs
 [ ! -d "$LORA_DIR" ] && mkdir "$LORA_DIR"

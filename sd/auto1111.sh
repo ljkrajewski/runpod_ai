@@ -34,13 +34,13 @@ git clone https://github.com/thomasasfk/sd-webui-aspect-ratio-helper.git
 git clone https://github.com/vladmandic/sd-extension-system-info.git
 # Stable Diffusion Dynamic Prompts
 git clone https://github.com/adieyal/sd-dynamic-prompts.git
+# roop for StableDiffusion
+git clone https://github.com/s0md3v/sd-webui-roop.git
 # ControlNet for Stable Diffusion WebUI (https://github.com/Mikubill/sd-webui-controlnet)
 git clone https://github.com/Mikubill/sd-webui-controlnet.git
 cd sd-webui-controlnet/models
 git clone https://huggingface.co/lllyasviel/ControlNet-v1-1
-# roop for StableDiffusion
-#cd ???
-#git clone https://github.com/s0md3v/sd-webui-roop.git
+
 
 ## Start the GUI ##
 cd $SDBASE

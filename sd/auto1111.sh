@@ -38,6 +38,9 @@ git clone https://github.com/adieyal/sd-dynamic-prompts.git
 git clone https://github.com/Mikubill/sd-webui-controlnet.git
 cd sd-webui-controlnet/models
 git clone https://huggingface.co/lllyasviel/ControlNet-v1-1
+# roop for StableDiffusion
+#cd ???
+#git clone https://github.com/s0md3v/sd-webui-roop.git
 
 ## Start the GUI ##
 cd $SDBASE

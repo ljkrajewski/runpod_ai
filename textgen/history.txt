@@ -1,0 +1,18 @@
+    1  nvidia-smi
+    2  sudo curl -L https://ollama.ai/download/ollama-linux-amd64 -o /usr/bin/ollama
+    3  sudo chmod +x /usr/bin/ollama
+    4  curl -L https://ollama.ai/download/ollama-linux-amd64 -o /usr/bin/ollama
+    5  chmod +x /usr/bin/ollama
+    6  useradd -r -s /bin/false -m -d /usr/share/ollama ollama
+    7  vi /etc/systemd/system/ollama.service
+    8  systemctl daemon-reload
+    9  ls /etc/systemd/system
+   10  ls /etc/systemd/system -l
+   11  chmod 755 /etc/systemd/system/ollama.service 
+   12  systemctl daemon-reload
+   13  systemctl enable ollama
+   14  chmod 644 /etc/systemd/system/ollama.service 
+   15  systemctl start ollama
+   16  ollama serve
+   17  history
+   18  history >> textgen/history.txt

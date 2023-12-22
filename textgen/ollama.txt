@@ -1,0 +1,16 @@
+    1  cd textgen/
+    2  git status
+    3  ls
+    4  cd /workspace/
+    5  curl https://ollama.ai/install.sh | sh
+    6  ollama run dolphin-mixtral
+    7  ollama serve
+    8  ollama run dolphin-mixtral
+    9  ollama serve
+   10  history
+   11  cd runpod_ai/textgen/
+   12  history > ollama.txt
+    1  ollama run dolphin-mixtral
+    2  df -h
+    3  history
+    4  history >> /workspace/runpod_ai/textgen/ollama.txt 
